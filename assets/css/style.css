@@ -28,6 +28,11 @@ input {
   border: 0;
 }
 
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
 /*Estilizando scroll*/
 body {
   /*background-color: #111010;*/
@@ -313,33 +318,66 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #secao_contato {
-    display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    background-color: #E92D2D;
+    background-color: #d32929;
     width: 100%;
     height: 500px;
+    display: flex;
 }
 
 #area_img_frase {
     text-align: center;
     align-items: center;
     display: block;
-    margin: 20px;
-    padding: 0;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 30px;
+}
+
+#frase_topo {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    animation: icon-move 2s ease 2.9s infinite alternate;
+}
+
+#frase_base {
+    margin-left: 150px;
+    font-weight: 500;
+    color: #fff;
+    width: 400px;
+}
+
+@keyframes icon-move {
+    0% {    
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 }
 
 #img_ricardo_perfil {
-    width: 430px;
-    height: 380px;
+    width: 400px;
+    height: 350px;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease;
+}
+
+#img_ricardo_perfil:hover {
+    -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 svg#vector2_card {
     width: 640px;
     height: 502px;
-    position: relative;
-    right: 0px;
+    position: absolute;
+    right: 0;
 }
 
 #informacoes_para_contato{
@@ -347,17 +385,16 @@ svg#vector2_card {
     gap: 10px;
     position: relative;
     width: 400px;
-    height: 330px;
-    left: 233px;
-    bottom: 470px;
+    height: 400px;
+    left: 290px;
     color: #000000;
     text-align: center;
     
 }
 
 #titulo_name {
-  margin-top: 10px;
-  margin-bottom: 60px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .bnt_redes {
@@ -379,7 +416,7 @@ svg#vector2_card {
 }
 
 #instagram {
-    background-image: linear-gradient(45deg, #f857a6 0%, #f88437 35%, #ff5858 70%);
+    background-image: linear-gradient(45deg, #e45e9f 0%, #ffaa2bde 65%, #f73b3b 100%);
 }
 
 #facebook {
@@ -424,4 +461,23 @@ svg#vector2_card {
 .bnt_redes:hover .icon {
     width: calc(100% - 0.85rem);
     border-radius: 10em;
+}
+
+#footer_copyright {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: #111010;
+}
+
+#grid-layout {
+    display: flex;
+    justify-content: center;
+}
+
+#author {
+    color: #dad4d4;
+    font-size: 15px;
+    padding: 5px;
 }
