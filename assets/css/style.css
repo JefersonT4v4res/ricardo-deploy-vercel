@@ -64,8 +64,9 @@ nav#navbar {
 }
 
 p#p_conteudo {
-    padding: 15px;
-    text-align: center;
+    margin: 15px auto;
+    width: 850px;
+    height: 10px;
     text-align: center;
     color: #ffffff;
     font-size: 20px;
@@ -114,7 +115,6 @@ svg#vector_card {
     height: 172px;
     right: 4px;
     top: 483px;
-    
 }
 
 #info_cartao_nome {
@@ -149,7 +149,8 @@ svg#vector_card {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    background-color: rgb(10, 11, 13);
+    background-color: #0a0b0d;
+    filter: drop-shadow(0px 20px 5px #0c0d0f);
 }
 
 .conteudo_sobre {
@@ -233,7 +234,8 @@ button#btn_insta:hover span#span_btn_insta:after {
     padding: 0;
     width: 100%;
     height: 55vh;
-    background-color: rgb(10, 11, 13);
+    background-color: #0c0d0f;
+    box-shadow: inset 0px -10px 5px 1px #a7030383;
 }
 
 #transparent_card {
@@ -249,7 +251,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 #titulo_atendimento {
     color: #ffffff;
     padding-top: 90px;
-    margin-left: 40px;
+    margin-left: 30px;
     width: 500px;
     font-size: 64px;
     font-weight: bold;
@@ -259,7 +261,19 @@ button#btn_insta:hover span#span_btn_insta:after {
     background-color: rgba(238, 238, 238, 0.897);
     margin: 55px 50px 15px 0px;
     width: 300px;
-    height: 250px;
+    height: 260px;
+    border-radius: 1rem;
+    border: #013e41ad 2px solid;
+    transition: all 0.3s ease-in;
+    box-shadow: 0.4rem 0.4rem 0.9rem #044750fd;
+}
+
+.cards_atendimento:hover {
+    width: 304px;
+    transform: translateY(-1.5rem);
+    border: #f2295bf0 0.2em solid;
+    border-radius: 2.5rem 0 2.5rem 0;
+    box-shadow: 0.4rem 0.4rem 0.9rem #f2295bab;
 }
 
 .titulo_card {
@@ -280,9 +294,9 @@ button#btn_insta:hover span#span_btn_insta:after {
     color: #ffffff;
     font-size: 20px;
     font-weight: 500;
-    top: 35px;
-    left: 10px;
-    width: 265px;
+    top: 20px;
+    left: 11px;
+    width: 260px;
     height: 25px;
 }
 
@@ -292,14 +306,122 @@ button#btn_insta:hover span#span_btn_insta:after {
     color: #ffffff;
     font-size: 20px;
     font-weight: 500;
-    top: 57px;
+    top: 43px;
     left: 10px;
     width: 265px;
     height: 25px;
 }
 
 #secao_contato {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     background-color: #E92D2D;
     width: 100%;
-    height: 70vh;
+    height: 500px;
+}
+
+#area_img_frase {
+    text-align: center;
+    align-items: center;
+    display: block;
+    margin: 20px;
+    padding: 0;
+}
+
+#img_ricardo_perfil {
+    width: 430px;
+    height: 380px;
+}
+
+svg#vector2_card {
+    width: 640px;
+    height: 502px;
+    position: relative;
+    right: 0px;
+}
+
+#informacoes_para_contato{
+    display: grid;
+    gap: 10px;
+    position: relative;
+    width: 400px;
+    height: 330px;
+    left: 233px;
+    bottom: 470px;
+    color: #000000;
+    text-align: center;
+    
+}
+
+#titulo_name {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.bnt_redes {
+    font-family: inherit;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 10em;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 70px;
+}
+
+#whatsapp {
+    background-image: linear-gradient(45deg, #1ff54a, #1BD741, #16b436);
+}
+
+#instagram {
+    background-image: linear-gradient(45deg, #f857a6 0%, #f88437 35%, #ff5858 70%);
+}
+
+#facebook {
+    background-image: linear-gradient(45deg, #0672ff, #4e95f1, #0e60cc);
+}
+
+.name_button {
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+}
+
+.bnt_redes:hover span {
+    transform: translateX(15em);
+   }
+
+.bnt_redes .icon {
+    background-color: #ffffff86;
+    height: 60px;
+    width: 61px;
+    border-radius: 15em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.4em;
+    top: 5px;
+    transition: all 0.5s;
+}
+
+.icon #img_icon {
+    margin: 0;
+    padding: 0;
+    transition: all 0.6s;
+    width: 32px;
+    height: 32px;
+}
+
+.bnt_redes:hover .icon #img_icon {
+    transform: rotate(360deg);
+}
+   
+.bnt_redes:hover .icon {
+    width: calc(100% - 0.85rem);
+    border-radius: 10em;
 }
