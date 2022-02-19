@@ -29,7 +29,6 @@ input {
 }
 
 img {
-    user-drag: none;
     -webkit-user-drag: none;
 }
 
@@ -320,10 +319,24 @@ button#btn_insta:hover span#span_btn_insta:after {
 #secao_contato {
     margin: 0;
     padding: 0;
-    background-color: #d32929;
     width: 100%;
     height: 500px;
     display: flex;
+    background-color: #ff0000;
+}
+
+@keyframes transition {
+    0% {
+        background-color: #ff0000;
+    }
+
+    50% {
+        background-color: #a50000;
+    }
+   
+    100% {
+        background-color: #ff0000;
+    }
 }
 
 #area_img_frase {
@@ -331,54 +344,45 @@ button#btn_insta:hover span#span_btn_insta:after {
     align-items: center;
     display: block;
     width: 50%;
-    margin-top: 20px;
-    margin-left: 40px;
-    padding: 30px;
 }
 
 #frase_topo {
-    font-size: 20px;
+    margin: 30px 30px;
+    font-size: 25px;
     font-weight: 500;
     color: #fff;
-    animation: icon-move 2s ease 2.9s infinite alternate;
 }
 
 #frase_base {
-    margin-left: 150px;
+    margin: 30px 20px;
+    margin-left: 130px;
     font-weight: 500;
-    color: #fff;
-    width: 400px;
-}
-
-@keyframes icon-move {
-    0% {    
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
+    font-size: 20px;
+    color: #ffffff;
+    width: 505px;
+    letter-spacing: 1px;
 }
 
 #img_ricardo_perfil {
-    width: 400px;
-    height: 350px;
-    -webkit-transition: 1s all ease;
-    transition: 1s all ease;
+    width: 270px;
+    height: 250px;
+    margin: 30px 30px;
+    filter: drop-shadow(-60px 5px 10px #000000c5);
+    transition: transform 0.9s ease-in
 }
 
-#img_ricardo_perfil:hover {
-    -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+#area_img_frase #img_ricardo_perfil:hover {
+    transform: scale(1.3);
 }
 
 svg#vector2_card {
-    width: 640px;
+    width: 607px;
     height: 502px;
     position: absolute;
     right: 0;
+    filter: drop-shadow(-90px 0px 10px #000000c5);
 }
+
 
 #informacoes_para_contato{
     display: grid;
@@ -386,7 +390,7 @@ svg#vector2_card {
     position: relative;
     width: 400px;
     height: 400px;
-    left: 290px;
+    left: 348px;
     color: #000000;
     text-align: center;
     
@@ -400,7 +404,7 @@ svg#vector2_card {
 .bnt_redes {
     font-family: inherit;
     color: #000000;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     border-radius: 10em;
     letter-spacing: 1px;
@@ -416,7 +420,7 @@ svg#vector2_card {
 }
 
 #instagram {
-    background-image: linear-gradient(45deg, #e45e9f 0%, #ffaa2bde 65%, #f73b3b 100%);
+    background-image: linear-gradient(45deg, #fa1b87 0%, #fab355, #f73b3b 100%);
 }
 
 #facebook {
