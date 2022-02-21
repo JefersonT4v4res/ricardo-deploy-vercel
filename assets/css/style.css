@@ -273,7 +273,8 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 .cards_atendimento:hover {
-    width: 304px;
+    width: 300px;
+    margin: 50px 40px 25px 0px;
     transform: translateY(-1.5rem);
     border: #f2295bf0 0.2em solid;
     border-radius: 2.5rem 0 2.5rem 0;
@@ -388,7 +389,7 @@ svg#vector2_card {
     display: grid;
     gap: 10px;
     position: relative;
-    width: 400px;
+    width: 350px;
     height: 400px;
     left: 348px;
     color: #000000;
