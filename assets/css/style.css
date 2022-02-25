@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai+Looped&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai+Looped&family=Ubuntu&display=swap');
 
 
 
@@ -12,6 +12,7 @@
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 p,
@@ -172,13 +173,14 @@ svg#vector_card {
 
 
 #spn_frase {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    font-size: 16px;
 }
 
 #btn_insta {
     width: 300px;
     cursor: pointer;
-    margin: 0 0 130px 0;
     font-size: 20px;
     height: 48px;
     font-weight: bold;
@@ -232,11 +234,13 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #p_sobre_mim {
-    font-size: 25px;
-    text-align: center ;
-    font-weight: 600;
+    margin: 130px 0 0 0;
+    font-size: 33px;
+    text-align: center;
+    font-weight: 400;
     font-style: italic;
-    font-family: 'DM Sans', sans-serif;
+   /* font-family: 'DM Sans', sans-serif;*/
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .secao_atendimento {
@@ -281,10 +285,9 @@ button#btn_insta:hover span#span_btn_insta:after {
 .cards_atendimento:hover {
     width: 300px;
     margin: 50px 40px 15px 0px;
-    transform: translateY(-1.2rem);
-    border: #f2295bf0 0.2em solid;
+    border: #f2295bf0 2px solid;
     border-radius: 2.5rem 0 2.5rem 0;
-    box-shadow: 0.4rem 0.4rem 0.9rem #f2295bab;
+    box-shadow: 0.6rem 0.6rem 0.9rem #f82459c4;
 }
 
 .titulo_card {
@@ -298,36 +301,32 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 .texto_card {
     text-align: center;
-    padding: 15px;
-    font-size: 20px;
+    padding: 16px;
+    font-size: 1.3em;
     font-weight: 500;
+    margin: 0px;
+    white-space: normal;
+    overflow: hidden;
+
 }
 
-.btn_acesso {
+.cards_atendimento> :is(a) { 
     position: relative;
-    background-color: #e23737;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 200;
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     top: 20px;
     left: 11px;
-    width: 260px;
-    height: 25px;
 }
 
-.btn_servicos {
-    position: relative;
+.btn_acesso , .btn_servicos {
     background-color: #e23737;
     color: #ffffff;
     font-size: 17px;
     font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    top: 43px;
-    left: 10px;
-    width: 265px;
+    width: 260px;
     height: 25px;
+    cursor: pointer;
 }
+
 
 #secao_contato {
     margin: 0;
@@ -346,12 +345,12 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #frase_topo {
-    font-size: 40px;
-    font-weight: 500;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'DM Sans', sans-serif;
     margin: 30px 30px;
     position: relative;
-    left: 245px;
+    left: 265px;
     font-size: 25px;
     font-weight: 500;
     color: #fafafa;
@@ -378,34 +377,36 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 #img_ricardo_perfil {
     position: relative;
-    left: 20px;
+    left: 66px;
     width: 270px;
     height: 250px;
     margin-left: 30px;
     filter: drop-shadow(-18px 5px 23px #000000c5);
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in;
 }
 
 #area_img_frase #img_ricardo_perfil:hover {
     transform: scale(1.2);
+    
 }
-
 
 #seta_tracejada {
     position: relative;
-    left: -6px;
-    bottom: 44px;
-    transform: rotate(3deg);
+    width: 584px;
+    left: 50px;
+    bottom: 19px;
+    transform: rotate(4deg);
 }
 
-svg#vector2_card {
-    width: 607px;
-    height: 502px;
-    position: absolute;
-    right: 0;
-    filter: drop-shadow(-10px 0px 10px #000000c5);
-}
 
+#container_contato_redes {
+    width: 50%;
+    height: auto;
+    background-image: url("../img/Rectangle_2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
 
 #informacoes_para_contato{
     display: grid;
@@ -489,7 +490,7 @@ svg#vector2_card {
 }
    
 .bnt_redes:hover .icon {
-    width: calc(100% - 0.85rem);
+    width: calc(100% - 0.90rem);
     border-radius: 10em;
 }
 
