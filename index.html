@@ -25,30 +25,12 @@
    
        <img id="logo_marca" src="./assets/img/logo_marca.png" alt="logomarca Ricardo Motos">
             
-        <div id="container_informacoes_cartao">
-                <svg id="vector_card" viewBox="0 0 888 505" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_i_451_33)">
-                        <path d="M0 239.5L467 0H888V510H467L0 239.5Z" fill="#F3F3F3"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_i_451_33" x="0" y="0" width="911" height="514" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="23" dy="4"/>
-                    <feGaussianBlur stdDeviation="23"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_451_33"/>
-                    </filter>
-                    </defs>
-                </svg>
-            
-            <div id="informacoes_cartao">
-                <p id="info_cartao_nome">Ricardo Tavares</p>
-                <p id="info_cartao_sobre">Consultor de vendas Motosol</p>
-                <img id="logo_honda" src="./assets/img/honda_logo.png" alt="logomarca Honda" width="135px" height="113px">
-            </div>
+        <div id="container_informacoes_cartao"> 
+                <div id="informacoes_cartao">
+                    <p id="info_cartao_nome">Ricardo Tavares</p>
+                    <p id="info_cartao_sobre">Consultor de vendas Motosol</p>
+                </div>
+            <img id="logo_honda" src="./assets/img/honda_logo.png" alt="logomarca Honda" width="135px" height="113px">
         </div>
 </section>
     
@@ -66,18 +48,18 @@
 
                     <div class="cards_atendimento" id="div_consultoria">
                         <h1 class="titulo_card" id="consultoria">Consultoria</h1>
-                        <p class="texto_card">Veja o catálogo de motos e agilize o seu atendimento</p>
+                        <p class="texto_card">Veja o catálogo de motos e agilize o seu atendimento.</p>
                         <a href="./Pages/teste.html" target="_self" rel="next" title="Agilize seu atendimento comigo"><button class="btn_acesso">Acessar</button></a>
                     </div>
                     <div class="cards_atendimento" id="div_oficina">
                         <h1 class="titulo_card" id="oficina">Oficina</h1>
-                        <p class="texto_card">Fale com o setor de oficina da Motosol </p>
-                        <a href="https://api.whatsapp.com/send?phone=+5575988464938&text=alô, teste" target="_blank" rel="external" class="whatsappLink" title="Fale o atendimento da Oficina"><button class="btn_servicos">Entre em contato</button></a>
+                        <p class="texto_card">Fale com o setor de oficina da Motosol.</p>
+                        <a href="https://api.whatsapp.com/send?phone=+5575988464938&text=Olá! Quero uma consulta com a oficina." target="_blank" rel="external" title="Fale o atendimento da Oficina"><button class="btn_acesso">Entre em contato</button></a>
                     </div>
                     <div class="cards_atendimento" id="div_pecas">
                         <h1 class="titulo_card" id="pecas">Peças</h1>
-                        <p class="texto_card">Fale com o setor de peças da Motosol</p>
-                        <a href="#" target="_blank" rel="external" title="Fale com o atendimento do setor de Peças"><button class="btn_servicos">Entre em contato</button></a>
+                        <p class="texto_card">Fale com o setor de peças da Motosol.</p>
+                        <a href="https://api.whatsapp.com/send?phone=+557533114455&text=Olá! Quero uma consulta com o setor de peças." target="_blank" rel="external" title="Fale com o atendimento do setor de Peças"><button class="btn_acesso">Entre em contato</button></a>
                     </div>
         </div>
 
@@ -97,18 +79,28 @@
             <div id="container_contato_redes">
                     <div id="informacoes_para_contato">
                         <h1 id="titulo_name">Ricardo Tavares</h1>
-                        <button class="bnt_redes" id="whatsapp">
-                           <div class="icon" id="icon_whats"><img id="img_icon" src="./assets/icons/whatsapp.png" alt="ícone whatsapp"></div> 
-                            <span class="name_button">whatsapp</span>
-                        </button>
-                        <button class="bnt_redes" id="instagram">
-                            <div class="icon" id="icon_insta"><img id="img_icon" src="./assets/icons/instagram.png" alt="ícone instagram"></div>
-                            <span class="name_button">Instagram</span>
-                        </button>
-                        <button class="bnt_redes" id="facebook">
-                            <div class="icon" id="icon_face"><img id="img_icon" src="./assets/icons/facebook.png" alt="ícone facebook"></div>
-                            <span class="name_button">Facebook</span>
-                        </button>
+
+                        <a href="https://api.whatsapp.com/send?phone=+5575988464938&text=Oi, Ricardo!" target="_blank" rel="external" class="link_click" title="Fale comigo pelo whatsapp">
+                            <button class="bnt_redes" id="whatsapp">
+                                <div class="icon" id="icon_whats">
+                                    <img id="img_icon" src="./assets/icons/whatsapp.png" alt="ícone whatsapp"></div> 
+                                    <span class="name_button">whatsapp</span>
+                            </button>
+                         </a>
+                         <a href="https://www.instagram.com/ricardomotosol/" target="_blank" rel="external" title="Me siga no instagram"> 
+                            <button class="bnt_redes" id="instagram">
+                                <div class="icon" id="icon_insta">
+                                    <img id="img_icon" src="./assets/icons/instagram.png" alt="ícone instagram"></div>
+                                    <span class="name_button">Instagram</span>
+                            </button>
+                        </a>
+                        <a href="https://www.facebook.com/ricardo.tavares.54" target="_blank" rel="external" title="Me siga no facebook">
+                            <button class="bnt_redes" id="facebook">
+                                <div class="icon" id="icon_face">
+                                    <img id="img_icon" src="./assets/icons/facebook.png" alt="ícone facebook"></div>
+                                    <span class="name_button">Facebook</span>
+                            </button>
+                        </a>    
                     </div>
             </div>
 

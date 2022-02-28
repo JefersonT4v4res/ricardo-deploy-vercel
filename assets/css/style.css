@@ -89,13 +89,7 @@ p#p_conteudo {
     padding: 0;
     background-color: #ff0000;
     width: 100%;
-    height: 473px;
-}
-
-#container_informacoes_cartao {
-    display: flex;
-    margin: 0;
-    padding: 0;
+    height: 500px;
 }
 
 #logo_marca {
@@ -106,43 +100,42 @@ p#p_conteudo {
     left: 14px;
     top: 80px;
 }
-
-svg#vector_card {
-    filter: drop-shadow(-10px 0px 20px #0000007e);
-    width: 832px;
-    height: 473px;
-    position: relative;
-    right: 0;
+#container_informacoes_cartao {
+    width: 60%;
+    height: 500px;
+    background-image: url(../img/Polygon2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 #informacoes_cartao {
-    display: grid;
     position: absolute;
-    width: 630px;
-    height: 172px;
-    right: 4px;
-    top: 483px;
+    display: grid;
+    width: 487px;
+    height: 100px;
+    right: 17px;
+    top: 474px;
 }
 
-#info_cartao_nome {
-    text-align: center;
-    font-size: 67px;
+#informacoes_cartao p {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    height: 10px;
+    text-align: center;
     font-weight: bold;
 }
 
+#info_cartao_nome {
+    font-size: 67px;
+}
+
 #info_cartao_sobre {
-    text-align: center;
     font-size: 30px;
-    font-weight: 600;
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 #logo_honda{
     position: absolute;
     right: 12px;
-    top: 187px;
+    bottom: -77px;
 }
 
 #secao_sobre {
@@ -316,17 +309,29 @@ button#btn_insta:hover span#span_btn_insta:after {
     left: 11px;
 }
 
-.btn_acesso , .btn_servicos {
+.btn_acesso {
     background-color: #e23737;
     color: #ffffff;
     font-size: 17px;
     font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    width: 260px;
-    height: 25px;
+    width: 261px;
+    height: 28px;
     cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 
+.cards_atendimento:hover .btn_acesso {
+    width: 263px;
+    border-radius: 2.5rem 0 2.5rem 0;
+    box-shadow: 0.2rem 0.3rem 0.3rem #000000fd;
+}
+
+.cards_atendimento:hover .btn_acesso:active {
+    box-shadow: inset -0.2rem -0.1rem 0.3rem #000000fd,
+             inset 0 0 0.5rem #000000fd;
+
+}
 
 #secao_contato {
     margin: 0;
@@ -388,6 +393,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 #area_img_frase #img_ricardo_perfil:hover {
     transform: scale(1.2);
     
+    
 }
 
 #seta_tracejada {
@@ -428,9 +434,14 @@ button#btn_insta:hover span#span_btn_insta:after {
   font-size: 40px;
 }
 
+.informacoes_para_contato> :is(a) { 
+    position: relative;
+}
+
 .bnt_redes {
     font-family: inherit;
     color: #000000;
+    width: 100%;
     font-size: 20px;
     font-weight: 500;
     border-radius: 10em;
@@ -440,6 +451,7 @@ button#btn_insta:hover span#span_btn_insta:after {
     overflow: hidden;
     align-items: center;
     height: 70px;
+    cursor: pointer;
 }
 
 #whatsapp {
@@ -460,8 +472,9 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 .bnt_redes:hover span {
-    transform: translateX(15em);
+    transform: translateX(15rem);
    }
+
 
 .bnt_redes .icon {
     background-color: #ffffff86;
