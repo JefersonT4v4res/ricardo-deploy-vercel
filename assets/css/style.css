@@ -124,7 +124,7 @@ p#p_conteudo {
     font-weight: bold;
 }
 
-#info_cartao_nome {
+.info_cartao_nome {
     font-size: 4em;
 }
 
