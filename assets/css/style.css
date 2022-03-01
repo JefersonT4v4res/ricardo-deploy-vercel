@@ -134,7 +134,7 @@ p#p_conteudo {
 
 #logo_honda{
     position: relative;
-    left: 740px;
+    left: 725px;
     top: 363px;
 }
 
@@ -306,7 +306,6 @@ button#btn_insta:hover span#span_btn_insta:after {
 .cards_atendimento> :is(a) { 
     position: relative;
     top: 20px;
-    left: 5px;
 }
 
 .btn_acesso {
