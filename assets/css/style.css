@@ -133,9 +133,9 @@ p#p_conteudo {
 }
 
 #logo_honda{
-    position: absolute;
-    right: 20px;
-    bottom: -57px;
+    position: relative;
+    left: 740px;
+    top: 363px;
 }
 
 #secao_sobre {
@@ -306,7 +306,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 .cards_atendimento> :is(a) { 
     position: relative;
     top: 20px;
-    left: 11px;
+    left: 5px;
 }
 
 .btn_acesso {
@@ -315,15 +315,14 @@ button#btn_insta:hover span#span_btn_insta:after {
     font-size: 1em;
     font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    margin-left: 12px;
-    width: 240px;
+    margin-left: 22px;
+    width: 232px;
     height: 28px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
 .cards_atendimento:hover .btn_acesso {
-    width: 242px;
     border-radius: 2.5rem 0 2.5rem 0;
     box-shadow: 0.2rem 0.3rem 0.3rem #000000fd;
 }
