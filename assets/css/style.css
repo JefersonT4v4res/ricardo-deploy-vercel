@@ -134,8 +134,8 @@ p#p_conteudo {
 
 #logo_honda{
     position: relative;
-    left: 700px;
-    top: 350px;
+    left: 350px;
+    top: 64px;
 }
 
 #secao_sobre {
@@ -269,6 +269,7 @@ button#btn_insta:hover span#span_btn_insta:after {
     margin: 55px 50px 15px 0px;
     width: 300px;
     height: 260px;
+    padding: 12px;
     border-radius: 1rem;
     border: #013e41ad 2px solid;
     transition: all 0.3s ease-in;
@@ -314,9 +315,9 @@ button#btn_insta:hover span#span_btn_insta:after {
     font-size: 1em;
     font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    margin-left: 13px;
-    width: 260px;
+    width: 235px;
     height: 28px;
+    margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
