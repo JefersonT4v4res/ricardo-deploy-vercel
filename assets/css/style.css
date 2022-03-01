@@ -134,8 +134,8 @@ p#p_conteudo {
 
 #logo_honda{
     position: relative;
-    left: 725px;
-    top: 363px;
+    left: 700px;
+    top: 350px;
 }
 
 #secao_sobre {
@@ -314,8 +314,8 @@ button#btn_insta:hover span#span_btn_insta:after {
     font-size: 1em;
     font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    margin-left: 22px;
-    width: 232px;
+    margin-left: 13px;
+    width: 260px;
     height: 28px;
     cursor: pointer;
     transition: all 0.3s ease-in;
