@@ -26,25 +26,27 @@
        <img id="logo_marca" src="./assets/img/logo_marca.png" alt="logomarca Ricardo Motos">
             
         <div id="container_informacoes_cartao"> 
-                <div id="informacoes_cartao">
-                    <div class="info_cartao_nome" id="app"></div>
-                    <p id="info_cartao_sobre">Consultor de vendas Motosol</p>
+                <div class="delaySmallReveal" id="informacoes_cartao">
+                    <h1  id="info_cartao_quem" >Olá, eu sou<br />
+                        <span class="info_cartao_nome" id="app"></span><br />
+                        <span id="info_cartao_profissao">Consultor de vendas Motosol</span>
+                     </h1>
                     <img id="logo_honda" src="./assets/img/honda_logo.png" alt="logomarca Honda">
                 </div>
         </div>
 </section>
     
     <section id="secao_sobre">
-            <div class="conteudo_sobre">
-                <span id="spn_frase">Me acompanhe nas redes!</span>
-                <a href="https://www.instagram.com/ricardomotosol/" target="_blank" rel="external"><button id="btn_insta"><span id="span_btn_insta">Instagram</span></button></a>
-                <p id="p_sobre_mim">Estou sempre prezando pelo melhor atendimento e dando o máximo para garantir a felicidade do meu cliente.</p>
+            <div id="conteudo_sobre">
+                <span class="delaySmallReveal" id="spn_frase">Me acompanhe nas redes!</span>
+                <a class="delayLargeReveal" href="https://www.instagram.com/ricardomotosol/" target="_blank" rel="external"><button id="btn_insta"><span id="span_btn_insta">Instagram</span></button></a>
+                <p class="delayExtraBigReveal" id="p_sobre_mim">Estou sempre prezando pelo melhor atendimento e dando o máximo para garantir a felicidade do meu cliente.</p>
             </div>
     </section>
 
     <section class="secao_atendimento" id="particles-js">    
         <div id="transparent_card">
-                    <h1 id="titulo_atendimento">Quer agilizar o atendimento?</h1>
+                    <h1 class="delayMediumReveal"  id="titulo_atendimento">Quer agilizar o atendimento?</h1>
 
                     <div class="cards_atendimento" id="div_consultoria">
                         <h1 class="titulo_card" id="consultoria">Consultoria</h1>
@@ -68,16 +70,16 @@
     <section id="secao_contato">
 
             <div id="area_img_frase">
-                <p id="frase_topo">Para seguro, consórcio, financiamento ou outras dúvidas entre em contato </p>
+                <p class="delaySmallReveal" id="frase_topo">Para seguro, consórcio, financiamento ou outras dúvidas entre em contato </p>
                     <div id="grid_layout">
-                        <img id="img_ricardo_perfil" src="./assets/img/Ricardo_perfil.png" alt="Foto perfil Ricardo">
-                        <img id="seta_tracejada" src="./assets/img/arrowdashed.png" alt="seta tracejada">        
+                        <img class="delayMediumReveal" id="img_ricardo_perfil" src="./assets/img/Ricardo_perfil.png" alt="Foto perfil Ricardo">
+                        <img class="delayLargeReveal" id="seta_tracejada" src="./assets/img/arrowdashed.png" alt="seta tracejada">        
                     </div>
-                <p id="frase_base">O seu sonho pode está mais perto, do que você imagina.</p>
+                <p class="delaySmallReveal" id="frase_base">O seu sonho pode está mais perto, do que você imagina.</p>
             </div>
 
             <div id="container_contato_redes">
-                    <div id="informacoes_para_contato">
+                    <div class="delayExtraBigReveal" id="informacoes_para_contato">
                         <h1 id="titulo_name">Ricardo Tavares</h1>
 
                         <a href="https://api.whatsapp.com/send?phone=+5575988464938&text=Oi, Ricardo!" target="_blank" rel="external" class="link_click" title="Fale comigo pelo whatsapp">
@@ -114,58 +116,16 @@
     </footer>
 
     
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="./assets/js/scrollPage.js"></script>
+
 
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="./assets/js/typeWriter.js"></script>
+<script type="text/javascript" src="./assets/js/typeWriter.js"></script>
     
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 200,
-                density: { enable: true, value_area: 700 }
-            },
-            color: {
-                value: "#1edbee"
-            },
-            shape: {
-                type: "circle",
-                stroke: { width: 10, color: "#00e8fd71" },
-                polygon: { nb_sides: 10 },
-                image: { src: "img/github.svg", width: 100, height: 100 }
-            },
-            opacity: {
-                value: 0.48927153781200905,
-                random: false,
-                anim: { enable: true, speed: 0.2, opacity_min: 0, sync: false }
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: { enable: true, speed: 3, size_min: 2, sync: false }
-            },
-            line_linked: {
-                enable: true,
-                distance: 50,
-                color: "#ffffff",
-                opacity: 0.9,
-                width: 2
-            },
-            move: {
-                enable: true,
-                speed: 3,
-                direction: "none",
-                random: true,
-                straight: false,
-                out_mode: "bounce",
-                bounce: true,
-                attract: { enable: false, rotateX: 600, rotateY: 1200 }
-            }
-        },
-    });
-    </script>
+    <script type="text/javascript" src="./assets/js/particles.js"></script>
 
 </body>
 </html>

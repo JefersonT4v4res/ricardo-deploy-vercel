@@ -37,8 +37,8 @@ img {
 
 /*Estilizando scroll*/
 body {
-  /*background-color: #111010;*/
-    background-color: #fffb00;
+  background-color: #111010;
+    
   }
   
 html {
@@ -110,26 +110,35 @@ p#p_conteudo {
 }
 
 #informacoes_cartao {
-    position: absolute;
+    position: relative;
     display: grid;
     width: 515px;
     height: 100px;
-    right: 17px;
-    top: 474px;
+    left: 374px;
+    top: 119px;
 }
 
-#informacoes_cartao p {
+#informacoes_cartao h1 {
+    padding-left: 20px;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-    text-align: center;
+    text-align: start;
     font-weight: bold;
+}
+
+#info_cartao_quem {
+    font-size: 1em;
 }
 
 .info_cartao_nome {
     font-size: 4em;
 }
 
-#info_cartao_sobre {
+#info_cartao_profissao {
     font-size: 1.7em;
+}
+
+.Typewriter__cursor {
+    color: #ff0000;
 }
 
 #logo_honda{
@@ -152,7 +161,7 @@ p#p_conteudo {
     filter: drop-shadow(0px 20px 5px #0c0d0f);
 }
 
-.conteudo_sobre {
+#conteudo_sobre {
     display: flex;
     flex-flow: column;
     color: #ffffff;
@@ -387,12 +396,6 @@ button#btn_insta:hover span#span_btn_insta:after {
     margin-left: 30px;
     filter: drop-shadow(-18px 5px 23px #000000c5);
     transition: transform 0.6s ease-in;
-}
-
-#area_img_frase #img_ricardo_perfil:hover {
-    transform: scale(1.2);
-    
-    
 }
 
 #seta_tracejada {

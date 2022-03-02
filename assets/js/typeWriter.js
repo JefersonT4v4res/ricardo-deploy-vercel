@@ -1,7 +1,13 @@
 var app = document.getElementById('app');
 
 var typewriter = new Typewriter(app, {
-    strings: ['Ricardo Tavares'],
-    autoStart: true,
-    
+    cursor: '|',
+    delay: '150'
 });
+
+typewriter
+    .pauseFor(850)
+    .typeString('Ricardo Tavares')
+    .start();
+    
+
