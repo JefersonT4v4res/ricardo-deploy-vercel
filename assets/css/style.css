@@ -32,6 +32,11 @@ input:focus {
   border: 0;
 }
 
+span {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     -webkit-user-drag: none;
 }
