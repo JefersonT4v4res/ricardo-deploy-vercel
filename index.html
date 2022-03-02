@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Jeferson Tavares">
-    <meta name="description" content="Meu nome é Ricardo Tavares, consultor de vendas da Motosol. Estou aqui para facilitar seu atendimento e realizar o seu sonho de conquistar sua moto própria.">
+    <meta name="description" content="Meu nome é Ricardo Tavares, consultor de vendas da Motosol. Estou aqui para facilitar seu atendimento e realizar o seu sonho de conquistar sua Honda 0Km.">
+    <meta
+      name="keywords"
+      content="moto, motosol, vendedor, ricardo, Ricardo Tavares, honda, rico, ricardo motosol, rico motosol, ricotavares, ricardotavares"
+    />
     <meta name="copyright" content="Jeferson Tavares 2022">
-    <meta name="theme-color" content="#E92D2D" />
+    <meta name="theme-color" content="#111010" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      property="og:image"
+      content="https://ricardotavares.vercel.app/assets/img/preview.jpg"
+    />
+    <meta
+      property="og:title"
+      content="Ricardo Tavares - Consultor de vendas Motosol"
+    />
+    <meta
+      property="og:description"
+      content="Eu sou Ricardo, consultor de vendas Motosol e realizar o seu sonho de conquistar sua Honda 0Km."
+    />
     <title>Ricardo Tavares - Consultor de vendas Motosol</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" >
+    <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#35363a">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#35363a">
 </head>
 <body>
     
-<header id="secao_cabecalho">
+<header class="banner" id="secao_cabecalho">
         <img id="banner" src="./assets/img/banner_rico.jpg" alt="Banner Ricardo consórcio, financiamento e seguro" width="100%" height="280px">
-            <nav id="navbar">
-                    <p id="p_conteudo"> Quer realizar seu sonho de ter uma moto própria? Fale comigo para tornar esse sonho real!</p>
-            </nav>
+            <div id="divisoria"></div>
 </header>
 
 <section id="secao_cartao_apresentacao">
-   
-       <img id="logo_marca" src="./assets/img/logo_marca.png" alt="logomarca Ricardo Motos">
-            
-        <div id="container_informacoes_cartao"> 
-                <div class="delaySmallReveal" id="informacoes_cartao">
-                    <h1  id="info_cartao_quem" >Olá, eu sou<br />
+            <div id="container_image">  
+                <img id="logo_marca" src="./assets/img/logo_marca.png" alt="logomarca Ricardo Motos">
+            </div>  
+        <div class="cartao_fundo" id="container_informacoes_cartao"> 
+                <div class="cartao_informacoes" id="informacoes_cartao">
+                    <h1>
+                        <span id="info_cartao_ola">Olá, eu sou</span><br />
                         <span class="info_cartao_nome" id="app"></span><br />
                         <span id="info_cartao_profissao">Consultor de vendas Motosol</span>
                      </h1>
@@ -38,15 +62,15 @@
     
     <section id="secao_sobre">
             <div id="conteudo_sobre">
-                <span class="delaySmallReveal" id="spn_frase">Me acompanhe nas redes!</span>
-                <a class="delayLargeReveal" href="https://www.instagram.com/ricardomotosol/" target="_blank" rel="external"><button id="btn_insta"><span id="span_btn_insta">Instagram</span></button></a>
-                <p class="delayExtraBigReveal" id="p_sobre_mim">Estou sempre prezando pelo melhor atendimento e dando o máximo para garantir a felicidade do meu cliente.</p>
+                <span id="spn_frase">Me acompanhe nas redes!</span>
+                <a  href="https://www.instagram.com/ricardomotosol/" target="_blank" rel="external"><button id="btn_insta"><span id="span_btn_insta">Instagram</span></button></a>
+                <p  id="p_sobre_mim">Estou sempre prezando pelo melhor atendimento e dando o máximo para garantir a felicidade do meu cliente.</p>
             </div>
     </section>
 
     <section class="secao_atendimento" id="particles-js">    
         <div id="transparent_card">
-                    <h1 class="delayMediumReveal"  id="titulo_atendimento">Quer agilizar o atendimento?</h1>
+                    <h1 class="smallDelay"  id="titulo_atendimento">Quer agilizar o atendimento?</h1>
 
                     <div class="cards_atendimento" id="div_consultoria">
                         <h1 class="titulo_card" id="consultoria">Consultoria</h1>
@@ -70,15 +94,15 @@
     <section id="secao_contato">
 
             <div id="area_img_frase">
-                <p class="delaySmallReveal" id="frase_topo">Para seguro, consórcio, financiamento ou outras dúvidas entre em contato </p>
+                <p class="smallDelay" id="frase_topo">Para seguro, consórcio, financiamento ou outras dúvidas entre em contato </p>
                     <div id="grid_layout">
-                        <img class="delayMediumReveal" id="img_ricardo_perfil" src="./assets/img/Ricardo_perfil.png" alt="Foto perfil Ricardo">
-                        <img class="delayLargeReveal" id="seta_tracejada" src="./assets/img/arrowdashed.png" alt="seta tracejada">        
+                        <img class="largeDelay" id="img_ricardo_perfil" src="./assets/img/Ricardo_perfil.png" alt="Foto perfil Ricardo">
+                        <img class="mediumDelay" id="seta_tracejada" src="./assets/img/arrowdashed.png" alt="seta tracejada">        
                     </div>
-                <p class="delaySmallReveal" id="frase_base">O seu sonho pode está mais perto, do que você imagina.</p>
+                <p class="smallDelay" id="frase_base">O seu sonho pode está mais perto, do que você imagina.</p>
             </div>
 
-            <div id="container_contato_redes">
+            <div class="container_contato_redes">
                     <div class="delayExtraBigReveal" id="informacoes_para_contato">
                         <h1 id="titulo_name">Ricardo Tavares</h1>
 
@@ -110,7 +134,7 @@
 
     <footer id="footer_copyright">
         <div id="grid-layout">
-            <p id="author">&copy; 2022 Copyright || Feito por Jeferson Tavares</p>
+            <p id="author">&copy; 2022 || Feito por Jeferson Tavares</p>
         </div>
               
     </footer>

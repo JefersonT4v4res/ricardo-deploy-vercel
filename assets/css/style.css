@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai+Looped&family=Ubuntu&display=swap');
-
-
-
 /*Resetando valores*/
 * {
     padding: 0;
@@ -31,16 +27,22 @@ input {
   border: 0;
 }
 
+button:focus,
+input:focus {
+  border: 0;
+}
+
 img {
     -webkit-user-drag: none;
 }
 
-/*Estilizando scroll*/
+
 body {
   background-color: #111010;
     
-  }
-  
+}
+ 
+/*Estilizando scroll*/
 html {
     scroll-behavior: smooth;
 }
@@ -57,6 +59,17 @@ html {
     background-color: #ff0000;
 }
 
+.Typewriter__cursor {
+    color: #ff0000;
+    margin: 0;
+    padding: 0;
+}
+
+.Typewriter__wrapper {
+    color: #ff0000;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+}	
+
 /*Estilizando pagina*/
 header#secao_cabecalho {
     margin: 0;
@@ -64,90 +77,87 @@ header#secao_cabecalho {
     display: grid;
 }
 
-nav#navbar {
-    margin: 0;
-    height: 50px;
-    background-color: #111010;
+img#banner {
+    -webkit-box-reflect: below 1px linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
 }
 
-p#p_conteudo {
-    margin: 15px auto;
-    width: 850px;
-    height: 10px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.1em;
-    font-weight: 500;
-    font-style: italic;
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+div#divisoria {
+    margin: 0;
+    height: 5px;
+    background: #000000;
+    box-shadow: inset 0px 10px 7px 2px #8d0404;
+   
 }
 
 #secao_cartao_apresentacao {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
     background-color: #ff0000;
     width: 100%;
     height: 500px;
+    overflow: hidden;
 }
 
+#container_image {
+    width: 40%;
+    height: auto;
+}
+
+
 #logo_marca {
-    display: flex;
     position: relative;
-    width: 612px;
-    height: 240px;
-    left: 14px;
-    top: 90px;
+    width: 630px;
+    height: 251px;
+    margin: 0px;
+    left: 0px;
+    top: 91px;
 }
 
 #container_informacoes_cartao {
     width: 60%;
     height: 500px;
-    background-image: url(../img/Polygon2.png);
+    background-image: url(../img/Polygon3.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right;
 }
 
 #informacoes_cartao {
     position: relative;
-    display: grid;
-    width: 436px;
+    width: 40px;
     margin: 0;
     padding: 0;
-    height: 100px;
-    left: 374px;
-    top: 119px;
+    height: 40px;
+    left: 293px;
+    top: 116px;
 }
 
 #informacoes_cartao h1 {
-    padding-left: 20px;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     text-align: start;
     font-weight: bold;
+    width: 595px;
 }
 
-#info_cartao_quem {
-    font-size: 0.9em;
+#info_cartao_ola {
+    font-size: 1.2em;
 }
 
 .info_cartao_nome {
-    font-size: 3.8em;
+    font-size: 2.4em;
 }
 
 #info_cartao_profissao {
-    font-size: 1.7em;
-}
-
-.Typewriter__cursor {
-    color: #ff0000;
+    font-size: 1em;
 }
 
 #logo_honda{
+    width: 115px;
+    height: 110px;
     position: relative;
-    left: 330px;
-    top: 74px;
+    left: 450px;
+    top: 70px;
 }
 
 #secao_sobre {
@@ -155,6 +165,7 @@ p#p_conteudo {
     padding: 0;
     width: 100%;
     height: 105vh; 
+    overflow: hidden;
     box-shadow: inset 0px 10px 7px 2px #8d0404;
     background-image: url("../img/bg_rede_social.jpeg");
     background-repeat: no-repeat;
@@ -345,6 +356,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #secao_contato {
+    overflow: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -409,7 +421,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 
-#container_contato_redes {
+.container_contato_redes {
     width: 50%;
     height: auto;
     background-image: url("../img/Rectangle_2.png");

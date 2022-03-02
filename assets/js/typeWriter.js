@@ -2,12 +2,14 @@ var app = document.getElementById('app');
 
 var typewriter = new Typewriter(app, {
     cursor: '|',
-    delay: '150'
+    delay: '100'
 });
 
 typewriter
-    .pauseFor(850)
-    .typeString('Ricardo Tavares')
+    .pauseFor(1400)
+    .typeString('Ricardo Motos')
+    .deleteChars(5)
+    .typeString('Tavares')
     .start();
     
 

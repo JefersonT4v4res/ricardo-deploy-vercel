@@ -1,32 +1,68 @@
 const sr = ScrollReveal({
-    origin: 'bottom',
     reset: false,
-    scale: 0.8,
     duration: 2000
+
+});
+
+sr.reveal(".banner", {
+    opacity: 0,
+    delay: 100
+});
+
+sr.reveal(".cartao_fundo, .cartao_informacoes, .container_contato_redes", {
+    origin: 'right',
+    distance: '500px',
+    delay: 600
+});
+
+sr.reveal("#logo_marca", {
+    origin: 'left',
+    distance: '300px',
+    delay: 300
+});
+
+sr.reveal("#logo_honda", {
+    origin: 'bottom',
+    distance: '500px',
+    delay: 3800
+});
+
+sr.reveal("#spn_frase", {
+    origin: 'bottom',
+    distance: '100px',
+    delay: 300
+});
+
+sr.reveal("#btn_insta, #p_sobre_mim", {
+    origin: 'bottom',
+    distance: '200px',
+    delay: 500
+});
+
+sr.reveal("#div_consultoria, #whatsapp", {
+    delay: 1000
+});
+sr.reveal("#div_oficina, #instagram", {
+    delay: 1250
+});
+sr.reveal("#div_pecas, #facebook", {
+    delay: 1450
+});
+
+sr.reveal(".smallDelay", {
+    opacity: 0,
+    delay: 300
+});
+
+sr.reveal(".mediumDelay", {
+    origin: 'left',
+    distance: '200px',
+    delay: 600
+});
+
+sr.reveal(".largeDelay", {
+    delay: 900
 });
 
 
-sr.reveal(".delaySmallReveal", {
-     delay: 300
-});
-sr.reveal(".delayMediumReveal", {
-     delay: 600
-});
-sr.reveal(".delayLargeReveal", {
-    delay: 800
-});
-sr.reveal(".delayExtraBigReveal", {
-    delay: 1200
-});
 
-sr.reveal("#div_consultoria", {
-    delay: 800
-});
-
-sr.reveal("#div_oficina", {
-    delay: 950
-});
-
-sr.reveal("#div_pecas", {
-    delay: 1150
-});
