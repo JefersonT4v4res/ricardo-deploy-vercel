@@ -39,13 +39,13 @@ sr.reveal("#btn_insta, #p_sobre_mim", {
     delay: 500
 });
 
-sr.reveal("#div_consultoria, #whatsapp", {
+sr.reveal("#whatsapp", {
     delay: 1000
 });
-sr.reveal("#div_oficina, #instagram", {
+sr.reveal("#instagram", {
     delay: 1250
 });
-sr.reveal("#div_pecas, #facebook", {
+sr.reveal("#facebook", {
     delay: 1450
 });
 
