@@ -126,7 +126,7 @@ p#p_conteudo {
 }
 
 #info_cartao_quem {
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .info_cartao_nome {
@@ -143,8 +143,8 @@ p#p_conteudo {
 
 #logo_honda{
     position: relative;
-    left: 350px;
-    top: 64px;
+    left: 330px;
+    top: 74px;
 }
 
 #secao_sobre {
@@ -241,7 +241,6 @@ button#btn_insta:hover span#span_btn_insta:after {
     text-align: center;
     font-weight: 400;
     font-style: italic;
-   /* font-family: 'DM Sans', sans-serif;*/
     font-family: 'Ubuntu', sans-serif;
 }
 
