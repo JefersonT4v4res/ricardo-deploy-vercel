@@ -95,10 +95,10 @@ p#p_conteudo {
 #logo_marca {
     display: flex;
     position: relative;
-    width: 641px;
-    height: 252px;
+    width: 621px;
+    height: 244px;
     left: 14px;
-    top: 80px;
+    top: 93px;
 }
 #container_informacoes_cartao {
     width: 60%;
