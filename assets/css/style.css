@@ -313,8 +313,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 .titulo_card {
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     font-weight: 600;
     font-style: italic;
     font-family: 'DM Sans', sans-serif;
@@ -322,7 +321,6 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 .texto_card {
     text-align: center;
-    padding: 15px;
     font-size: 1.3em;
     font-weight: 500;
     margin: 0px;
