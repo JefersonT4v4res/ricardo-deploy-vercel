@@ -146,23 +146,23 @@ div#divisoria {
 }
 
 #info_cartao_ola {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .info_cartao_nome {
-    font-size: 2.6em;
+    font-size: 2.3em;
 }
 
 #info_cartao_profissao {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 #logo_honda{
     width: 115px;
     height: 110px;
     position: relative;
-    left: 390px;
-    top: 88px;
+    left: 417px;
+    top: 70px;
 }
 
 #secao_sobre {
