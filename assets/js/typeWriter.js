@@ -1,9 +1,5 @@
 var app = document.getElementById('app');
-
-var typewriter = new Typewriter(app, {
-    cursor: '|',
-    delay: '100'
-});
+var typewriter = new Typewriter(app, {cursor: '|', delay: '100'});
 
 typewriter
     .pauseFor(1400)
@@ -11,5 +7,3 @@ typewriter
     .deleteChars(5)
     .typeString('Tavares')
     .start();
-    
-

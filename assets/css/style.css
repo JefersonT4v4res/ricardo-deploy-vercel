@@ -3,12 +3,21 @@
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
+    box-sizing: border-box;
+}
+
+header,
+section,
+aside,
+main,
+footetr {
+    margin: 0;
+    padding: 0;
+}
 
 a {
-  text-decoration: none;
-  color: #ffffff;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 p,
@@ -18,18 +27,25 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p::selection,
+h1::selection,
+span::selection {
+    background-color: #8d0404;
+    color: #ffffff;
 }
 
 button,
 input {
-  border: 0;
+    border: 0;
 }
 
 button:focus,
 input:focus {
-  border: 0;
+    border: 0;
 }
 
 span {
@@ -41,12 +57,12 @@ img {
     -webkit-user-drag: none;
 }
 
-
 body {
-  background-color: #111010;
-    
+    background-color: #111010;
+    padding: 0;
+    margin: 0;
 }
- 
+
 /*Estilizando scroll*/
 html {
     scroll-behavior: smooth;
@@ -73,31 +89,26 @@ html {
 .Typewriter__wrapper {
     color: #ff0000;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-}	
+}
 
-/*Estilizando pagina*/
+/*--Estilizando pagina--*/
+
+/*   ***Sessao 1*** */
 header#secao_cabecalho {
-    margin: 0;
-    padding: 0;
-    display: grid;
+    display: block;
 }
 
 img#banner {
-    -webkit-box-reflect: below 1px linear-gradient( to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+    -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 
 div#divisoria {
-    margin: 0;
     height: 5px;
-    background: #000000;
-    box-shadow: inset 0px 10px 7px 2px #8d0404;
-   
+    background: #000000cc;
 }
 
 #secao_cartao_apresentacao {
     display: flex;
-    margin: 0;
-    padding: 0;
     background-color: #ff0000;
     width: 100%;
     height: 500px;
@@ -105,44 +116,44 @@ div#divisoria {
 }
 
 #container_image {
-    width: 40%;
+    width: 34%;
     height: auto;
 }
 
-
 #logo_marca {
     position: relative;
-    width: 630px;
-    height: 251px;
-    margin: 0px;
-    left: 0px;
-    top: 91px;
+    left: 25px;
+    top: 117px;
 }
 
 #container_informacoes_cartao {
-    width: 60%;
-    height: 500px;
-    background-image: url(../img/Polygon3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+    width: 66%;
+    height: auto;
 }
 
 #informacoes_cartao {
-    position: relative;
-    width: 40px;
+    position: absolute;
     margin: 0;
     padding: 0;
-    height: 40px;
-    left: 354px;
-    top: 74px;
+    left: 427px;
+    top: 134px;
+}
+
+img#polygon1 {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    left: 111px;
 }
 
 #informacoes_cartao h1 {
+    position: absolute;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     text-align: start;
     font-weight: bold;
-    width: 595px;
+    width: 570px;
+    left: auto;
+    top: -32px;
 }
 
 #info_cartao_ola {
@@ -157,60 +168,58 @@ div#divisoria {
     font-size: 1.1em;
 }
 
-#logo_honda{
-    width: 115px;
+#logo_honda {
+    width: 122px;
     height: 110px;
     position: relative;
-    left: 417px;
-    top: 70px;
+    left: 423px;
+    top: 228px;
 }
 
 #secao_sobre {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 105vh; 
+    height: 105vh;
     overflow: hidden;
-    box-shadow: inset 0px 10px 7px 2px #8d0404;
-    background-image: url("../img/bg_rede_social.jpeg");
+    box-shadow: inset 0px 10px 1px #8d0404;
+    background-image: url("../img/bg_rede_social.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
     background-color: #0a0b0d;
-    filter: drop-shadow(0px 20px 5px #0c0d0f);
 }
 
 #conteudo_sobre {
-    display: flex;
-    flex-flow: column;
-    color: #ffffff;
-    width: 405px;
+    width: 436px;
     height: 90vh;
     margin-left: 47px;
     padding-top: 120px;
     text-align: center;
-    align-items: center;
 }
 
-
+#p_sobre_mim,
+#span_btn_insta,
 #spn_frase {
-    margin: 0 0 15px 0;
     color: #ffffff;
-    font-size: 1.3em;
+    text-align: center;
+}
+
+#spn_frase,
+#span_btn_insta {
+    font-style: italic;
+    font-size: 1.4em;
 }
 
 #btn_insta {
+    margin-top: 15px;
     width: 300px;
     cursor: pointer;
-    font-size: 20px;
     height: 48px;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
     background: linear-gradient(95deg, #002296, #82008F, #C0007A, #EA0C5F, #FF5341, #ff8820, #d8a713, #002296);
     background-size: 300%;
     border-radius: 30px;
-    
+
 }
 
 #btn_insta:hover {
@@ -220,11 +229,11 @@ div#divisoria {
 
 @keyframes ani {
     0% {
-     background-position: 0%;
+        background-position: 0%;
     }
-   
+
     100% {
-     background-position: 400%;
+        background-position: 400%;
     }
 }
 
@@ -233,7 +242,6 @@ div#divisoria {
     position: relative;
     transition: 0.5s;
     font-weight: 600;
-    font-style: italic;
 }
 
 span#span_btn_insta:after {
@@ -248,101 +256,94 @@ span#span_btn_insta:after {
 button#btn_insta:hover span#span_btn_insta {
     padding-right: 15px;
 }
-   
+
 button#btn_insta:hover span#span_btn_insta:after {
     opacity: 1;
     right: 0;
 }
 
 #p_sobre_mim {
-    margin: 130px 0 0 0;
-    font-size: 2em;
+    margin: 90px 0 0 0;
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 40px;
     text-align: center;
-    font-weight: 400;
-    font-style: italic;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .secao_atendimento {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 55vh;
-    background-color: #0c0d0f;
-    box-shadow: inset 0px -10px 7px 2px #8d0404;
+    background-color: #0a0b0d;
 }
 
-#transparent_card {
+#transparent_background {
     position: absolute;
-    background-color: rgba(10, 11, 13, 0.25);
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     width: 100%;
     height: 55vh;
-    display: inline-flex;
+    display: flex;
 }
 
 #titulo_atendimento {
     color: #ffffff;
     padding-top: 90px;
     margin-left: 30px;
-    width: 500px;
     font-size: 4em;
     font-weight: bold;
 }
 
 .cards_atendimento {
-    background-color: rgba(238, 238, 238, 0.897);
-    margin: 55px 50px 15px 0px;
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.863);
+    margin: 55px 40px 15px 0px;
+    width: 290px;
     height: 260px;
-    padding: 12px;
+    padding: 20px;
     border-radius: 1rem;
-    border: #013e41ad 2px solid;
+    border: #037c83c0 2px solid;
     transition: all 0.3s ease-in;
-    box-shadow: 0.4rem 0.4rem 0.9rem #044750fd;
+    box-shadow: 0.4rem 0.4rem 0.9rem #05535efd;
 }
 
 .cards_atendimento:hover {
-    width: 300px;
     margin: 50px 40px 15px 0px;
-    border: #f2295bf0 2px solid;
+    border: #f2295be7 2px solid;
     border-radius: 2.5rem 0 2.5rem 0;
-    box-shadow: 0.6rem 0.6rem 0.9rem #f82459c4;
+    box-shadow: 0.6rem 0.4rem 0.9rem #f2295bf6;
+}
+
+.titulo_card,
+.texto_card {
+    text-align: center;
 }
 
 .titulo_card {
-    text-align: center;
-    padding-bottom: 10px;
-    font-weight: 600;
+    padding-bottom: 12px;
+    font-weight: bold;
     font-style: italic;
     font-family: 'DM Sans', sans-serif;
 }
 
 .texto_card {
-    text-align: center;
     font-size: 1.3em;
     font-weight: 500;
-    margin: 0px;
     white-space: normal;
     overflow: hidden;
-
 }
 
-.cards_atendimento> :is(a) { 
+.cards_atendimento> :is(a) {
     position: relative;
-    top: 20px;
+    top: 31px;
 }
 
 .btn_acesso {
     background-color: #e23737;
     color: #ffffff;
     font-size: 1em;
-    font-weight: 200;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     width: 235px;
-    height: 28px;
-    margin: 10px;
+    height: 30px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
@@ -354,14 +355,11 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 .cards_atendimento:hover .btn_acesso:active {
     box-shadow: inset -0.2rem -0.1rem 0.3rem #000000fd,
-             inset 0 0 0.5rem #000000fd;
-
+        inset 0 0 0.5rem #000000fd;
 }
 
 #secao_contato {
     overflow: hidden;
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 500px;
     display: flex;
@@ -369,107 +367,93 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #area_img_frase {
-    text-align: center;
-    align-items: center;
-    display: block;
-    width: 50%;
+    width: 42%;
+}
+
+#frase_topo,
+#frase_base {
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    color: #fafafa;
 }
 
 #frase_topo {
     font-size: 1.5em;
-    font-weight: 200;
-    font-family: 'DM Sans', sans-serif;
+    text-align: center;
     margin: 30px 30px;
-    position: relative;
-    left: 265px;
-    font-weight: 500;
-    color: #fafafa;
+    left: 350px;
 }
 
 #frase_base {
     margin: 0px 116px;
-    position: relative;
-    left: 269px;
+    left: 306px;
     bottom: 21px;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 1em;
     font-style: italic;
-    font-family: 'DM Sans', sans-serif;
-    color: #fafafa;
     width: 505px;
     letter-spacing: 1px;
 }
 
 #grid_layout {
     display: flex;
-    margin: auto;
 }
 
 #img_ricardo_perfil {
     position: relative;
-    left: 66px;
-    width: 270px;
-    height: 250px;
-    margin-left: 30px;
-    filter: drop-shadow(-18px 5px 23px #000000c5);
-    transition: transform 0.6s ease-in;
+    left: 120px;
+    filter: drop-shadow(-23px 7px 12px #000000e7);
 }
 
 #seta_tracejada {
     position: relative;
-    width: 584px;
+    width: 628px;
     left: 50px;
-    bottom: 19px;
-    transform: rotate(4deg);
+    bottom: 50px;
 }
-
 
 .container_contato_redes {
-    width: 50%;
+    width: 58%;
     height: auto;
-    background-image: url("../img/Rectangle_2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
 }
 
-#informacoes_para_contato{
-    display: grid;
-    gap: 10px;
+img#polygon2 {
+    width: 900px;
+    height: 502px;
     position: relative;
-    width: 350px;
-    height: 400px;
-    left: 348px;
-    color: #000000;
+    left: 111px;
+}
+
+#informacoes_para_contato {
+    display: grid;
+    position: absolute;
+    width: 360px;
+    height: 460px;
+    right: 35px;
+    bottom: 70px;
     text-align: center;
-    
 }
 
 #titulo_name {
-  margin-top: 80px;
-  margin-bottom: 20px;
-  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-  font-weight: 600;
-  font-size: 2.5em;
+    margin-top: 75px;
+    margin-bottom: 10px;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 2.5em;
 }
 
-.informacoes_para_contato> :is(a) { 
+.bnt_redes,
+.informacoes_para_contato> :is(a) {
     position: relative;
 }
 
 .bnt_redes {
-    font-family: inherit;
-    color: #000000;
-    width: 100%;
-    font-size: 1.2em;
-    font-weight: 500;
-    border-radius: 10em;
-    letter-spacing: 1px;
-    position: relative;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
+    width: 100%;
+    font-size: 1.4em;
+    border-radius: 10em;
+    letter-spacing: 1.2px;
     overflow: hidden;
-    align-items: center;
-    height: 70px;
+    height: 75px;
     cursor: pointer;
 }
 
@@ -492,13 +476,13 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 .bnt_redes:hover span {
     transform: translateX(15rem);
-   }
+}
 
 
 .bnt_redes .icon {
     background-color: #ffffff86;
-    height: 60px;
-    width: 61px;
+    height: 64px;
+    width: 64px;
     border-radius: 15em;
     position: absolute;
     display: flex;
@@ -513,16 +497,14 @@ button#btn_insta:hover span#span_btn_insta:after {
     margin: 0;
     padding: 0;
     transition: all 0.6s;
-    width: 32px;
-    height: 32px;
 }
 
 .bnt_redes:hover .icon #img_icon {
     transform: rotate(360deg);
 }
-   
+
 .bnt_redes:hover .icon {
-    width: calc(100% - 0.90rem);
+    width: calc(100% - 1.1rem);
     border-radius: 10em;
 }
 
