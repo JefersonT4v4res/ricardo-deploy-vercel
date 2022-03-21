@@ -1,9 +1,9 @@
 /*Resetando valores*/
 * {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header,
@@ -11,13 +11,13 @@ section,
 aside,
 main,
 footetr {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 p,
@@ -27,595 +27,627 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 p::selection,
 h1::selection,
 span::selection {
-    background-color: #8d0404;
-    color: #ffffff;
+  background-color: #ec0202;
+  color: #ffffff;
 }
 
 button,
 input {
-    border: 0;
+  border: 0;
 }
 
 button:focus,
 input:focus {
-    border: 0;
+  border: 0;
 }
 
 span {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    -webkit-user-drag: none;
+  -webkit-user-drag: none;
 }
 
 body {
-    background-color: #111010;
-    padding: 0;
-    margin: 0;
+  background-color: #111010;
+  padding: 0;
+  margin: 0;
 }
 
 /*Estilizando scroll*/
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 .Typewriter__cursor {
-    color: #ff0000;
-    margin: 0;
-    padding: 0;
+  color: #ff0000;
+  margin: 0;
+  padding: 0;
 }
 
 .Typewriter__wrapper {
-    color: #ff0000;
-    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  color: #ff0000;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
 }
 
 /*--Estilizando pagina--*/
 
 /*   ***Sessao 1*** */
 header#secao_cabecalho {
-    display: block;
+  display: block;
 }
 
 img#banner {
-    -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-    width: 100%;
-    height: 280px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  width: 100%;
+  max-height: 320px;
 }
 
 div#divisoria {
-    height: 5px;
-    background: #000000cc;
+  height: 5px;
+  background: #000000cc;
 }
 
 #secao_cartao_apresentacao {
-    display: flex;
-    background-color: #ff0000;
-    width: 100%;
-    height: 79vh;
-    overflow: hidden;
+  display: flex;
+  background-color: #ff0000;
+  width: 100%;
+  overflow: hidden;
+}
+
+#logo_marca {
+  position: relative;
+  left: 7em;
+  top: 5.5em;
+}
+
+img#polygon1 {
+  width: auto;
+  height: 57vh;
+  position: sticky;
 }
 
 #container_image {
-    width: 34%;
-    height: auto;
+  width: 34%;
+  height: auto;
 }
 
 #container_informacoes_cartao {
-    width: 66%;
-    height: auto;
+  width: 66%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#informacoes_cartao {
+  position: absolute;
+  left: 60%;
+  top: 17%;
+}
+
+#informacoes_cartao h1 {
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  text-align: start;
+  font-weight: bold;
+  width: 410px;
+}
+
+#info_cartao_ola,
+#info_cartao_profissao {
+  font-size: 0.7em;
+}
+
+.info_cartao_nome {
+  font-size: 1.6em;
+}
+
+#logo_honda {
+  width: 122px;
+  height: 110px;
+  position: relative;
+  left: 26em;
+  top: 13.5em;
+}
+
+#conteudo_sobre {
+  width: 26em;
+  height: 79vh;
+  background: #070c0c;
+  margin-left: 1em;
+  margin-top: 3em;
+  padding-top: 4em;
+  text-align: center;
+}
+
+#spn_frase,
+#span_btn_insta {
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+#btn_insta {
+  margin-top: 15px;
+  width: 341px;
+  height: 56px;
+  cursor: pointer;
+  background: linear-gradient(
+    95deg,
+    #002296,
+    #82008f,
+    #c0007a,
+    #ea0c5f,
+    #ff5341,
+    #ff8820,
+    #d3a313,
+    #002296
+  );
+  background-size: 300%;
+  border-radius: 30px;
+}
+
+#btn_insta:hover {
+  animation: ani 5s linear infinite;
+  border: none;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+#span_btn_insta {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+span#span_btn_insta:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+button#btn_insta:hover span#span_btn_insta {
+  padding-right: 15px;
+}
+
+button#btn_insta:hover span#span_btn_insta:after {
+  opacity: 1;
+  right: 0;
+}
+
+#p_sobre_mim {
+  margin: 90px 0 0 0;
+  font-size: 1.6em;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#titulo_atendimento {
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.cards_atendimento {
+  background-color: rgba(255, 255, 255, 0.863);
+  margin: 55px 40px 15px 0px;
+  width: 290px;
+  height: 260px;
+  padding: 20px;
+  border-radius: 1rem;
+  border: #037c83c0 2px solid;
+  transition: all 0.2s ease-in;
+  box-shadow: 0.4rem 0.4rem 0.9rem #05535efd;
+}
+
+.cards_atendimento:hover {
+  margin: 50px 40px 15px 0px;
+  border: #f2295be7 2px solid;
+  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: 0.6rem 0.4rem 0.9rem #f2295bf6;
+}
+
+.titulo_card,
+.texto_card {
+  text-align: center;
+}
+
+.titulo_card {
+  padding-bottom: 12px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "DM Sans", sans-serif;
+}
+
+.texto_card {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.cards_atendimento > :is(a) {
+  position: relative;
+  top: 31px;
+}
+
+.btn_acesso {
+  background-color: #bb0101;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  width: 235px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.cards_atendimento:hover .btn_acesso {
+  transform: translateY(-10px);
+  border-radius: 2.5rem 0 2.5rem 0;
+  box-shadow: 0rem 0.2rem 0rem #000000fd;
+}
+
+.cards_atendimento:hover .btn_acesso:active {
+  box-shadow: inset -0.2rem -0.1rem 0.3rem #000000fd, inset 0 0 0.5rem #000000fd;
+}
+
+#frase_topo,
+#frase_base {
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  color: #fafafa;
+}
+
+#frase_topo {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 30px;
+  left: 316px;
+}
+
+#frase_base {
+  left: 25em;
+  margin-top: 2.5em;
+  font-size: 1em;
+  font-style: italic;
+  width: 31em;
+  letter-spacing: 1px;
+}
+
+#img_ricardo_perfil {
+  position: relative;
+  left: 120px;
+  filter: drop-shadow(-23px 7px 12px #000000e7);
+}
+
+#seta_tracejada {
+  position: relative;
+  width: 30em;
+  left: 5em;
+  bottom: -1em;
+}
+
+img#polygon2 {
+    width: auto;
+    height: 66vh;
+    position: sticky;
+}
+
+#informacoes_para_contato {
+  display: grid;
+  position: absolute;
+  width: 360px;
+  height: 400px;
+  right: 35px;
+  bottom: 0px;
+  text-align: center;
+}
+
+#titulo_name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-size: 2.5em;
+}
+
+.bnt_redes,
+.informacoes_para_contato > :is(a) {
+  position: relative;
+}
+
+.bnt_redes {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  width: 100%;
+  font-size: 1.4em;
+  border-radius: 10em;
+  letter-spacing: 1.2px;
+  overflow: hidden;
+  height: 75px;
+  cursor: pointer;
+}
+
+#whatsapp {
+  background-image: linear-gradient(45deg, #1ff54a, #1bd741, #16b436);
+}
+
+#instagram {
+  background-image: linear-gradient(45deg, #fa1b87 0%, #fab355, #f73b3b 100%);
+}
+
+#facebook {
+  background-image: linear-gradient(45deg, #0672ff, #4e95f1, #0e60cc);
+}
+
+.name_button {
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+
+.bnt_redes:hover span {
+  transform: translateX(15rem);
+}
+
+.bnt_redes .icon {
+  background-color: #ffffff86;
+  height: 64px;
+  width: 64px;
+  border-radius: 15em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.4em;
+  top: 5px;
+  transition: all 0.5s;
+}
+
+.icon #img_icon {
+  margin: 0;
+  padding: 0;
+  transition: all 0.6s;
+}
+
+.bnt_redes:hover .icon #img_icon {
+  transform: rotate(360deg);
+}
+
+.bnt_redes:hover .icon {
+  width: calc(100% - 1.1rem);
+  border-radius: 10em;
+}
+
+#grid-layout {
+  display: flex;
+  justify-content: center;
+}
+
+#author {
+  color: #dad4d4;
+  font-size: 1em;
+  padding: 5px;
 }
 
 #secao_sobre {
-    width: 100%;
-    height: 105vh;
-    overflow: hidden;
-    box-shadow: inset 0px 10px 1px #8d0404;
-    background-image: url("../img/bg_rede_social.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    background-color: #0a0b0d;
+  width: 100%;
+  height: 79vh;
+  overflow: hidden;
+  box-shadow: inset 0px 10px 1px #8d0404;
+  background-image: url("../img/bg_rede_social.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  background-color: #0a0b0d;
 }
 
 #p_sobre_mim,
 #span_btn_insta,
 #spn_frase {
-    color: #ffffff;
-    text-align: center;
+  color: #ffffff;
+  text-align: center;
 }
 
 .secao_atendimento {
-    width: 100%;
-    height: 55vh;
-    background-color: #0a0b0d;
+  width: 100%;
+  height: 410px;
+  background-color: #070c0c;
 }
 
 #transparent_background {
-    position: absolute;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    width: 100%;
-    height: 55vh;
-    display: flex;
-    justify-content: flex-start;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 410px;
+  align-content: center;
+  text-align: center;
+  box-shadow: inset 0px -10px 1px #8d0404;
 }
 
 #secao_contato {
-    overflow: hidden;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    background-color: #ff0000;
+  overflow: hidden;
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  background-color: #ff0000;
+}
+
+.riders {
+  position: absolute;
+  width: 265px;
+  height: 258px;
+}
+#motorcycle-rider1 {
+  left: 40vw;
+  top: 234vh;
+}
+#motorcycle-rider2 {
+  left: 14vw;
+  top: 208vh;
 }
 
 #area_img_frase {
-    width: 42%;
+  width: 42%;
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
 }
 
 #grid_layout {
-    display: flex;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  margin-left: -15px;
 }
 
 .container_contato_redes {
-    width: 58%;
-    height: auto;
+  width: 58%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 #footer_copyright {
-    width: 100%;
-    height: 30px;
-    margin: 0;
-    padding: 0;
-    background-color: #111010;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: #111010;
 }
 
+/*    SCREEN SIZE     */
 
-@media (min-width : 1400px) {
+@media (min-width: 1400px) {
+  #secao_cartao_apresentacao {
+    height: 50vh;
+    min-height: 414px;
+    max-height: 706px;
+  }
 
-        #logo_marca {
-            position: relative;
-            left: 1em;
-            top: 6em;
-        }
+  #logo_marca {
+    top: 5.5em;
+  }
 
-        img#polygon1 {
-            width: 58em;
-            height: 32em;
-            position: relative;
-            left: 2em;
-            bottom: 0em;
-        }
+  img#polygon1 {
+    width: auto;
+    height: 57vh;
+  }
 
-        #informacoes_cartao {
-            position: absolute;
-            left: 23em;
-            top: 9em;
-        }
+  #container_image {
+    width: 34%;
+    height: auto;
+  }
 
-        #informacoes_cartao h1 {
-            position: absolute;
-            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-            text-align: start;
-            font-weight: bold;
-            width: 570px;
-            left: auto;
-            top: -32px;
-        }
+  #informacoes_cartao {
+    left: 33vw;
+    top: 11vh;
+  }
 
-        #info_cartao_ola {
-            font-size: 1.1em;
-        }
+  #informacoes_cartao h1 {
+    width: 500px;
+  }
 
-        .info_cartao_nome {
-            font-size: 2.3em;
-        }
+  #info_cartao_ola,
+  #info_cartao_profissao {
+    font-size: 1em;
+  }
 
-        #info_cartao_profissao {
-            font-size: 1.1em;
-        }
+  .info_cartao_nome {
+    font-size: 2em;
+  }
 
-        #logo_honda {
-            width: 122px;
-            height: 110px;
-            position: relative;
-            left: 423px;
-            top: 228px;
-        }
+  #logo_honda {
+    left: 22em;
+    top: 1em;
+  }
 
-        #conteudo_sobre {
-            width: 436px;
-            height: 90vh;
-            margin-left: 47px;
-            padding-top: 120px;
-            text-align: center;
-        }
+  #conteudo_sobre {
+    width: 30vw;
+    margin-left: 60px;
+    margin-top: 35px;
+    padding-top: 16px;
+  }
 
-        #spn_frase,
-        #span_btn_insta {
-            font-style: italic;
-            font-size: 1.4em;
-        }
+  span#span_btn_insta:after {
+    font-size: 1.3em;
+    font-weight: bold;
+    top: -5px;
+    right: -25px;
+  }
 
-        #btn_insta {
-            margin-top: 15px;
-            width: 300px;
-            cursor: pointer;
-            height: 48px;
-            background: linear-gradient(95deg, #002296, #82008F, #C0007A, #EA0C5F, #FF5341, #ff8820, #d8a713, #002296);
-            background-size: 300%;
-            border-radius: 30px;
-        }
+  .btn_acesso {
+    font-size: 1.25em;
+  }
 
-        #btn_insta:hover {
-            animation: ani 5s linear infinite;
-            border: none;
-        }
+  #frase_base {
+    left: 26vw;
+    margin-top: 2px;
+    width: 475px;
+  }
 
-        @keyframes ani {
-            0% {
-                background-position: 0%;
-            }
-            100% {
-                background-position: 400%;
-            }
-        }
+  #img_ricardo_perfil {
+    position: relative;
+    left: 120px;
+    filter: drop-shadow(-23px 7px 12px #000000e7);
+  }
 
-        #span_btn_insta {
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
-            font-weight: 600;
-        }
+  #seta_tracejada {
+    position: relative;
+    width: 30em;
+    left: 5em;
+    bottom: -1em;
+  }
 
-        span#span_btn_insta:after {
-            content: '»';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -15px;
-            transition: 0.5s;
-        }
-
-        button#btn_insta:hover span#span_btn_insta {
-            padding-right: 15px;
-        }
-
-        button#btn_insta:hover span#span_btn_insta:after {
-            opacity: 1;
-            right: 0;
-        }
-
-        #p_sobre_mim {
-            margin: 90px 0 0 0;
-            font-size: 1.6em;
-            font-weight: 500;
-            line-height: 40px;
-            text-align: center;
-            font-family: 'Ubuntu', sans-serif;
-        }
-
-        #titulo_atendimento {
-            color: #ffffff;
-            padding-top: 90px;
-            margin-left: 30px;
-            font-size: 4em;
-            font-weight: bold;
-        }
-
-        .cards_atendimento {
-            background-color: rgba(255, 255, 255, 0.863);
-            margin: 55px 40px 15px 0px;
-            width: 290px;
-            height: 260px;
-            padding: 20px;
-            border-radius: 1rem;
-            border: #037c83c0 2px solid;
-            transition: all 0.3s ease-in;
-            box-shadow: 0.4rem 0.4rem 0.9rem #05535efd;
-        }
-
-        .cards_atendimento:hover {
-            margin: 50px 40px 15px 0px;
-            border: #f2295be7 2px solid;
-            border-radius: 2.5rem 0 2.5rem 0;
-            box-shadow: 0.6rem 0.4rem 0.9rem #f2295bf6;
-        }
-
-        .titulo_card,
-        .texto_card {
-            text-align: center;
-        }
-
-        .titulo_card {
-            padding-bottom: 12px;
-            font-weight: bold;
-            font-style: italic;
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        .texto_card {
-            font-size: 1.3em;
-            font-weight: 500;
-            white-space: normal;
-            overflow: hidden;
-        }
-
-        .cards_atendimento> :is(a) {
-            position: relative;
-            top: 31px;
-        }
-
-        .btn_acesso {
-            background-color: #e23737;
-            color: #ffffff;
-            font-size: 1em;
-            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-            width: 235px;
-            height: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease-in;
-        }
-
-        .cards_atendimento:hover .btn_acesso {
-            border-radius: 2.5rem 0 2.5rem 0;
-            box-shadow: 0.2rem 0.3rem 0.3rem #000000fd;
-        }
-
-        .cards_atendimento:hover .btn_acesso:active {
-            box-shadow: inset -0.2rem -0.1rem 0.3rem #000000fd,
-                inset 0 0 0.5rem #000000fd;
-        }
-
-        #frase_topo,
-        #frase_base {
-            position: relative;
-            font-family: 'DM Sans', sans-serif;
-            color: #fafafa;
-        }
-
-        #frase_topo {
-            font-size: 1.5em;
-            text-align: center;
-            margin: 30px 30px;
-            left: 350px;
-        }
-
-        #frase_base {
-            margin: 0px 116px;
-            left: 306px;
-            bottom: 21px;
-            font-size: 1em;
-            font-style: italic;
-            width: 505px;
-            letter-spacing: 1px;
-        }
-
-        #img_ricardo_perfil {
-            position: relative;
-            left: 120px;
-            filter: drop-shadow(-23px 7px 12px #000000e7);
-        }
-
-        #seta_tracejada {
-            position: relative;
-            width: 628px;
-            left: 50px;
-            bottom: 50px;
-        }
-
-        img#polygon2 {
-            width: 900px;
-            height: 502px;
-            position: relative;
-            left: 111px;
-        }
-
-        #informacoes_para_contato {
-            display: grid;
-            position: absolute;
-            width: 360px;
-            height: 460px;
-            right: 35px;
-            bottom: 70px;
-            text-align: center;
-        }
-
-        #titulo_name {
-            margin-top: 75px;
-            margin-bottom: 10px;
-            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-            font-size: 2.5em;
-        }
-
-        .bnt_redes,
-        .informacoes_para_contato> :is(a) {
-            position: relative;
-        }
-
-        .bnt_redes {
-            font-family: 'Times New Roman', Times, serif;
-            display: flex;
-            width: 100%;
-            font-size: 1.4em;
-            border-radius: 10em;
-            letter-spacing: 1.2px;
-            overflow: hidden;
-            height: 75px;
-            cursor: pointer;
-        }
-
-        #whatsapp {
-            background-image: linear-gradient(45deg, #1ff54a, #1BD741, #16b436);
-        }
-
-        #instagram {
-            background-image: linear-gradient(45deg, #fa1b87 0%, #fab355, #f73b3b 100%);
-        }
-
-        #facebook {
-            background-image: linear-gradient(45deg, #0672ff, #4e95f1, #0e60cc);
-        }
-
-        .name_button {
-            transition: all 0.3s ease-in-out;
-            margin: auto;
-        }
-
-        .bnt_redes:hover span {
-            transform: translateX(15rem);
-        }
-
-        .bnt_redes .icon {
-            background-color: #ffffff86;
-            height: 64px;
-            width: 64px;
-            border-radius: 15em;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            left: 0.4em;
-            top: 5px;
-            transition: all 0.5s;
-        }
-
-        .icon #img_icon {
-            margin: 0;
-            padding: 0;
-            transition: all 0.6s;
-        }
-
-        .bnt_redes:hover .icon #img_icon {
-            transform: rotate(360deg);
-        }
-
-        .bnt_redes:hover .icon {
-            width: calc(100% - 1.1rem);
-            border-radius: 10em;
-        }
-
-        #grid-layout {
-            display: flex;
-            justify-content: center;
-        }
-
-        #author {
-            color: #dad4d4;
-            font-size: 1em;
-            padding: 5px;
-        }
 }
 
-@media (min-width : 2500px) {
+@media (min-width: 1840px) {
+    
+}
 
-        img#banner { height: 380px; }
+@media (min-width: 2500px) {
+  
 
-        #secao_cartao_apresentacao { height: 60vh; }
-
-        #logo_marca { left: 16em; top: 10em; }
-
-        img#polygon1 {
-            width: 79em;
-            height: 50em;
-            left: 26.6em;
-            bottom: 3em;
-        }
-
-        #informacoes_cartao {
-            left: 51em;
-            top: 12em;
-        }
-
-        #informacoes_cartao h1 { width: 27em; }
-        
-        #info_cartao_ola, #info_cartao_profissao { font-size: 1.5em; }
-        
-        .info_cartao_nome { font-size: 3.5em; }
-        
-        #logo_honda {
-            width: 14em;
-            height: 14em;
-            left: 38em;
-            top: 17em;
-        }
-        
-        #conteudo_sobre {
-            width: 53em;
-            height: 53em;
-            display: grid;
-            align-content: center;
-            margin-top: 80px;
-        }
-
-        #spn_frase, #span_btn_insta {
-            font-size: 2.7em;
-        }
-
-        #btn_insta {
-            margin-top: 16px;
-            width: 33em;
-            height: 4.4em;
-        }
-
-        #p_sobre_mim {
-            margin: 90px 0 0 0;
-            font-size: 3.7em;
-            line-height: 1.1em;
-            text-align: center;
-        }
-
-        span#span_btn_insta:after {
-            top: -0.01em;
-            left: 4.4em;
-        }
-        
-        #titulo_atendimento {
-            width: 7.5em;
-            font-size: 7em;
-        }
-
-        .cards_atendimento {
-            width: 500px;
-            height: 400px;
-            padding: 35px;
-        }
-
-        .titulo_card {
-            padding-bottom: 42px;
-            margin: 0;
-            font-size: 4em;
-        }
-
-        .texto_card {
-            font-size: 2.3em;
-            margin-bottom: 1em;
-        }
-
-        .btn_acesso {
-            font-size: 2em;
-            width: 13em;
-            height: 1.5em;
-        }
 }
