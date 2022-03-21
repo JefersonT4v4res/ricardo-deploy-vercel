@@ -114,6 +114,8 @@ div#divisoria {
   display: flex;
   background-color: #ff0000;
   width: 100%;
+  min-height: 414px;
+  max-height: 606px;
   overflow: hidden;
 }
 
@@ -126,6 +128,8 @@ div#divisoria {
 img#polygon1 {
   width: auto;
   height: 57vh;
+  min-height: 414px;
+  max-height: 606px;
   position: sticky;
 }
 
@@ -144,8 +148,8 @@ img#polygon1 {
 
 #informacoes_cartao {
   position: absolute;
-  left: 60%;
-  top: 17%;
+  left: 25vw;
+  top: 13vh;
 }
 
 #informacoes_cartao h1 {
@@ -173,12 +177,14 @@ img#polygon1 {
 }
 
 #conteudo_sobre {
+  display: block;
   width: 26em;
-  height: 79vh;
-  background: #070c0c;
-  margin-left: 1em;
-  margin-top: 3em;
-  padding-top: 4em;
+  max-width: 572px;
+  height: 300px;
+  background: #070c0c17;
+  margin-left: 60px;
+  margin-top: 35px;
+  padding-top: 16px;
   text-align: center;
 }
 
@@ -261,6 +267,7 @@ button#btn_insta:hover span#span_btn_insta:after {
   color: #ffffff;
   font-size: 4em;
   font-weight: bold;
+  width: 39vw;
 }
 
 .cards_atendimento {
@@ -493,7 +500,7 @@ img#polygon2 {
 #transparent_background {
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 410px;
@@ -563,17 +570,10 @@ img#polygon2 {
 @media (min-width: 1400px) {
   #secao_cartao_apresentacao {
     height: 50vh;
-    min-height: 414px;
-    max-height: 706px;
   }
 
   #logo_marca {
     top: 5.5em;
-  }
-
-  img#polygon1 {
-    width: auto;
-    height: 57vh;
   }
 
   #container_image {
@@ -643,7 +643,169 @@ img#polygon2 {
 
 }
 
-@media (min-width: 1840px) {
+@media (min-width: 1800px) {
+    img#banner {
+        max-height: 360px;
+    }
+
+    #logo_marca {
+        top: 12vh;
+    }
+
+    img#polygon1 {
+        max-height: 606px;
+      }
+
+    #informacoes_cartao {
+        left: 27vw;
+        top: 10vh;
+    }
+
+    #informacoes_cartao h1 {
+        width: 700px;
+    }
+
+    #info_cartao_ola, #info_cartao_profissao {
+        font-size: 1.4em;
+    }
+
+    .info_cartao_nome {
+        font-size: 2.9em;
+    }
+
+    #logo_honda {
+        width: 140px;
+        height: 116px;
+        left: 29vw;
+        top: 0vh;
+    }
+
+    #secao_sobre {
+        height: 70vh;
+        min-height: 582px;
+        max-height: 724px;
+    }
+
+    #conteudo_sobre {
+        margin-left: 90px;
+        margin-top: 111px;
+    }
+
+    #spn_frase, #span_btn_insta {
+        font-style: italic;
+        font-size: 1.9em;
+    }
+
+    #btn_insta {
+        margin-top: 20px;
+        width: 436px;
+        height: 75px;
+    }
+
+    span#span_btn_insta:after {
+        font-size: 1.9em;
+        top: -19px;
+    }
+    
+    button#btn_insta:hover span#span_btn_insta:after {
+        right: -17px;
+    }
+
+    #p_sobre_mim {
+        margin: 55px 0 0 0;
+        font-size: 2.1em;
+    }
+
+    #titulo_atendimento {
+        font-size: 5em;
+        width: 31vw;
+    }
+
+    .cards_atendimento {
+        margin: 48px 31px 27px 0px;
+        width: 340px;
+        height: 290px;
+    }
+
+    .cards_atendimento:hover {
+        margin: 48px 31px 27px 0px;
+        transform: translateY(-10px);
+    }
+
+    .titulo_card {
+        font-size: 2.8em;
+        padding-bottom: 4px;
+    }
+
+    .texto_card {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .btn_acesso {
+        width: 256px;
+        height: 40px;
+    }
+
+    .btn_acesso {
+        font-size: 1.5em;
+    }
+
+    #secao_contato {
+        height: 55vh;
+        min-height: 414px;
+        max-height: 602px;
+    }
+
+    #area_img_frase {
+        justify-content: space-evenly;
+    }
+
+    #frase_topo {
+        font-size: 2em;
+        left: 276px;
+    }
+
+    #frase_base {
+        left: 18.5vw;
+        width: 40vw;
+        min-width: 700px;
+        font-size: 1.5em;
+    }
+
+    #grid_layout {
+        margin-left: 263px;
+    }
+
+    img#polygon2 {
+        min-height: 414px;
+        max-height: 606px;
+    }
+
+    #informacoes_para_contato {
+        width: 430px;
+        right: 84px;
+        bottom: 117px;
+    }
+
+    #titulo_name {
+        margin-bottom: 5px;
+        font-size: 3.3em;
+    }
+
+    .bnt_redes {
+        border-radius: 73em;
+        height: 92px;
+    }
+
+    .bnt_redes .icon {
+        height: 81px;
+        width: 82px;
+    }
+
+    .bnt_redes:hover span {
+        transform: translateX(18rem);
+      }
     
 }
 
