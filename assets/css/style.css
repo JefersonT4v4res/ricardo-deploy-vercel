@@ -700,6 +700,7 @@ img#polygon2 {
         margin-top: 20px;
         width: 436px;
         height: 75px;
+        border-radius: 40px;
     }
 
     span#span_btn_insta:after {
@@ -785,7 +786,7 @@ img#polygon2 {
     #informacoes_para_contato {
         width: 430px;
         right: 84px;
-        bottom: 117px;
+        bottom: 89px;
     }
 
     #titulo_name {
@@ -811,5 +812,48 @@ img#polygon2 {
 
 @media (min-width: 2500px) {
   
+    #secao_cartao_apresentacao {
+        max-height: 702px;
+    }
+
+    img#polygon1 {
+        max-height: 702px;
+    }
+
+    #informacoes_cartao {
+        left: 31vw;
+        top: 11vh;
+    }
+
+    #informacoes_cartao h1 {
+        width: auto;
+    }
+
+    #info_cartao_ola, #info_cartao_profissao {
+        font-size: 1.8em;
+    }
+
+    .info_cartao_nome {
+        font-size: 3.6em;
+    }
+
+    #logo_honda {
+        left: 27vw;
+        top: 4vh;
+    }
+
+    #frase_topo {
+        font-size: 2.7em;
+        width: 53vw;
+    }
+
+    #frase_base {
+        left: 20.5vw;
+        font-size: 1.9em;
+    }
+
+    #grid_layout {
+        margin-left: 424px;
+    }
 
 }
