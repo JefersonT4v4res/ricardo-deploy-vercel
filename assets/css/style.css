@@ -585,7 +585,7 @@ img#polygon2 {
 
     #informacoes_cartao {
       left: 28vw;
-      top: 5vh;
+      top: 90px;
     }
 
     #logo_honda {
@@ -597,6 +597,7 @@ img#polygon2 {
 
     #secao_sobre {
       height: 35vh;
+      min-height: 508px;
       background-size: contain;
       background-position: top right;
     }
@@ -605,6 +606,7 @@ img#polygon2 {
       width: 24em;
       display: flex;
       height: 31vh;
+      min-height: 457px;
       background: #070c0c;
       flex-direction: column;
       align-content: center;
@@ -617,16 +619,18 @@ img#polygon2 {
   }
 
     .secao_atendimento {
-      height: 62vh;
-      max-height: 1065px;
+      height: 52vh;
+      min-height: 900px;
+      max-height: 1059px;
     }
     
     #transparent_background {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      height: 62vh;
-      max-height: 1065px;
+      height: 52vh;
+      min-height: 900px;
+      max-height: 1059px;
       padding-bottom: 30px;
     }
 
