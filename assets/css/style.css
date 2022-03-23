@@ -368,6 +368,7 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #seta_tracejada {
+  display: flex;
   position: relative;
   width: 30em;
   left: 5em;
@@ -804,6 +805,7 @@ img#polygon2 {
   }
 
   #seta_tracejada {
+    display: flex;
     position: relative;
     width: 30em;
     left: 5em;
@@ -934,6 +936,10 @@ img#polygon2 {
         justify-content: space-evenly;
     }
 
+    #seta_tracejada {
+      display: flex;
+    }
+
     #frase_topo {
         font-size: 2em;
         left: 276px;
@@ -1020,6 +1026,10 @@ img#polygon2 {
     #logo_honda {
         left: 17vw;
         top: 1vh;
+    }
+
+    #seta_tracejada {
+      display: flex;
     }
 
     #frase_topo {
