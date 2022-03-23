@@ -508,6 +508,9 @@ img#polygon2 {
   align-content: center;
   text-align: center;
   box-shadow: inset 0px -10px 1px #8d0404;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 #secao_contato {
@@ -619,8 +622,9 @@ img#polygon2 {
     }
     
     #transparent_background {
-      flex-wrap: nowrap;
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       height: 62vh;
       max-height: 1065px;
       padding-bottom: 30px;
@@ -629,14 +633,14 @@ img#polygon2 {
     #titulo_atendimento {
       margin-bottom: 10px;
       font-size: 3em;
-      width: 70vw;
+      width: 80vw;
     }
 
     .cards_atendimento {
       padding: 5px;
       width: 331px;
       height: 311px;
-      margin: 10px 40px 5px 0px;
+      margin: 10px 20px 5px 0px;
     }
 
     .cards_atendimento:hover {
@@ -701,8 +705,8 @@ img#polygon2 {
     }
 
     #informacoes_para_contato {
-      right: 25px;
-      bottom: 44px;
+    right: 25px;
+    bottom: 44px;
     }
 
 
@@ -763,6 +767,12 @@ img#polygon2 {
     font-weight: bold;
     top: -5px;
     right: -25px;
+  }
+
+  #titulo_atendimento {
+    margin-bottom: 76px;
+    font-size: 5em;
+    width: 84vw;
   }
 
   .btn_acesso {
