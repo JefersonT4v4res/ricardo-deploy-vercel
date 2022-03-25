@@ -376,9 +376,12 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 img#polygon2 {
-    width: auto;
-    height: 66vh;
-    position: sticky;
+  width: auto;
+  height: 57vh;
+  min-height: 414px;
+  max-height: 606px;
+  position: absolute;
+  left: 20vw;
 }
 
 #informacoes_para_contato {
@@ -578,13 +581,175 @@ img#polygon2 {
 
 /*    SCREEN SIZE     */
 
+@media (min-width: 768px) {
+ 
+  #secao_cartao_apresentacao, img#polygon1 {
+    min-height: 320px;
+    max-height: 423px;
+  }
+
+  #logo_marca {
+    left: 2vw;
+    top: 5vh;
+  }
+
+  img#polygon1 {
+    height: 51vh;
+    left: 12vw;
+  }
+
+  #informacoes_cartao {
+    left: 32vw;
+    top: 4.7vh;
+  }
+
+  #info_cartao_ola, #info_cartao_profissao {
+    font-size: 0.5em;
+  }
+
+  .info_cartao_nome {
+    font-size: 1.07em;
+  }
+
+  #secao_sobre,  #conteudo_sobre {
+    height: 53vh;
+    min-height: 571px;
+  }
+
+  #secao_sobre {
+    background-size: cover;
+    background-position: center;
+  }
+
+  #conteudo_sobre {
+    width: 24em;
+    display: flex;
+    background: #070c0cdb;
+    flex-direction: column;
+  }
+
+  #p_sobre_mim {
+    margin: 39px 0 0 0;
+  }
+
+  .secao_atendimento, #transparent_background {
+    height: 52vh;
+    min-height: 800px;
+    max-height: 900px;
+  }
+
+  #transparent_background {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+    flex-direction: row;
+  }
+
+  #titulo_atendimento {
+    margin-bottom: 10px;
+    font-size: 2.7em;
+    width: 80vw;
+  }
+
+  .cards_atendimento {
+    padding: 21px;
+    width: 320px;
+    height: 277px;
+    margin: 10px 4px 5px 0px;
+  }
+
+  .cards_atendimento:hover {
+    margin: 50px 40px 5px 0px;
+    transform: translate(30px, -40px);
+  }
+
+  .texto_card {
+    font-size: 1.4em;
+  }
+
+  .btn_acesso {
+    width: 256px;
+    height: 40px;
+    font-size: 1.5em;
+  }
+
+  #secao_contato, img#polygon2 {
+    min-height: 422px;
+    max-height: 451px;
+  }
+
+  #secao_contato {
+    height: 26vh;
+    align-items: center;
+  }
+
+
+  #img_ricardo_perfil {
+    top: 10px;
+    left: 92px;
+  }
+
+  #seta_tracejada {
+    display: none;
+  }
+
+  #frase_topo {
+    margin-top: 6px;
+    font-size: 1.3em;
+    width: 390px;
+    left: 19px;
+  }
+
+  #frase_base {
+    left: 6em;
+    width: 274px;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  img#polygon2 {
+      height: 44vh;
+      left: 0;
+  }
+
+  #informacoes_para_contato {
+    width: 262px;
+    height: 372px;
+    right: 5px;
+    top: -208px;
+  }
+
+  #titulo_name {
+    margin-top: 60px;
+    margin-bottom: 5px;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .name_button {
+    margin-left: 95px;
+  } 
+
+  .bnt_redes {
+    height: 70px;
+    width: 250px;
+    text-align: center;
+  }
+
+  .bnt_redes .icon {
+    height: 60px;
+    width: 62px;
+  }
+
+}
+
 @media (min-width: 1024px) {
     img#banner {
       max-height: 333px;
     }
 
     #logo_marca {
-      left: 4em;
+      left: 4vw;
     }
 
     img#polygon1 {
@@ -616,7 +781,7 @@ img#polygon2 {
       display: flex;
       height: 31vh;
       min-height: 457px;
-      background: #070c0c;
+      background: #070c0cdb;
       flex-direction: column;
       align-content: center;
       justify-content: center;
@@ -658,7 +823,7 @@ img#polygon2 {
 
     .cards_atendimento:hover {
       margin: 50px 40px 5px 0px;
-      transform: translate(100px, -35px);
+      transform: translate(-30px, -41px);
     }
 
     .titulo_card {
@@ -674,9 +839,6 @@ img#polygon2 {
     .btn_acesso {
         width: 256px;
         height: 40px;
-    }
-
-    .btn_acesso {
         font-size: 1.5em;
     }
 
@@ -721,9 +883,6 @@ img#polygon2 {
     right: 25px;
     bottom: 44px;
     }
-
-
-
 
 }
 
@@ -947,6 +1106,7 @@ img#polygon2 {
 
     #frase_base {
         left: 18.5vw;
+        margin-top: 53px;
         width: 40vw;
         min-width: 700px;
         font-size: 1.5em;
@@ -1038,6 +1198,7 @@ img#polygon2 {
     }
 
     #frase_base {
+        margin-top: 53px;
         left: 20.5vw;
         font-size: 1.9em;
     }
