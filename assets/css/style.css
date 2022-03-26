@@ -585,7 +585,7 @@ img#polygon2 {
 
   #logo_marca {
     position: relative;
-    left: 4em;
+    left: 5em;
     top: 3.5em;
   }
 
@@ -600,7 +600,8 @@ img#polygon2 {
   }
 
   img#polygon1 {
-    height: 39vh;
+    height: 23vh;
+    min-height: 380px;
     left: -41vw;
     top: 214px;
     transform: rotate(90deg);
@@ -608,7 +609,7 @@ img#polygon2 {
 
   #informacoes_cartao {
     left: 3vw;
-    top: 41vh;
+    top: 30vh;
   }
 
   #informacoes_cartao h1 {
@@ -632,7 +633,8 @@ img#polygon2 {
   }
 
   #secao_sobre {
-    height: 86vh;
+    height: 64vh;
+    min-height: 680px;
     background-position: top right;
     background-size: 128%;
     background-color: #070c0c;
@@ -690,8 +692,8 @@ img#polygon2 {
     font-size: 1.3em;
   }
   #secao_contato {
-    height: 100vh;
-    min-height: 1000px;
+    height: 72vh;
+    min-height: 988px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -724,7 +726,8 @@ img#polygon2 {
   }
 
   img#polygon2 {
-    height: 40vh;
+    height: 28vh;
+    min-height: 385px;
     left: -17vw;
     right: 0;
     bottom: 58px;
