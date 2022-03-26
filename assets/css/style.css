@@ -573,7 +573,162 @@ img#polygon2 {
 /*    SCREEN SIZE     */
 
 @media only screen and (min-width: 425px) and (max-width: 760px) {
+  img#banner {
+    height: 27vh;
+  }
+
+  #secao_cartao_apresentacao {
+    display: flex;
+    flex-direction: column;
+    min-height: 785px;
+  }
+
+  #logo_marca {
+    position: relative;
+    left: 1.5em;
+    top: 2em;
+  }
+
+  #container_image {
+    width: 100%;
+    height: auto;
+  }
   
+  #container_informacoes_cartao {
+    width: 100%;
+    height: auto;
+  }
+
+  img#polygon1 {
+    height: 48vh;
+    left: -41vw;
+    top: 214px;
+    transform: rotate(90deg);
+  }
+
+  #informacoes_cartao {
+    left: 10vw;
+    top: 43vh;
+  }
+
+  #informacoes_cartao h1 {
+    text-align: center;
+    line-height: 34px;
+  }
+
+  #info_cartao_ola, #info_cartao_profissao {
+    font-size: 0.7em;
+  }
+
+  .info_cartao_nome {
+    font-size: 1.5em;
+  }
+
+  #logo_honda {
+    width: 76px;
+    height: 66px;
+    left: 17em;
+    top: 0.5em;
+  }
+
+  #secao_sobre {
+    height: 86vh;
+    background-position: top right;
+    background-size: 128%;
+    background-color: #070c0c;
+  }
+
+  #conteudo_sobre {
+  width: 400px;
+  margin-left: 13px;
+  margin-top: 309px;
+  background-color: transparent;
+  }
+
+  #p_sobre_mim {
+    margin: 18px 0 0 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .secao_atendimento {
+    height: 117vh;
+    min-height: 1184px;
+  }
+
+  #transparent_background {
+    display: flex;
+    height: 126vh;
+    min-height: 1184px;
+    padding: 30px;
+  }
+
+  #titulo_atendimento {
+    font-size: 3.3em;
+    font-weight: bold;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .cards_atendimento {
+    background-color: rgba(255, 255, 255, 0.863);
+    margin: 21px 40px 15px 0px;
+    width: 290px;
+    height: 260px;
+    padding: 20px;
+  }
+
+  .cards_atendimento:hover {
+    transform: translate(30px, -55px);
+  }
+
+  #secao_contato {
+    height: 100vh;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  #frase_topo {
+    font-size: 1.3em;
+    width: 95vw;
+    left: 13px;
+  }
+
+  #img_ricardo_perfil {
+    top: 20px;
+    left: 110px;
+  }
+
+  #seta_tracejada {
+    display: none;
+  }
+
+  #frase_base {
+    left: 23px;
+    margin-top: 60px;
+    font-size: 0.8em;
+    width: 95vw;
+  }
+
+  img#polygon2 {
+    height: 48vh;
+    left: -16vw;
+    right: 0;
+    bottom: 59px;
+    transform: rotate(90deg);
+  }
+
+  #informacoes_para_contato {
+    right: 0;
+    bottom: 0px;
+    left: 39px;
+  }
+
 }
 
 @media only screen and (min-width: 760px) and (max-width: 1024px) {
