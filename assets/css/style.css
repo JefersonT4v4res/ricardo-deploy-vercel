@@ -770,15 +770,16 @@ img#polygon2 {
   }
 
   img#polygon1 {
-    height: 48vh;
-    left: -49vw;
+    height: 63vh;
+    min-height: 430px;
+    left: -41vw;
     top: 214px;
     transform: rotate(90deg);
   }
 
   #informacoes_cartao {
     left: 10vw;
-    top: 38vh;
+    top: 56vh;
   }
 
   #informacoes_cartao h1 {
@@ -802,7 +803,8 @@ img#polygon2 {
   }
 
   #secao_sobre {
-    height: 86vh;
+    height: 108vh;
+    min-height: 744px;
     background-position: top right;
     background-size: 128%;
     background-color: #070c0c;
@@ -886,7 +888,8 @@ img#polygon2 {
   }
 
   img#polygon2 {
-    height: 45vh;
+    height: 64vh;
+    min-height: 438px;
     left: -17vw;
     right: 0;
     bottom: 65px;
