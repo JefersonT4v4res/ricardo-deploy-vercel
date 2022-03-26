@@ -101,7 +101,7 @@ header#secao_cabecalho {
 img#banner {
   -webkit-box-reflect: below 1px
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-  width: 100vw;
+  width: 100%;
   max-height: 320px;
 }
 
