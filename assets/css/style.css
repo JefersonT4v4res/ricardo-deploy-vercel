@@ -897,7 +897,7 @@ img#polygon2 {
   }
 }
 
-@media only screen and (min-width: 760px) and (max-width: 1024px) {
+@media only screen and (min-width: 760px) and (max-width: 1023px) {
  
   #secao_cartao_apresentacao, img#polygon1 {
     min-height: 320px;
@@ -1069,7 +1069,7 @@ img#polygon2 {
 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {
     img#banner {
       max-height: 333px;
     }
@@ -1079,27 +1079,31 @@ img#polygon2 {
     }
 
     img#polygon1 {
-      max-height: 395px;
-      left: 10vw;
+      max-height: 416px;
+      left: 2vw;
     }
 
     #informacoes_cartao {
-      left: 28vw;
-      top: 46px;
+      left: 20vw;
+      top: 90px;
+    }
+
+    #informacoes_cartao h1 {
+      width: auto;
     }
 
     #info_cartao_ola, #info_cartao_profissao {
-      font-size: 0.74em;
+      font-size: 0.8em;
     }
 
     .info_cartao_nome {
-      font-size: 1.5em;
+      font-size: 1.9em;
     }
 
     #logo_honda {
-      width: 91px;
-      height: 76px;
-      left: 16em;
+      width: 130px;
+      height: 125px;
+      left: 20em;
       top: 0.5em;
     }
 
@@ -1111,7 +1115,7 @@ img#polygon2 {
     }
 
     #conteudo_sobre {
-      width: 24em;
+      width: 30em;
       display: flex;
       height: 31vh;
       min-height: 457px;
@@ -1145,6 +1149,7 @@ img#polygon2 {
     #titulo_atendimento {
       font-size: 3em;
       width: 80vw;
+      margin-bottom: 63px;
     }
 
     .cards_atendimento {
@@ -1156,7 +1161,7 @@ img#polygon2 {
 
     .cards_atendimento:hover {
       margin: 50px 40px 5px 0px;
-      transform: translate(-30px, -41px);
+      transform: translate(-10px, -41px);
     }
 
     .titulo_card {
@@ -1189,7 +1194,8 @@ img#polygon2 {
     }
 
     #grid_layout {
-      margin-left: 167px;
+      margin-top: 13px;
+      margin-left: 148px;
     }
 
     #seta_tracejada {
@@ -1199,28 +1205,31 @@ img#polygon2 {
     #frase_topo {
       width: 56vw;
       margin-top: 6px;
-      left: 113px;
+      left: 105px;
     }
 
     #frase_base {
-      left: 16em;
+      left: 9em;
       width: auto;
-      margin-top: 33px;
+      margin-top: 23px;
+      font-size: 1.2em;
+      text-align: center;
     }
 
     img#polygon2 {
+      position: sticky;
         max-height: 455px;
         left: 10vw;
     }
 
     #informacoes_para_contato {
-    right: 25px;
-    bottom: 44px;
+      right: 25px;
+      bottom: 35px;
     }
 
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1800px) {
+@media only screen and (min-width: 1400px) and (max-width: 1799px) {
   #secao_cartao_apresentacao {
     height: 50vh;
   }
@@ -1243,7 +1252,7 @@ img#polygon2 {
   }
 
   #informacoes_cartao {
-    left: 24vw;
+    left: 30vw;
     top: 10vh;
   }
 
@@ -1253,7 +1262,7 @@ img#polygon2 {
   }
 
   .info_cartao_nome {
-    font-size: 2.3em;
+    font-size: 2.15em;
   }
 
   #logo_honda {
@@ -1290,6 +1299,15 @@ img#polygon2 {
     min-height: 746px;
   }
 
+  .cards_atendimento {
+    margin: 65px 40px 15px 0px;
+  }
+
+  .cards_atendimento:hover {
+    margin: 65px 40px 15px 0px;
+    transform: translateY(-50px);
+  }
+
   #titulo_atendimento {
     margin-bottom: 76px;
     font-size: 5em;
@@ -1307,36 +1325,36 @@ img#polygon2 {
 
   #frase_base {
     left: 16vw;
-    margin-top: 64px;
+    margin-top: 30px;
     width: auto;
     font-size: 1.2em;
   }
 
   #grid_layout {
-    margin-left: -35px;
-    margin-top: 45px;
+    margin-left: 42px;
+    margin-top: -5px;
   }
 
   img#polygon2 {
     position: sticky;
-    height: 55vh;
+    height: 64vh;
     min-height: 416px;
     max-height: 536px;
   }
 
   #informacoes_para_contato {
     width: 400px;
-    right: 35px;
-    top: 40px;  
+    right: 18px;
+    bottom: 17px;
   }
 
   #titulo_name {
-    font-size: 3.5em;
+    font-size: 3.3em;
   }
 
   .bnt_redes {
       border-radius: 73em;
-      margin-bottom: 20px;
+      margin-bottom: 13px;
       width: 383px;
       height: 92px;
   }
@@ -1353,7 +1371,7 @@ img#polygon2 {
 
 }
 
-@media only screen and (min-width: 1800px) and (max-width: 2500px){
+@media only screen and (min-width: 1800px) and (max-width: 2499px){
 
     img#banner {
         max-height: 400px;
