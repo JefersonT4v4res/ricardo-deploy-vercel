@@ -572,6 +572,173 @@ img#polygon2 {
 
 /*    SCREEN SIZE     */
 
+@media only screen and (max-width: 424px) {
+  img#banner {
+    height: 15vh;
+  }
+
+  #secao_cartao_apresentacao {
+    display: flex;
+    flex-direction: column;
+    min-height: 785px;
+  }
+
+  #logo_marca {
+    position: relative;
+    left: 4em;
+    top: 3.5em;
+  }
+
+  #container_image {
+    width: 100%;
+    height: auto;
+  }
+  
+  #container_informacoes_cartao {
+    width: 100%;
+    height: auto;
+  }
+
+  img#polygon1 {
+    height: 39vh;
+    left: -41vw;
+    top: 214px;
+    transform: rotate(90deg);
+  }
+
+  #informacoes_cartao {
+    left: 3vw;
+    top: 41vh;
+  }
+
+  #informacoes_cartao h1 {
+    text-align: center;
+    line-height: 34px;
+  }
+
+  #info_cartao_ola, #info_cartao_profissao {
+    font-size: 0.7em;
+  }
+
+  .info_cartao_nome {
+    font-size: 1.5em;
+  }
+
+  #logo_honda {
+    width: 91px;
+    height: 78px;
+    left: 16em;
+    top: 1.5em;
+  }
+
+  #secao_sobre {
+    height: 86vh;
+    background-position: top right;
+    background-size: 128%;
+    background-color: #070c0c;
+  }
+
+  #conteudo_sobre {
+    width: 340px;
+    margin-left: 18px;
+    margin-top: 309px;
+    background-color: transparent;
+  }
+
+  #p_sobre_mim {
+    margin: 18px 0 0 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .secao_atendimento {
+    height: 117vh;
+    min-height: 1184px;
+  }
+
+  #transparent_background {
+    display: flex;
+    height: 117vh;
+    min-height: 1184px;
+    padding: 30px;
+  }
+
+  #titulo_atendimento {
+    font-size: 2.8em;
+    font-weight: bold;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .cards_atendimento {
+    background-color: rgba(255, 255, 255, 0.863);
+    margin: 21px 40px 15px 0px;
+    width: 290px;
+    height: 260px;
+    padding: 20px;
+  }
+
+  .cards_atendimento:hover {
+    margin: 20px 40px 15px 0px;
+    transform: translate(30px, -10px);
+  }
+
+  .btn_acesso{
+    width: 241px;
+    height: 30px;
+    font-size: 1.3em;
+  }
+  #secao_contato {
+    height: 100vh;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  #frase_topo {
+    font-size: 1.1em;
+    width: 101vw;
+    left: -1px;
+  }
+
+  #img_ricardo_perfil {
+    top: 46px;
+    left: 80px;
+  }
+
+  #seta_tracejada {
+    display: none;
+  }
+
+  #frase_base {
+    left: 23px;
+    top: 77px;
+    margin-top: 0;
+    font-size: 0.8em;
+    text-align: center;
+    width: 86vw;
+  }
+
+  img#polygon2 {
+    height: 40vh;
+    left: -17vw;
+    right: 0;
+    bottom: 58px;
+    transform: rotate(90deg);
+  }
+
+  #informacoes_para_contato {
+    right: 0;
+    bottom: 10px;
+    left: 9px;
+    height: 361px;
+  }
+}
+
 @media only screen and (min-width: 425px) and (max-width: 760px) {
   img#banner {
     height: 27vh;
@@ -601,14 +768,14 @@ img#polygon2 {
 
   img#polygon1 {
     height: 48vh;
-    left: -41vw;
+    left: -49vw;
     top: 214px;
     transform: rotate(90deg);
   }
 
   #informacoes_cartao {
     left: 10vw;
-    top: 43vh;
+    top: 38vh;
   }
 
   #informacoes_cartao h1 {
@@ -659,13 +826,13 @@ img#polygon2 {
 
   #transparent_background {
     display: flex;
-    height: 126vh;
+    height: 117vh;
     min-height: 1184px;
     padding: 30px;
   }
 
   #titulo_atendimento {
-    font-size: 3.3em;
+    font-size: 3.2em;
     font-weight: bold;
     width: auto;
     margin-bottom: 10px;
@@ -680,7 +847,7 @@ img#polygon2 {
   }
 
   .cards_atendimento:hover {
-    transform: translate(30px, -55px);
+    transform: translate(30px, -50px);
   }
 
   #secao_contato {
@@ -716,10 +883,10 @@ img#polygon2 {
   }
 
   img#polygon2 {
-    height: 48vh;
-    left: -16vw;
+    height: 45vh;
+    left: -17vw;
     right: 0;
-    bottom: 59px;
+    bottom: 65px;
     transform: rotate(90deg);
   }
 
@@ -728,7 +895,6 @@ img#polygon2 {
     bottom: 0px;
     left: 39px;
   }
-
 }
 
 @media only screen and (min-width: 760px) and (max-width: 1024px) {
