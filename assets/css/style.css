@@ -581,7 +581,7 @@ img#polygon2 {
 
 /*    SCREEN SIZE     */
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
  
   #secao_cartao_apresentacao, img#polygon1 {
     min-height: 320px;
@@ -759,7 +759,7 @@ img#polygon2 {
 
     #informacoes_cartao {
       left: 28vw;
-      top: 90px;
+      top: 46px;
     }
 
     #logo_honda {
@@ -901,6 +901,9 @@ img#polygon2 {
   }
 
   img#polygon1 {
+    width: auto;
+    height: 45vh;
+    min-height: 425px;
     left: 13vw;
   }
 
@@ -951,10 +954,17 @@ img#polygon2 {
     font-size: 1.25em;
   }
 
+  #frase_topo {
+    width: 45vw;
+    font-size: 1.5em;
+    left: 246px;
+  }
+
   #frase_base {
-    left: 26vw;
+    left: 25vw;
     margin-top: 2px;
     width: 475px;
+    font-size: 1em;
   }
 
   #img_ricardo_perfil {
@@ -971,9 +981,43 @@ img#polygon2 {
     bottom: -1em;
   }
 
+  img#polygon2 {
+    left: 13vw;
+    height: 54vh;
+    min-height: 414px;
+    max-height: 486px;
+  }
+
+  #informacoes_para_contato {
+    width: 400px;
+    right: 25px;
+    top: -252px;  
+  }
+
+  #titulo_name {
+    font-size: 2.5em;
+  }
+
+  .bnt_redes {
+      border-radius: 73em;
+      margin-bottom: 20px;
+      width: 383px;
+      height: 92px;
+  }
+
+  .bnt_redes .icon {
+      height: 81px;
+      width: 82px;
+  }
+  
+  .name_button {
+    margin-left: 162px;
+  }
+
 }
 
 @media (min-width: 1800px) {
+
     img#banner {
         max-height: 360px;
     }
@@ -990,12 +1034,12 @@ img#polygon2 {
       }
 
     #informacoes_cartao {
-        left: 35vw;
-        top: 10vh;
+      left: 34vw;
+      top: 7.5vh;
     }
 
     #informacoes_cartao h1 {
-        width: 700px;
+        width: auto;
     }
 
     #info_cartao_ola, #info_cartao_profissao {
@@ -1003,20 +1047,20 @@ img#polygon2 {
     }
 
     .info_cartao_nome {
-        font-size: 2.2em;
+        font-size: 2.4em;
     }
 
     #logo_honda {
         width: 140px;
         height: 116px;
-        left: 19vw;
+        left: 22vw;
         top: 0vh;
     }
 
     #secao_sobre {
-        height: 70vh;
-        min-height: 582px;
-        max-height: 724px;
+      height: 83vh;
+      min-height: 582px;
+      max-height: 808px;
     }
 
     #conteudo_sobre {
@@ -1048,6 +1092,12 @@ img#polygon2 {
     #p_sobre_mim {
         margin: 55px 0 0 0;
         font-size: 2.1em;
+    }
+
+    .secao_atendimento, #transparent_background {
+      height: 60vh;
+      min-height: 600px;
+      max-height: 900px;
     }
 
     #titulo_atendimento {
@@ -1100,8 +1150,9 @@ img#polygon2 {
     }
 
     #frase_topo {
-        font-size: 2em;
-        left: 276px;
+      width: 45vw;
+      font-size: 2em;
+      left: 276px;
     }
 
     #frase_base {
@@ -1117,14 +1168,15 @@ img#polygon2 {
     }
 
     img#polygon2 {
-        min-height: 414px;
-        max-height: 606px;
+      left: 21vw;
+      min-height: 543px;
+      max-height: 606px;
     }
 
     #informacoes_para_contato {
-        width: 430px;
-        right: 84px;
-        bottom: 89px;
+      width: 400px;
+      right: 25px;
+      top: -252px;  
     }
 
     #titulo_name {
@@ -1134,6 +1186,8 @@ img#polygon2 {
 
     .bnt_redes {
         border-radius: 73em;
+        margin-bottom: 20px;
+        width: 383px;
         height: 92px;
     }
 
@@ -1144,14 +1198,19 @@ img#polygon2 {
 
     .bnt_redes:hover span {
         transform: translateX(18rem);
-      }
+    }
+
+    .name_button {
+      margin-left: 162px;
+    }
     
 }
 
 @media (min-width: 2500px) {
   
     #secao_cartao_apresentacao {
-        max-height: 602px;
+      height: 60vh;
+      max-height: 620px;
     }
 
     #logo_marca {
@@ -1160,15 +1219,15 @@ img#polygon2 {
     }
 
     img#polygon1 {
-        left: 30vw;
-        max-height: 602px;
-        min-height: 602px;
+        left: 23vw;
+        max-height: 620px;
+        min-height: 620px;
         min-width: 916px;
     }
 
     #informacoes_cartao {
-      left: 40vw;
-      top: 9vh;
+      left: 36vw;
+      top: 14vh;
     }
 
     #informacoes_cartao h1 {
@@ -1176,11 +1235,11 @@ img#polygon2 {
     }
 
     .info_cartao_nome {
-      font-size: 2.5em;
+      font-size: 3.2em;
     }
     
     #info_cartao_ola, #info_cartao_profissao {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     
     #logo_honda {
@@ -1193,18 +1252,49 @@ img#polygon2 {
     }
 
     #frase_topo {
-        font-size: 2.7em;
-        width: 53vw;
+      left: 470px;
+      font-size: 2.7em;
+      width: 53vw;
     }
 
     #frase_base {
         margin-top: 53px;
-        left: 20.5vw;
+        left: 24.5vw;
         font-size: 1.9em;
     }
 
+    #informacoes_para_contato {
+      width: 460px;
+      right: 29px;
+      top: -223px;
+    }
+  
+    #titulo_name {
+      font-size: 4em;
+    }
+
+    img#polygon2 {
+      left: 29vw;
+      min-height: 571px;
+      max-height: 647px;
+    }
+
+    .bnt_redes {
+      width: 435px;
+      height: 105px;
+    }
+
+    .bnt_redes .icon {
+      height: 94px;
+      width: 94px;
+    }
+
+    .name_button {
+      font-size: 1.5em;
+    }
+
     #grid_layout {
-        margin-left: 424px;
+      margin-left: 656px;
     }
 
 }
