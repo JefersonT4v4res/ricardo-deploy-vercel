@@ -600,8 +600,9 @@ img#polygon2 {
   }
 
   img#polygon1 {
-    height: 46vh;
+    height: 56vh;
     min-height: 324px;
+    max-height: 688px;
     left: -41vw;
     top: 237px;
     transform: rotate(90deg);
@@ -647,7 +648,7 @@ img#polygon2 {
 
   #conteudo_sobre {
     width: 290px;
-    margin-left: 13px;
+    margin-left: 44px;
     margin-top: 309px;
     background-color: transparent;
   }
@@ -698,7 +699,7 @@ img#polygon2 {
     font-size: 1.3em;
   }
   #secao_contato {
-    height: 126vh;
+    height: 133vh;
     min-height: 876px;
     display: flex;
     flex-direction: column;
@@ -732,8 +733,9 @@ img#polygon2 {
   }
 
   img#polygon2 {
-    height: 48vh;
+    height: 56vh;
     min-height: 327px;
+    max-height: 499px;
     left: -17vw;
     right: 0;
     bottom: 48px;
@@ -746,8 +748,8 @@ img#polygon2 {
 
   #informacoes_para_contato {
     right: 0;
-    bottom: 10px;
-    left: 20px;
+    bottom: 38px;
+    left: 49px;
     height: 306px;
     width: 285px;
     display: flex;
