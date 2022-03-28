@@ -925,9 +925,10 @@ img#polygon2 {
   }
 
   #informacoes_para_contato {
-    margin-top: -72vh;
-    margin-right: -6px;
+    margin-top: -70vh;
+    margin-right: 2px;
     width: 257px;
+    height: 271px;
   }
 
   .bnt_redes {
