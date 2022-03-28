@@ -118,16 +118,12 @@ div#divisoria {
   overflow: hidden;
 }
 
-#logo_marca {
-  position: relative;
-  left: 7em;
-  top: 5.5em;
-}
+
 
 img#polygon1 {
-  width: auto;
-  height: 57vh;
-  position: absolute;
+  width: 100%;
+  height: auto;
+  position: relative;
   left: 20vw;
 }
 
@@ -145,7 +141,6 @@ img#polygon1 {
 }
 
 #informacoes_cartao {
-  position: absolute;
   left: 25vw;
   top: 13vh;
 }
@@ -336,7 +331,6 @@ button#btn_insta:hover span#span_btn_insta:after {
 
 #frase_topo,
 #frase_base {
-  position: relative;
   font-family: "DM Sans", sans-serif;
   color: #fafafa;
 }
@@ -345,11 +339,9 @@ button#btn_insta:hover span#span_btn_insta:after {
   font-size: 1.5em;
   text-align: center;
   margin-top: 30px;
-  left: 316px;
 }
 
 #frase_base {
-  left: 25em;
   margin-top: 2.5em;
   font-size: 1em;
   font-style: italic;
@@ -358,8 +350,6 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 #img_ricardo_perfil {
-  position: relative;
-  left: 120px;
   filter: drop-shadow(-23px 7px 12px #000000e7);
 }
 
@@ -372,23 +362,26 @@ button#btn_insta:hover span#span_btn_insta:after {
 }
 
 img#polygon2 {
-  width: auto;
-  height: 57vh;
-  position: absolute;
+  width: 100%;
+  height: auto;
+  position: relative;
   left: 20vw;
 }
 
 #informacoes_para_contato {
-  display: grid;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 360px;
   height: 400px;
-  right: 35px;
-  bottom: 0px;
   text-align: center;
+  margin-top: -37vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #titulo_name {
+  position: relative;
   margin-top: 20px;
   margin-bottom: 10px;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
@@ -402,6 +395,7 @@ img#polygon2 {
 
 .bnt_redes {
   font-family: "Times New Roman", Times, serif;
+  margin-bottom: 7px;
   display: flex;
   width: 100%;
   font-size: 1.4em;
@@ -478,7 +472,7 @@ img#polygon2 {
   height: 79vh;
   overflow: hidden;
   box-shadow: inset 0px 10px 1px #8d0404;
-  background-image: url("../img/bg_rede_social.webp");
+  background-image: url("../img/bg_rede_social(G).webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -524,42 +518,22 @@ img#polygon2 {
   background-color: #ff0000;
 }
 
-.riders {
-  position: absolute;
-  width: 265px;
-  height: 258px;
-}
-#motorcycle-rider1 {
-  left: 40vw;
-  top: 234vh;
-}
-#motorcycle-rider2 {
-  left: 14vw;
-  top: 208vh;
-}
 
 #area_img_frase {
   width: 42%;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: center;
 }
 
 #grid_layout {
   display: flex;
   align-items: center;
   width: 450px;
-  margin-left: -15px;
 }
 
 .container_contato_redes {
-  width: 58%;
+  width: 100%;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: end;
 }
 
 #footer_copyright {
@@ -572,21 +546,26 @@ img#polygon2 {
 
 /*    SCREEN SIZE     */
 
-@media only screen and (min-width: 320px) and (max-width: 424px) {
+@media only screen and (min-width: 320px) {
   img#banner {
-    height: 15vh;
+    height: 27vh;
   }
 
   #secao_cartao_apresentacao {
     display: flex;
     flex-direction: column;
-    min-height: 785px;
+    height: 130vh;
+    min-height: 620px;
+    max-height: 740px;
+    justify-content: space-around;
+    align-items: center;
   }
 
   #logo_marca {
-    position: relative;
-    left: 3em;
-    top: 3.5em;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
   }
 
   #container_image {
@@ -600,31 +579,31 @@ img#polygon2 {
   }
 
   img#polygon1 {
-    height: 56vh;
-    min-height: 324px;
-    max-height: 688px;
-    left: -41vw;
-    top: 237px;
+    width: 182%;
+    max-width: 184%;
+    left: 141vw;
+    top: 3vh;
+    margin-top: 20vh;
     transform: rotate(90deg);
   }
 
   #informacoes_cartao {
-    left: -5vw;
-    top: 59vh;
+    margin-top: 41vh;
+    margin-bottom: auto;
   }
 
   #informacoes_cartao h1 {
     text-align: center;
     line-height: 34px;
-    width: 114vw;
+    width: 100vw;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 
   .info_cartao_nome {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
   #logo_honda {
@@ -637,19 +616,23 @@ img#polygon2 {
   #secao_sobre {
     height: 64vh;
     min-height: 680px;
-    background-position: top right;
-    background-size: 128%;
+    background-position: 0 0;
+    background-size: 100%;
+    background-image: url("../img/bg_rede_social(M).webp");
     background-color: #070c0c;
   }
 
   #btn_insta {
-    width: 296px;
+    width: 284px;
   }
 
   #conteudo_sobre {
-    width: 290px;
-    margin-left: 44px;
-    margin-top: 309px;
+    width: 55vw;
+    min-width: 279px;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 44vh;
     background-color: transparent;
   }
 
@@ -698,9 +681,11 @@ img#polygon2 {
     height: 30px;
     font-size: 1.3em;
   }
+
   #secao_contato {
     height: 133vh;
-    min-height: 876px;
+    min-height: 790px;
+    max-height: 876px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -708,24 +693,31 @@ img#polygon2 {
     align-items: stretch;
   }
 
+  #area_img_frase {
+    height: 51%;
+    width: 100%;
+  }
+
+  #frase_base, #frase_topo {
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
   #frase_topo {
-    font-size: 1.1em;
+    font-size: 1em;
     width: 101vw;
-    left: -1px;
   }
 
   #img_ricardo_perfil {
-    top: 46px;
-    left: 53px;
+    margin-left: 13vw;
+    margin-bottom: 15px;
   }
-
+  
   #seta_tracejada {
     display: none;
   }
 
   #frase_base {
-    left: 23px;
-    top: 77px;
     margin-top: 0;
     font-size: 0.8em;
     text-align: center;
@@ -733,12 +725,11 @@ img#polygon2 {
   }
 
   img#polygon2 {
-    height: 56vh;
-    min-height: 327px;
-    max-height: 499px;
-    left: -17vw;
-    right: 0;
-    bottom: 48px;
+    width: 132%;
+    max-width: 150%;
+    left: -16vw;
+    top: 6vh;
+    margin-top: 4vh;
     transform: rotate(90deg);
   }
 
@@ -747,15 +738,9 @@ img#polygon2 {
   }
 
   #informacoes_para_contato {
-    right: 0;
-    bottom: 38px;
-    left: 49px;
     height: 306px;
-    width: 285px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    width: 276px;
+  }
 
   .bnt_redes {
     width: 100%;
@@ -768,49 +753,22 @@ img#polygon2 {
   }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 760px) {
+@media only screen and (min-width: 480px) {
   img#banner {
     height: 27vh;
   }
 
-  #secao_cartao_apresentacao {
-    display: flex;
-    flex-direction: column;
-    min-height: 785px;
+  #informacoes_cartao {
+    margin-top: 36vh;
   }
 
-  #logo_marca {
-    position: relative;
-    left: 1.5em;
-    top: 2em;
-  }
-
-  #container_image {
-    width: 100%;
-    height: auto;
+  #informacoes_cartao h1  span#info_cartao_ola, span#app, span#info_cartao_profissao {
+    margin-left: 7vw;
   }
   
-  #container_informacoes_cartao {
-    width: 100%;
-    height: auto;
-  }
-
-  img#polygon1 {
-    height: 63vh;
-    min-height: 430px;
-    left: -41vw;
-    top: 214px;
-    transform: rotate(90deg);
-  }
-
-  #informacoes_cartao {
-    left: 10vw;
-    top: 56vh;
-  }
-
-  #informacoes_cartao h1 {
-    text-align: center;
-    line-height: 34px;
+  #logo_honda {
+    left: 14em;
+    top: -0.5em;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
@@ -818,290 +776,184 @@ img#polygon2 {
   }
 
   .info_cartao_nome {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
-  #logo_honda {
-    width: 76px;
-    height: 66px;
-    left: 17em;
-    top: 0.5em;
-  }
-
-  #secao_sobre {
-    height: 108vh;
-    min-height: 744px;
-    background-position: top right;
-    background-size: 128%;
-    background-color: #070c0c;
-  }
-
-  #conteudo_sobre {
-  width: 400px;
-  margin-left: 13px;
-  margin-top: 309px;
-  background-color: transparent;
-  }
-
-  #p_sobre_mim {
-    margin: 18px 0 0 0;
-    font-size: 1.2em;
-    font-weight: 500;
-    line-height: 28px;
-  }
-
-  .secao_atendimento {
-    height: 117vh;
-    min-height: 1184px;
-  }
-
-  #transparent_background {
-    display: flex;
-    height: 117vh;
-    min-height: 1184px;
-    padding: 30px;
-  }
-
-  #titulo_atendimento {
-    font-size: 3.2em;
-    font-weight: bold;
-    width: auto;
-    margin-bottom: 10px;
-  }
-
-  .cards_atendimento {
-    background-color: rgba(255, 255, 255, 0.863);
-    margin: 21px 40px 15px 0px;
-    width: 290px;
-    height: 260px;
-    padding: 20px;
-  }
-
-  .cards_atendimento:hover {
-    transform: translate(30px, -50px);
-  }
-
-  #secao_contato {
-    height: 100vh;
-    min-height: 1000px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    align-items: stretch;
+  #img_ricardo_perfil {
+    margin-left: 25vw;
+    margin-bottom: 22px;
+    margin-top: 22px;
   }
 
   #frase_topo {
     font-size: 1.3em;
-    width: 95vw;
-    left: 13px;
-  }
-
-  #img_ricardo_perfil {
-    top: 20px;
-    left: 110px;
-  }
-
-  #seta_tracejada {
-    display: none;
-  }
-
-  #frase_base {
-    left: 23px;
-    margin-top: 60px;
-    font-size: 0.8em;
-    width: 95vw;
+    width: 91vw;
   }
 
   img#polygon2 {
-    height: 64vh;
-    min-height: 438px;
-    left: -17vw;
-    right: 0;
-    bottom: 65px;
-    transform: rotate(90deg);
+    width: 136%;
+    left: -18vw;
   }
 
   #informacoes_para_contato {
-    right: 0;
-    bottom: 0px;
-    left: 39px;
+    margin-top: -42vh;
   }
+
 }
 
-@media only screen and (min-width: 760px) and (max-width: 1023px) {
- 
-  #secao_cartao_apresentacao, img#polygon1 {
-    min-height: 320px;
-    max-height: 423px;
+@media only screen and (min-width: 660px) {
+  
+  img#banner {
+    height: 36vh;
+  }
+
+  #secao_cartao_apresentacao {
+    display: flex;
+    flex-direction: row;
+    height: 83vh;
+    min-height: 279px;
+    max-height: 282px;
   }
 
   #logo_marca {
-    left: 2vw;
-    top: 5vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23vh;
   }
 
+  #container_image, #container_informacoes_cartao, #area_img_frase, .container_contato_redes {
+    width: 50%;
+    height: 100%;
+  }
+  
   img#polygon1 {
-    height: 51vh;
-    left: 12vw;
+    width: 155%;
+    max-width: 170%;
+    left: 126vw;
+    top: 0vh;
+    margin-top: 0vh;
+    transform: rotate(0deg);
   }
 
   #informacoes_cartao {
-    left: 31vw;
-    top: 9vh;
+    margin-top: 17vh;
   }
 
   #informacoes_cartao h1 {
-    line-height: 26px;
+    text-align: start;
+    line-height: 23px;
+    width: 104vw;
+  }
+
+  #informacoes_cartao h1 span#info_cartao_ola, span#app, span#info_cartao_profissao {
+    margin-left: 67vw;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
-    font-size: 0.5em;
+    font-size: 0.4em;
   }
 
   .info_cartao_nome {
-    font-size: 1.07em;
+    font-size: 0.9em;
   }
 
   #logo_honda {
-    width: 74px;
-    height: 63px;
-    left: 10em;
-    top: 1em;
-  }
-
-  #secao_sobre,  #conteudo_sobre {
-    height: 53vh;
-    min-height: 571px;
+    left: 37em;
+    top: -0.5em;
+    width: 60px;
   }
 
   #secao_sobre {
-    background-size: cover;
-    background-position: center;
+    height: 46vh;
+    min-height: 549px;
+    background-color: #070c0c;
+  }
+
+  #secao_sobre, #conteudo_sobre {
+    height: 46vh;
+    min-height: 549px;
   }
 
   #conteudo_sobre {
-    width: 24em;
-    display: flex;
+    margin-left: 3vw;
+    margin-top: 16vh;
     background: #070c0cdb;
-    flex-direction: column;
-  }
-
-  #p_sobre_mim {
-    margin: 39px 0 0 0;
+    padding: 10px;
   }
 
   .secao_atendimento, #transparent_background {
-    height: 52vh;
-    min-height: 800px;
-    max-height: 900px;
-  }
-
-  #transparent_background {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 45px;
-    flex-direction: row;
-  }
-
-  #titulo_atendimento {
-    font-size: 2.7em;
-    width: 80vw;
-  }
-
-  .cards_atendimento {
-    padding: 21px;
-    width: 320px;
-    height: 277px;
-    margin: 10px 4px 5px 0px;
-  }
-
-  .cards_atendimento:hover {
-    margin: 50px 40px 5px 0px;
-    transform: translate(30px, -40px);
-  }
-
-  .texto_card {
-    font-size: 1.4em;
-  }
-
-  .btn_acesso {
-    width: 256px;
-    height: 40px;
-    font-size: 1.5em;
-  }
-
-  #secao_contato, img#polygon2 {
-    min-height: 422px;
-    max-height: 451px;
+    height: 50vh;
+    min-height: 900px;
   }
 
   #secao_contato {
-    height: 26vh;
-    align-items: center;
+    height: 83vh;
+    min-height: 279px;
+    max-height: 282px;
+    display: flex;
+    flex-direction: row;
   }
-
-
-  #img_ricardo_perfil {
-    top: 10px;
-    left: 92px;
-  }
-
-  #seta_tracejada {
-    display: none;
-  }
-
+  
   #frase_topo {
-    margin-top: 6px;
-    font-size: 1.3em;
-    width: 390px;
-    left: 19px;
+    font-size: 1.2em;
+    text-align: center;
+    width: 51vw;
+    margin-top: 11px;
+    margin-left: 20px;
   }
 
   #frase_base {
-    left: 6em;
-    width: 274px;
-    text-align: center;
-    font-size: 0.8em;
+    margin-left: 45px;
+    width: 39vw;
+  }
+
+  #img_ricardo_perfil {
+    margin-left: 13vw;
+    margin-bottom: 13px;
+    margin-top: 11px;
+    width: 160px;
+    height: 160px;
   }
 
   img#polygon2 {
-      height: 44vh;
-      left: 0;
+    width: 116%;
+    max-width: 120%;
+    left: -7vw;
+    top: -4vh;
+    transform: rotate(0deg);
   }
 
   #informacoes_para_contato {
-    width: 262px;
-    height: 372px;
-    right: 5px;
-    top: -208px;
+    margin-top: -72vh;
+    margin-right: -6px;
+    width: 257px;
   }
 
-  #titulo_name {
-    margin-top: 60px;
-    margin-bottom: 5px;
-    font-size: 2.2em;
-    text-align: center;
+  .bnt_redes {
+    width: 90%;
+    height: 61px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .name_button {
-    margin-left: 95px;
-  } 
-
-  .bnt_redes {
-    height: 70px;
-    width: 250px;
-    text-align: center;
+    margin-left: 76px;
+    margin-right: auto;
+    margin-top: 16px;
   }
 
-  .bnt_redes .icon {
-    height: 60px;
-    width: 62px;
+  #titulo_name {
+    font-size: 1.9em;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+
 
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1399px) {
+@media only screen and (min-width: 1024px) {
     img#banner {
       max-height: 333px;
     }
@@ -1116,13 +968,10 @@ img#polygon2 {
       left: 2vw;
     }
 
-    #informacoes_cartao {
-      left: 20vw;
-      top: 90px;
-    }
-
     #informacoes_cartao h1 {
       width: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #info_cartao_ola, #info_cartao_profissao {
@@ -1226,11 +1075,6 @@ img#polygon2 {
       flex-wrap: wrap;
     }
 
-    #grid_layout {
-      margin-top: 13px;
-      margin-left: 148px;
-    }
-
     #seta_tracejada {
       display: none;
     }
@@ -1263,7 +1107,7 @@ img#polygon2 {
 
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1799px) {
+@media only screen and (min-width: 1400px) {
   #secao_cartao_apresentacao {
     height: 50vh;
   }
@@ -1410,7 +1254,7 @@ img#polygon2 {
 
 }
 
-@media only screen and (min-width: 1800px) and (max-width: 2499px){
+@media only screen and (min-width: 1800px) {
 
     img#banner {
         max-height: 400px;
