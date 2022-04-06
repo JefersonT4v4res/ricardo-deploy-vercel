@@ -549,7 +549,7 @@ img#polygon2 {
     flex-direction: column;
     height: 130vh;
     min-height: 620px;
-    max-height: 740px;
+    max-height: 640px;
     justify-content: space-around;
     align-items: center;
   }
@@ -563,25 +563,25 @@ img#polygon2 {
 
   #container_image {
     width: 100%;
-    height: 310px;
+    height: 330px;
   }
   
   #container_informacoes_cartao {
     width: 100%;
-    height: 310px;
+    height: 262px;
   }
 
   img#polygon1 {
     width: 180%;
     max-width: 184%;
     left: 130vw;
-    top: -12vh;
-    margin-top: 20vh;
+    top: -18vh;
+    margin-top: 16em;
     transform: rotate(90deg);
   }
 
   #informacoes_cartao {
-    margin-top: 14vh;
+    margin-top: 4em;
     margin-bottom: auto;
     position: relative;
     right: 7px;
@@ -602,10 +602,10 @@ img#polygon2 {
   }
 
   #logo_honda {
-    width: 91px;
-    height: 78px;
-    left: 152px;
-    top: 0.5em;
+    width: 70px;
+    height: 55px;
+    left: 36vw;
+    top: -1.5em;
   }
 
   #secao_sobre {
@@ -703,7 +703,7 @@ img#polygon2 {
   }
 
   #img_ricardo_perfil {
-    margin-left: 9vw;
+    margin-left: 15vw;
     margin-bottom: 15px;
   }
   
@@ -966,6 +966,7 @@ img#polygon2 {
 
     #logo_marca {
       left: 4vw;
+      margin-top: 2.5em;
     }
 
     img#polygon1 {
@@ -1008,6 +1009,7 @@ img#polygon2 {
     #secao_sobre {
       height: 35vh;
       min-height: 508px;
+      background-image: url("../img/bg_rede_social(G).webp");
       background-size: contain;
       background-position: top right;
     }
@@ -1017,7 +1019,7 @@ img#polygon2 {
       display: flex;
       height: 31vh;
       min-height: 457px;
-      background: #070c0cdb;
+      background: #070c0c36;
       flex-direction: column;
       align-content: center;
       justify-content: center;
@@ -1086,7 +1088,7 @@ img#polygon2 {
     }
 
     #area_img_frase {
-      width: 42%;
+      width: 63%;
       display: inline-flex;
       flex-wrap: wrap;
     }
@@ -1096,36 +1098,41 @@ img#polygon2 {
     }
 
     #frase_topo {
-      width: 25em;
+      width: auto;
       margin-top: 60px;
       left: 105px;
     }
 
     #frase_base {
       width: auto;
-      margin-left: 95px;
+      margin-left: 8vw;
       margin-top: 23px;
       font-size: 0.9em;
       text-align: center;
     }
 
-    #img_ricardo_perfil {
-      margin-left: 10em;
+    #img_ricardo_perfil {  
+      margin-left: 20vw;
       margin-bottom: 5px;
       margin-top: 11px;
       width: 200px;
       height: 200px;
     }
 
+    .container_contato_redes {
+      width: auto;
+    }
+
     img#polygon2 {
       min-width: 102%;
       max-width: 200%;
       max-height: 101%;
-      left: 2em;
+      left: -4vw;
+      position: relative;
     }
 
     #informacoes_para_contato {
-      margin-top: 2em;
+      margin-top: -26em;
       margin-right: 27px;  
       width: 300px;
       height: 300px;
