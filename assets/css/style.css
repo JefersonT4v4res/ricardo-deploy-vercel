@@ -94,7 +94,7 @@ html {
 /*--Estilizando pagina--*/
 
 /*   ***Sessao 1*** */
-header#secao_cabecalho {
+div#secao_cabecalho, header#header_pagina {
   display: block;
 }
 
