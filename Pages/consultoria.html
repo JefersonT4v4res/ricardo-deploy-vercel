@@ -11,18 +11,7 @@
     <meta name="theme-color" content="#111010" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:image"
-      content="https://ricardotavares.vercel.app/assets/img/preview.png"
-    />
-    <meta
-      property="og:title"
-      content="Ricardo Tavares - Consultor de vendas Motosol"
-    />
-    <meta
-      property="og:description"
-      content="Me chamo Ricardo e irei realizar o seu sonho de conquistar sua Honda 0Km."
-    />
+
     <title>Ricardo Tavares - Consultor de vendas Motosol</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,9 +19,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai+Looped&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/consultoria.css" />
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -50,10 +39,14 @@
       sizes="16x16"
       href="./assets/img/favicon/favicon-16x16.png"
     />
-    <script src="./assets/js/svg-inject.min.js"></script>
-    <meta name="google-site-verification" content="U5yc1YzGiYFEXU6ytbAxU1aDEoN3vKHndxjUJnrwg6U" />
+    <!--<script src="./assets/js/svg-inject.min.js"></script>-->
+    <script type="module" src="../assets/js/script.js"></script>
+    <meta
+      name="google-site-verification"
+      content="U5yc1YzGiYFEXU6ytbAxU1aDEoN3vKHndxjUJnrwg6U"
+    />
   </head>
-  
+
   <body>
     <header id="header_pagina">
       <img
@@ -63,92 +56,114 @@
       />
     </header>
 
+    <main id="catalogo_Motos">
+      <section id="lista_veiculos">
+        <div id="lista_Motos_Street">
+          <h1 id="lista_titulo">Street</h1>
+          <!--Inicio card-->
+            
+          
+          <!--Final card-->
+        </div>
 
-
-<main id="catalogo_Motos">
-  <section id="lista_veiculos">
-
-      <div id="lista_Motos_Street">
-        <h1>Street</h1>
-<!--Inicio card-->
-      <div id="card_Street1">
-        <input type="radio" name="" id="Street_card1"/>
-        <label for="Street_card1">
-          <div class="card_Moto" >
-            <div class="moto_Nome"><h1>Biz 110i</h1></div>
-            <div class="moto_Img"><img src="" alt="imagem foda da moto para representar"></div>
-            <a href="#"><button><span>Saiba mais</span></button></a>
+        <div id="lista_Motos_Adventure">
+          <h1>Adventure (até 300cc)</h1>
+          <!--Inicio card-->
+          <div id="card_Adventure1">
+            <div class="card_Moto">
+              <h1 class="moto_Nome">Biz 110i</h1>
+              <img
+                src=""
+                class="moto_Img"
+                alt="imagem foda da moto para representar"
+              />
+              <button>Saiba mais</button>
+            </div>
           </div>
-        </label> 
-      </div>  
-<!--Final card-->       
-      </div>
-
-      <div id="lista_Motos_Adventure">
-        <h1>Adventure (até 300cc)</h1>
-<!--Inicio card-->
-        <div id="card_Adventure1">
-          <input type="radio" name="" id="Adventure_card1"/>
-          <label for="Adventure_card1">
-            <div class="card_Moto" >
-              <div class="moto_Nome"><h1>Biz 110i</h1></div>
-              <div class="moto_Img"><img src="" alt="imagem foda da moto para representar"></div>
-              <a href="#"><button><span>Saiba mais</span></button></a>
-            </div>
-          </label>    
+          <!--Final card-->
         </div>
-<!--Final card-->
-      </div>
 
-      <div id="lista_Motos_offRroad">
-        <h1>Off Road</h1>
-<!--Inicio card-->
-        <div id="card_Off_Road1">
-          <input type="radio" name="" id="OffRoad_card1"/>
-          <label for="OffRoad_card1">
-            <div class="card_Moto" >
-              <div class="moto_Nome"><h1>Biz 110i</h1></div>
-              <div class="moto_Img"><img src="" alt="imagem foda da moto para representar"></div>
-              <a href="#"><button><span>Saiba mais</span></button></a>
+        <div id="lista_Motos_offRroad">
+          <h1>Off Road</h1>
+          <!--Inicio card-->
+          <div id="card_Off_Road1">
+            <div class="card_Moto">
+              <h1 class="moto_Nome">Biz 110i</h1>
+              <img
+                src=""
+                class="moto_Img"
+                alt="imagem foda da moto para representar"
+              />
+              <button>Saiba mais</button>
             </div>
-          </label>
+          </div>
+          <!--Final card-->
         </div>
-<!--Final card-->
 
-      </div>
-
-      <div id="lista_Motos_Sport">
-        <h1>Sport</h1>
-<!--Inicio card-->
+        <div id="lista_Motos_Sport">
+          <h1>Sport</h1>
+          <!--Inicio card-->
           <div id="card_Sport1">
-            <input type="radio" name="" id="Sport_card1"/>
-            <label for="Sport_card1">
-            <div class="card_Moto" >
-              <div class="moto_Nome"><h1>Biz 110i</h1></div>
-              <div class="moto_Img"><img src="" alt="imagem foda da moto para representar"></div>
-              <a href="#"><button><span>Saiba mais</span></button></a>
+            <div class="card_Moto">
+              <h1 class="moto_Nome">Biz 110i</h1>
+              <img
+                src=""
+                class="moto_Img"
+                alt="imagem foda da moto para representar"
+              />
+              <button>Saiba mais</button>
             </div>
-            </label>
           </div>
-<!--Final card-->
+          <!--Final card-->
+        </div>
 
-      </div>
+        <!-- Reune todas as informações da moto selecionada -->
+        <div class="saiba_Mais" id="veiculo_Informacoes">
+          <span id="veiculo_Informacoes_overlay"></span>
+          <div id="veiculo_Informacoes_Box">
+            <div id="veiculo_imgs_cores">
+              <img src="../assets/img/logo_marcaP.png" alt="" />
+              <div id="veiculo_opcoes_cores">
+                <h1 id="nome_Moto">CG 160 FAN ESDI</h1>
+                <ul id="escolhar_cor">
+                  <li class="cor"></li>
+                  <li class="cor"></li>
+                  <li class="cor"></li>
+                </ul>
+              </div>
+            </div>
 
-      <!-- Reune todas as informações da moto selecionada -->
-      <div id="saiba_Mais">
-
-      </div>
-  
-  </section>
-</main>  
-    
-
+            <div id="veiculo_informacoes_detalhadas">
+              <div id="motor">
+                <h1 id="titulo_motor"></h1>
+                <p id="informacao_motor"></p>
+              </div>
+              <div id="cilindrada">
+                <h1 id="titulo_cilindrada"></h1>
+                <p id="informacao_cilindrada"></p>
+              </div>
+              <div id="transmissao">
+                <h1 id="titulo_transmissao"></h1>
+                <p id="informacao_transmissao"></p>
+              </div>
+              <div id="partida">
+                <h1 id="titulo_partida"></h1>
+                <p id="informacao_partida"></p>
+              </div>
+              <div id="freios">
+                <h1 id="titulo_freios"></h1>
+                <p id="informacao_freios"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer id="footer_copyright">
       <div id="grid-layout">
         <p id="author">&copy; 2022 || Feito por Jeferson Tavares</p>
       </div>
     </footer>
-
   </body>
 </html>
