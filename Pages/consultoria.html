@@ -19,7 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400;1,700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai+Looped&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/consultoria.css" />
     <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link
@@ -40,7 +39,6 @@
       href="./assets/img/favicon/favicon-16x16.png"
     />
     <!--<script src="./assets/js/svg-inject.min.js"></script>-->
-    <script type="module" src="../assets/js/script.js"></script>
     <meta
       name="google-site-verification"
       content="U5yc1YzGiYFEXU6ytbAxU1aDEoN3vKHndxjUJnrwg6U"
@@ -48,122 +46,153 @@
   </head>
 
   <body>
-    <header id="header_pagina">
-      <img
-        id="logo_marca"
-        src="../assets/img/logo_marcaPP.png"
+      <nav id="cabecalho_Pagina">
+        <img
+        id="icon_voltar"
+        src="../assets/img/Icon_Back.svg"
+        alt="">
+        <h1 id="h1_consultoria">Consultoria</h1>
+        <img
+        id="logomarca_Ricardo"
+        src="../assets/img/logo_Marca(Invertida).svg"
         alt="Círculo branco contendo a letra 'R', ao lado direito está escrito na vertical, todo em maiúsculo, Ricardo Motos novas e seminovas"
       />
-    </header>
+      </nav>
+      <img
+        id="banner"
+        src="../assets/img/banner_rico.jpg"
+        alt=""
+        width="320px"
+        height="auto"
+      />
+      
+      <header id="apresentacao">
+        <h1>Escolha sua moto</h1>
+        <p>Tem sempre uma Honda que é a sua cara! Veja nosso catálogo, escolha aquelas que estão nos seus sonhos e saiba sobre as condições de consórcio ou financiamento</p>
+      </header>
 
     <main id="catalogo_Motos">
       <section id="lista_veiculos">
-        <div id="lista_Motos_Street">
-          <h1 id="lista_titulo">Street</h1>
-          <!--Inicio card-->
-            
+       
+        <h1 class="lista_titulo" id="street">Street</h1>
+        <div class="lista" id="lista_Motos_Street">
           
-          <!--Final card-->
         </div>
 
-        <div id="lista_Motos_Adventure">
-          <h1>Adventure (até 300cc)</h1>
-          <!--Inicio card-->
-          <div id="card_Adventure1">
-            <div class="card_Moto">
-              <h1 class="moto_Nome">Biz 110i</h1>
-              <img
-                src=""
-                class="moto_Img"
-                alt="imagem foda da moto para representar"
-              />
-              <button>Saiba mais</button>
-            </div>
-          </div>
-          <!--Final card-->
+        <h1 class="lista_titulo" id="adventure">Adventure (até 300cc)</h1>
+        <div class="lista" id="lista_Motos_Adventure">
+          
         </div>
 
-        <div id="lista_Motos_offRroad">
-          <h1>Off Road</h1>
-          <!--Inicio card-->
-          <div id="card_Off_Road1">
-            <div class="card_Moto">
-              <h1 class="moto_Nome">Biz 110i</h1>
-              <img
-                src=""
-                class="moto_Img"
-                alt="imagem foda da moto para representar"
-              />
-              <button>Saiba mais</button>
-            </div>
-          </div>
-          <!--Final card-->
+        <h1 class="lista_titulo" id="offRoad">Off Road</h1>
+        <div class="lista" id="lista_Motos_offRoad">
+
         </div>
 
-        <div id="lista_Motos_Sport">
-          <h1>Sport</h1>
-          <!--Inicio card-->
-          <div id="card_Sport1">
-            <div class="card_Moto">
-              <h1 class="moto_Nome">Biz 110i</h1>
-              <img
-                src=""
-                class="moto_Img"
-                alt="imagem foda da moto para representar"
-              />
-              <button>Saiba mais</button>
-            </div>
-          </div>
-          <!--Final card-->
+        <h1 class="lista_titulo" id="sport">Sport</h1>
+        <div class="lista" id="lista_Motos_Sport">
+          
         </div>
 
         <!-- Reune todas as informações da moto selecionada -->
         <div class="saiba_Mais" id="veiculo_Informacoes">
-          <span id="veiculo_Informacoes_overlay"></span>
-          <div id="veiculo_Informacoes_Box">
+          <div id="veiculo_Informacoes_Box"> <!-- Box de informação -->
+            <button id="btn_Fecha_Informacoes" onclick="fechar()"><img id="icon_fechar" src="../assets/icons/close.png" alt=""></button>
             <div id="veiculo_imgs_cores">
-              <img src="../assets/img/logo_marcaP.png" alt="" />
+                <!--SLIDE IMAGE-->
+              <div id="slide_imgs">
+                <img class='img_MotoExemplo' id="frontal" src="" >
+                <img class='img_MotoExemplo' id="lateral" src="" >
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+              </div>
+
               <div id="veiculo_opcoes_cores">
-                <h1 id="nome_Moto">CG 160 FAN ESDI</h1>
-                <ul id="escolhar_cor">
-                  <li class="cor"></li>
-                  <li class="cor"></li>
-                  <li class="cor"></li>
+                <h1 id="nome_Moto"></h1>
+                <ul id="lista_Cores">
+                  
                 </ul>
+                <button>tenho interesse</button>
               </div>
             </div>
 
             <div id="veiculo_informacoes_detalhadas">
-              <div id="motor">
-                <h1 id="titulo_motor"></h1>
+              <div class="box_informacoes" id="motor">
+                <img src="../assets/icons/car-engine.png">
+                <h1 id="titulo_motor">Motor</h1>
                 <p id="informacao_motor"></p>
               </div>
-              <div id="cilindrada">
-                <h1 id="titulo_cilindrada"></h1>
+
+              <div class="box_informacoes" id="cilindrada">
+                <img src="../assets/icons/pistons.png">
+                <h1 id="titulo_cilindrada">Cilindrada</h1>
                 <p id="informacao_cilindrada"></p>
               </div>
-              <div id="transmissao">
-                <h1 id="titulo_transmissao"></h1>
+
+              <div class="box_informacoes" id="transmissao">
+                <img src="../assets/icons/drive-belt.png">
+                <h1 id="titulo_transmissao">Transmissão</h1>
                 <p id="informacao_transmissao"></p>
               </div>
-              <div id="partida">
-                <h1 id="titulo_partida"></h1>
+
+              <div class="box_informacoes" id="partida">
+                <img src="../assets/icons/key.png">
+                <h1 id="titulo_partida">Sistema de Partida</h1>
                 <p id="informacao_partida"></p>
               </div>
-              <div id="freios">
-                <h1 id="titulo_freios"></h1>
+
+              <div class="box_informacoes" id="freios">
+                <img src="../assets/icons/break.png">
+                <h1 id="titulo_freios">Freios</h1>
                 <p id="informacao_freios"></p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
     </main>
+
+  <aside id="videos_informativos">
+      <div class="secao_SaibaMais">
+        <h1 id="titulo_SaibaMais">Saiba mais +</h1>
+        <hr id="breakRow">
+          <div class="breve_informacao_video">
+            <h1 class="titulo_Videos">O que é financiamento?</h1>
+            <p class="frase_Video">Veja o vídeo sobre o que é e como funciona o financimento.</p>
+          </div>
+        <iframe  src="https://www.youtube.com/embed/3WU4cWWLxME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    <hr id="breakRow_Red">
+      <div class="secao_Videos">
+          <div class="breve_informacao_video">
+            <h1 class="titulo_Videos">Vendedor recomendado</h1>
+            <p class="frase_Video">Meu nome é Ricardo Tavares, consultor de vendas da Motosol. Estou aqui para facilitar seu atendimento e realizar o seu sonho de conquistar sua Honda 0Km.</p>
+          </div>
+          <iframe src="https://www.youtube.com/embed/OHfeSk2SDlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> 
+      <hr id="breakRow">
+  </aside>
+
+    <section id="contato">
+      <h1 id="titulo_contato">Entre em contato!</h1>
+      <p id="p_contato">Para quaisquer outras dúvidas e/ou consultas, basta preencher os campos abaixo:</p>
+      <input type="text" name="nome" id="input_Nome" placeholder="Nome">
+      <input type="text" name="assunto" id="input_Assunto" placeholder="Assunto">
+      <textarea name="mensagem" id="input_Mensagem" cols="30" rows="5" placeholder="Deixe uma mensagem"></textarea>
+      <button id="btn_contato" onclick="send_handle()">Enviar</button>
+      <img id="img_bike_man" src="../assets/img/Beep Beep - Small Vehicle.png" alt="">
+    </section>
 
     <footer id="footer_copyright">
       <div id="grid-layout">
         <p id="author">&copy; 2022 || Feito por Jeferson Tavares</p>
       </div>
     </footer>
+
+    <script type="module" src="../assets//js/script.js">
+//      import sobreMoto from '../assets/js/script.js';
+    </script>
   </body>
 </html>

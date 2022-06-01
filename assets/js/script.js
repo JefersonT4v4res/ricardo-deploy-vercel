@@ -1,39 +1,108 @@
-import { lista_Motos } from './motosLista.js';
+import { listaMotos } from './motosLista.js';
 
-var listaMotos = lista_Motos();
+var lista_Motos = listaMotos();
 
-var card = document.getElementById("lista_titulo");
+var street = document.getElementById("lista_Motos_Street");
+var adventure = document.getElementById("lista_Motos_Adventure");
+var offRoad = document.getElementById("lista_Motos_offRoad");
+var sport = document.getElementById("lista_Motos_Sport");
 
-let tamanho = 0;
-for(let i = 0; i < 22; i++){
-  if(listaMotos[i].tipo == "Street"){
-    tamanho += 1;
-  }
+var saibaMais = document.getElementById("veiculo_Informacoes");
+var img_Moto = document.getElementById("slide_imgs");
+var nome_Moto = document.getElementById("nome_Moto");
+var cores = document.getElementById("lista_Cores");
+var frontal = document.getElementById("frontal");
+var lateral = document.getElementById("lateral");
+
+var info_Motor = document.getElementById("informacao_motor");
+var info_Cilindrada = document.getElementById("informacao_cilindrada");
+var info_Transmissao = document.getElementById("informacao_transmissao");
+var info_Partida = document.getElementById("informacao_partida");
+var info_Freios = document.getElementById("informacao_freios");
+
+
+for(let i = 0; i < lista_Motos.length; i++){
+
+if (lista_Motos[i].tipo == "Street"){
+  street.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>"); 
+
+}else if(lista_Motos[i].tipo == "Adventure"){
+  adventure.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>"); 
+}else if(lista_Motos[i].tipo == "Off Road"){
+  offRoad.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>"); 
+}else if(lista_Motos[i].tipo === "Sport"){
+  sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>"); 
 }
 
-for(let i = 0; i < tamanho; i++){
-if (listaMotos[i].tipo == "Street"){
-
-  card.insertAdjacentHTML("afterend", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<h1 class='moto_Nome'>" + listaMotos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ listaMotos[i].url +"' alt='imagem foda da moto'>" + "<button>Saiba mais</button>"); 
-}
 }
 
-
-
-/*function send_handle(){
-
-    let num=document.getElementById("number").value;
-  
-    let msg= document.getElementById("msg").value;
-  
-    let name= document.getElementById("name").value;
+window.sobreMoto = function(x) {
+  let moto = parseInt(x);
+  let coloracao = "";
+  nome_Moto.textContent = lista_Motos[moto].nome;
+  for(var i in lista_Motos[moto].cor){
+    if(lista_Motos[moto].cor[i] != "none"){
+      if(i == "cor1"){
+        coloracao += "<li class='cor'><input class='radio_cor' type='radio' name='coloracao' id='"+ i +"' checked/><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
+        var check = lista_Motos[moto].cor[i];
+        slideShow(moto, check);
+      }else {
+        coloracao += "<li class='cor'><input class='radio_cor' type='radio' name='coloracao' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
+      }
+      
+      cores.innerHTML = coloracao;
+    }
     
-      var url = "https://wa.me/5575988464938?text=" 
-      + "number: " + number + "%0a"
-      + "name: " + name + "%0a"
-      + "msg: " + msg;
+  }
+  info_Motor.textContent = lista_Motos[moto].motor;
+  info_Cilindrada.textContent = lista_Motos[moto].cilindrada;
+  info_Transmissao.textContent = lista_Motos[moto].transmissao;
+  info_Partida.textContent = lista_Motos[moto].partida;
+  info_Freios.textContent = lista_Motos[moto].freio;
+
+  saibaMais.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+window.fechar = function(){
+  saibaMais.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+
+function slideShow(moto, cor){
+  let slide = "";
+
+  let imgFrontal = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/frontal.webp";
+  let imgLateral = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/lateral.webp";
+
+  frontal.src = imgFrontal;
+  lateral.src = imgLateral;
+}
+
+
+window.send_handle = function(){
+    let nome = document.getElementById("input").value;
+    let msg = document.getElementById("mensagem").value;
+    msg = window.encodeURIComponent(msg);
+      
+    var url = "https://wa.me/5575988464938?text=" 
+      + "name: " + nome + "%0A"
+      + "Mensagem: " + msg;
   
       window.open(url, '_blank').focus();
-  }*/
+      document.getElementById("input").value = "";
+      document.getElementById("mensagem").value = "";
+  }

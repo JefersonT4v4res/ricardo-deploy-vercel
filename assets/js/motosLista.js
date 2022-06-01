@@ -1,13 +1,13 @@
 var motos = [
-    motos = {
+    {
         tipo: "Street",
         nome: "CG 160 START",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/cg_start_prata_3.4_frontal_galeria_0.png.webp",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/cg_start_prata_lateral_card.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "162,7 cc",
         transmissao: "5 velocidades",
         partida: "Elétrico",
-        freio: "A tambor / 130mm",
+        freio: "A tambor / 130 mm",
         cor: {
             cor1: "Prata Metálico",
             cor2: "Preto",
@@ -16,9 +16,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CG 160 FAN ESDI",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/cg_fan_azul_lateral_card.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "162,7 cc",
         transmissao: "5 velocidades",
@@ -32,9 +33,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CG 160 TITAN",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/cg_titan_amarela_lateral_card.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "162,7 cc",
         transmissao: "5 velocidades",
@@ -48,9 +50,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "Biz 110i",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2022-01/BIZ_110_CINZA_LATERAL-CARD.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "109,1 cc",
         transmissao: "4 velocidades",
@@ -64,9 +67,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "Biz 125",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2022-01/BIZ_125_AZUL_LATERAL-card.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "124,9 cc",
         transmissao: "4 velocidades",
@@ -80,9 +84,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "Elite 125",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2022-01/HONDA_ELITE_VERMELHA_LATERAL_card_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "124,9 cc",
         transmissao: "Tipo V - MATIC",
@@ -96,9 +101,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "PCX STD CBS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-11/pcx_standard_cbs_azul_0.png.webp",    
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a líquido",
         cilindrada: "149,3 cc",
         transmissao: "Tipo V - MATIC",
@@ -112,9 +118,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "HONDA ADV",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-12/honda_adv_vermelha-lateral_redux_card_1.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a líquido",
         cilindrada: "149,3 cc",
         transmissao: "Tipo V - MATIC",
@@ -128,9 +135,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CB Twister ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-12/cb_twister_abs_vermelha_lateral_card_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "249,5 cc",
         transmissao: "6 velocidades",
@@ -144,9 +152,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CB Twister CBS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-12/cb_twister_cbs_branca_lateral_card_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "249,5 cc",
         transmissao: "6 velocidades",
@@ -160,9 +169,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CB 500F ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-01/cb500f_card_365x233_laranja.png.webp",
         motor: "DOHC, Dois cilindros 4 tempos, refrigeração líquida",
         cilindrada: "471 cc",
         transmissao: "6 velocidades",
@@ -176,9 +186,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "CB 1000R",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-03/cb1000r_card_365x233_vermelha.png.webp",
         motor: "DOHC, Quatro cilindros 4 tempos, refrigeração líquida",
         cilindrada: "998,4 cc",
         transmissao: "6 velocidades",
@@ -192,9 +203,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Street",
         nome: "Pop 110i",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-12/Pop---Branca---Sombra-alterada---Lateral-365px_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "109,1 cc",
         transmissao: "4 velocidades",
@@ -208,9 +220,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "NXR 160 BROS ESDD",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-08/bros-lateral-vermelha-card_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "162,7 cc",
         transmissao: "5 velocidades",
@@ -224,9 +237,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "XRE 190 ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-12/xre_190_vermelha-lateral_card_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "184,4 cc",
         transmissao: "5 velocidades",
@@ -240,9 +254,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "XRE 300 ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2022-04/card.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
         cilindrada: "291,6 cc",
         transmissao: "5 velocidades",
@@ -256,9 +271,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "CB 500X ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-01/cb500x_card_365x233_vermelho-perolizado.png.webp",
         motor: "DOHC, Dois cilindros 4 tempos, refrigeração líquida",
         cilindrada: "471 cc",
         transmissao: "6 velocidades",
@@ -272,9 +288,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "NC 750X ABS",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-10/nc750_card_365x233_azul_0.png.webp",
         motor: "OHC, Dois Cilindros 4 tempos, refrigeração líquida",
         cilindrada: "745 cc",
         transmissao: "6 velocidades",
@@ -288,9 +305,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Adventure",
         nome: "CRF 1100L AFRICA TWIN MT",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/crf-1100l-africa-twin-mt-4.png.webp",
         motor: "OHC, 2 cilindros 4 tempos, arrefecido a líquido",
         cilindrada: "1.084 cc",
         transmissao: "6 velocidades",
@@ -304,9 +322,10 @@ var motos = [
         }
     },
 
-    motos = {
+    {
         tipo: "Off Road",
         nome: "CRF 250F",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-03/crf250f_card_365x233_vermelha.png.webp",
         motor: "OHC, um cilindro 4 tempos, arrefecido a ar",
         cilindrada: "249,58 cc",
         transmissao: "5 velocidades",
@@ -320,25 +339,10 @@ var motos = [
         }
     },
 
-    motos = {
-        tipo: "Off Road",
-        nome: "TRX 420 FM",
-        motor: "OHV, monocilíndrico, 4 tempos, refrigeração líquida",
-        cilindrada: "420 cc",
-        transmissao: "5 velocidades + Ré",
-        partida: "Elétrico",
-        freio: "Dianteiro: A disco / 190 mm, Traseiro: A tambor / 160mm",
-        cor: {
-            cor1: "Vermelho",
-            cor2: "Preto",
-            cor3: "none",
-            cor4: "none"
-        }
-    },
-
-    motos = {
+    {
         tipo: "Sport",
         nome: "CBR 650R",
+        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-02/cbr650r_card_365x233_cinza-metalico.png.webp",
         motor: "DOHC, quatro cilindros 4 tempos, refrigeração líquida",
         cilindrada: "649 cc",
         transmissao: "6 velocidades",
@@ -353,11 +357,7 @@ var motos = [
     },
 ]
 
-export function lista_Motos(){
+export function listaMotos(){
     return motos;
 }
 
-export function tamanho_Lista(){
-    var tamanho =  motos.lenght;
-    return tamanho;
-}
