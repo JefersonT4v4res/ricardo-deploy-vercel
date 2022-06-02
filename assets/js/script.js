@@ -76,10 +76,7 @@ window.sobreMoto = function(x) {
   document.body.style.overflow = "hidden";
 }
 
-window.fechar = function(){
-  saibaMais.style.display = "none";
-  document.body.style.overflow = "auto";
-}
+
 
 
 function slideShow(moto, cor){

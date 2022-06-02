@@ -72,6 +72,7 @@
       </header>
 
     <main id="catalogo_Motos">
+      
       <section id="lista_veiculos">
        
         <h1 class="lista_titulo" id="street">Street</h1>
@@ -95,25 +96,39 @@
         </div>
 
         <!-- Reune todas as informações da moto selecionada -->
-        <div class="saiba_Mais" id="veiculo_Informacoes">
+        <div class="saiba_Mais" id="veiculo_Informacoes"> <!-- Fundo preto -->
           <div id="veiculo_Informacoes_Box"> <!-- Box de informação -->
-            <button id="btn_Fecha_Informacoes" onclick="fechar()"><img id="icon_fechar" src="../assets/icons/close.png" alt=""></button>
+            <div id="topo_Informacoes">
+            <h1>Informações</h1>
+            <button id="btn_Fecha_Informacoes"><img id="icon_fechar" src="../assets/icons/close.png" alt=""></button>
+            </div>
             <div id="veiculo_imgs_cores">
                 <!--SLIDE IMAGE-->
               <div id="slide_imgs">
                 <img class='img_MotoExemplo' id="frontal" src="" >
                 <img class='img_MotoExemplo' id="lateral" src="" >
 
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
 
               <div id="veiculo_opcoes_cores">
                 <h1 id="nome_Moto"></h1>
                 <ul id="lista_Cores">
-                  
                 </ul>
-                <button>tenho interesse</button>
+
+                <button class="bnt_redes" id="whatsapp">
+                  <div class="icon" id="icon_whats">
+                    <img
+                      id="img_icon"
+                      src="../assets/icons/whatsapp.png"
+                      alt="O ícone do aplicativo whatsapp é formado por balão característico de fala (comuns em quadrinhos, revistas, etc..) um círculo verde com bordas brancas e dentro temos o ícone de um gancho de telefone fixo."
+                      loading="lazy"
+                    />
+                  </div>
+                  <span class="name_button">tenho interesse</span>
+                </button>
+
               </div>
             </div>
 
@@ -168,7 +183,7 @@
       <div class="secao_Videos">
           <div class="breve_informacao_video">
             <h1 class="titulo_Videos">Vendedor recomendado</h1>
-            <p class="frase_Video">Meu nome é Ricardo Tavares, consultor de vendas da Motosol. Estou aqui para facilitar seu atendimento e realizar o seu sonho de conquistar sua Honda 0Km.</p>
+            <p class="frase_Video">Vendedor com grandíssima experiencia e pronto para realizar seu sonho de conquistar sua honda 0km.</p>
           </div>
           <iframe src="https://www.youtube.com/embed/OHfeSk2SDlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div> 
@@ -181,7 +196,7 @@
       <input type="text" name="nome" id="input_Nome" placeholder="Nome">
       <input type="text" name="assunto" id="input_Assunto" placeholder="Assunto">
       <textarea name="mensagem" id="input_Mensagem" cols="30" rows="5" placeholder="Deixe uma mensagem"></textarea>
-      <button id="btn_contato" onclick="send_handle()">Enviar</button>
+      <button id="btn_Contato">Enviar</button>
       <img id="img_bike_man" src="../assets/img/Beep Beep - Small Vehicle.png" alt="">
     </section>
 
@@ -191,9 +206,8 @@
       </div>
     </footer>
 
-    <script type="module" src="../assets/js/script.js">
-    </script>
-    <script type="application/javascript" src="../assets/js/sendMensage.js">
-    </script>
+    <script type="module" src="../assets/js/script.js"> </script>
+    <script type="application/javascript" src="../assets/js/funcoes.js"></script>
+    <script type="application/javascript" src="../assets/js/slideImg.js"></script>
   </body>
 </html>

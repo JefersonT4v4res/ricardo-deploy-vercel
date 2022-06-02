@@ -186,50 +186,160 @@ header h1 {
 }
 
 #veiculo_Informacoes_Box {
+    overflow: scroll;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 95vw;
-    height: 85vh;
-    padding: 15px 25px;
+    width: 100vw;
+    height: 90vh;
     box-sizing: border-box;
-    border-radius: 5px;
-    background-image: linear-gradient(to bottom, #aaaaaa, #b9b9b9, #c9c9c9, #d9d9d9, #e9e9e9, #e8e8e8, #e8e8e8, #e7e7e7, #d5d5d5, #c3c3c3, #b2b2b2, #a1a1a1);
+    background: #F4F4FF;
+    border-radius: 30.8502px;
     z-index: 20;
-    border: 1.5px groove red;
 }
 
 #veiculo_imgs_cores, #veiculo_informacoes_detalhadas {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-    width: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#veiculo_imgs_cores {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+#topo_Informacoes {
+    width: 100vw;
+    height: 79px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    background: #E21F1F;
+    box-shadow: 0px 0px 17px 11px rgb(0 0 0 / 20%);
+    border-radius: 30px 30px 0px 0px;
+}
+
+#topo_Informacoes h1 {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-right: 50px;
 }
 
 #btn_Fecha_Informacoes {
     border: 0;
     background: transparent;
-    margin-left: auto;
-    margin-bottom: 10px;
 }
 
-#btn_Fecha_Informacoes, #icon_fechar {
+#icon_fechar {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
 
-#veiculo_imgs_cores {
-    margin-bottom: 30px;
-    height: 20rem;
-}
-
-#veiculo_imgs_cores #img_MotoExemplo {
+#slide_imgs .img_MotoExemplo {
+    width: 277px;
+    height: 177.9px;
     max-height: 100%;
     max-width: 100%;
 }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  min-width: 14vw;
+  height: 100px;
+  top: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.22);
+  font-weight: bold;
+  font-size: 1.6em;
+  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {
+    left: 4%;
+}
+
+.next {
+    right: 4%;
+}
+
+/*.prev:hover,
+.next:hover {
+    background-color: rgba(67, 65, 65, 0.8);
+    color: #fff;
+}*/
+
+#veiculo_opcoes_cores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nome_Moto {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-weight: bold;
+    font-size: 2.7em;
+    color: #000000;
+    letter-spacing: 4px;
+    margin: 15px 0 0;
+}
+
+#lista_Cores{
+    padding: 0;
+    margin: 15px auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#lista_Cores li{
+    list-style: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4em;
+}
+
+#whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 84vw;
+    height: 70px;
+    border-radius: 10em;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #1ff54a, #1bd741, #16b436);
+}
+
+#whatsapp #icon_whats{
+    background-color: #ffffff86;
+  height: 55px;
+  width: 55px;
+  border-radius: 15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#whatsapp .name_button {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
 
 .box_informacoes {
     display: flex;
@@ -240,17 +350,28 @@ header h1 {
     font-family: 'DM Sans', sans-serif;
     width: 17rem;
     height: 14rem;
+    background: #ffffff;
+    /* border: 0.666678px solid rgba(198, 198, 198, 0.79); */
+    border-radius: 10px;
+    margin: 0 0 10px;
+    padding: 21px 4px;
+   
 }
 
 .box_informacoes p {
-   font-size: 0.9rem;
+   font-size: 1.2rem;
    text-align: center;
    color: darkred;
    font-weight: bold;
    font-style: italic;
 }
 
-                    /* SEÇÃO INFORMAÇÕES ADICIONAIS */
+.box_informacoes h1 {
+    font-size: 3em;
+    margin: 0.3em 0;
+}
+
+                    /* SEÇÃO VÍDEOS E INFORMAÇÕES ADICIONAIS */
 
 aside#videos_informativos {
     width: 90%;
@@ -287,13 +408,13 @@ aside#videos_informativos {
 
 .titulo_Videos {
     color: #fff;
-    font-size: 2em;
-    font-family:  Roboto, sans-serif;
+    font-size: 2.3em;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 .frase_Video {
     font-size: 1.3em;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #breakRow_Red {
@@ -306,7 +427,7 @@ aside#videos_informativos {
 
 iframe {
     margin: 0 auto;
-    width: 240px;
+    width: 275px;
     height: 240px;
 }
 
@@ -334,11 +455,11 @@ iframe {
     margin-bottom: 20px;
 }
 
-#inot_Nome, #input_Assunto, #input_Mensagem {
-    font-family: 'Inter';
+#input_Nome, #input_Assunto, #input_Mensagem {
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: rgba(198, 198, 198, 0.79);
+    color: rgb(0, 0, 0);
 }
 
 #input_Nome, #input_Assunto {
@@ -362,7 +483,7 @@ iframe {
     margin-bottom: 10px; 
 }
 
-#btn_contato {
+#btn_Contato {
     width: 145px;
     height: 24px;
     background: #E21F1F;
