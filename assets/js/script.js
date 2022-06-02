@@ -55,11 +55,11 @@ window.sobreMoto = function(x) {
   for(var i in lista_Motos[moto].cor){
     if(lista_Motos[moto].cor[i] != "none"){
       if(i == "cor1"){
-        coloracao += "<li class='cor'><input class='radio_cor' type='radio' name='coloracao' id='"+ i +"' checked/><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
         var check = lista_Motos[moto].cor[i];
+        coloracao += "<li class='cor'><input class='radio_cor' onclick='pegaCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' checked/><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
         slideShow(moto, check);
       }else {
-        coloracao += "<li class='cor'><input class='radio_cor' type='radio' name='coloracao' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
+        coloracao += "<li class='cor'><input class='radio_cor' onclick='pegaCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
       }
       
       cores.innerHTML = coloracao;
@@ -92,17 +92,16 @@ function slideShow(moto, cor){
   lateral.src = imgLateral;
 }
 
+window.pegaCor = function(moto) {
+var radios = document.getElementsByName("coloracao");
 
-window.send_handle = function(){
-    let nome = document.getElementById("input").value;
-    let msg = document.getElementById("mensagem").value;
-    msg = window.encodeURIComponent(msg);
-      
-    var url = "https://wa.me/5575988464938?text=" 
-      + "name: " + nome + "%0A"
-      + "Mensagem: " + msg;
-  
-      window.open(url, '_blank').focus();
-      document.getElementById("input").value = "";
-      document.getElementById("mensagem").value = "";
+var value;
+
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+        value = radios[i].value;  
+        slideShow(moto, value);   
+    }
   }
+  
+}
