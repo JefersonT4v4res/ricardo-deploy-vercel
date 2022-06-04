@@ -57,6 +57,43 @@ header h1 {
 
                     /* CONTEUDO PRINCIPAL */
 
+#lista_Interesses {
+    margin: -29px;
+    width: 84px;
+    height: auto;
+    display: flex;
+    z-index: 10;
+    position: sticky;
+    left: 13rem;
+    top: 23rem;
+}
+
+#esfera_notificacao {
+    box-sizing: border-box;
+    position: sticky;
+    width: 1.3rem;
+    height: 1.3rem;
+    left: 17rem;
+    z-index: 11;
+    background: #F87676;
+    border: 1px solid #000000;
+    border-radius: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#btn_Interesses {
+    background: transparent;
+    border: 0;
+    margin-top: 2px;
+}
+
+img#icon_interesse {
+    width: 50px;
+    height: 50px;
+}
+
 #lista_veiculos {
     margin-left: auto;
     margin-right: auto;
@@ -86,17 +123,20 @@ header h1 {
 }
 
 .card_Moto {
-    width: 315px;
-    height: 350px;
-    margin: 20px;
+    width: 278px;
+    height: 359px;
+    margin: 13px 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #F4F4FF;
-   /* transition: all 300ms;*/
+    /* transition: all 300ms; */
     border-radius: 5px;
     box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 20%);
+    justify-content: space-evenly;
 }
+
+
 
 /*
 .card_Moto:hover {
@@ -110,8 +150,7 @@ header h1 {
     background-color: transparent;
     display: flex;
     position: relative;
-    top: 16.9em;
-    left: 6.9em;
+    left: 7.1em;
     cursor: pointer;
 }
 
@@ -120,14 +159,24 @@ header h1 {
     height: 30px;
 }
 
+img.checked_Icon {
+    visibility: hidden;
+    position: relative;
+    right: 7.3rem;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
 .moto_Nome {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.1em;
     text-align: center;
-    width: 16rem;
-    margin-bottom: -20px;
-    margin-top: 43px;
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
 }
+
 
 .btn_Tenho_Interesse {
     width: 175px;
@@ -163,7 +212,7 @@ header h1 {
 .moto_Img {
     max-width: 280px;
     max-height: 165px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
                 /* SEÇÃO INFORMAÇÕES DA MOTO */
@@ -308,6 +357,12 @@ header h1 {
     list-style: none;
     font-family: 'DM Sans', sans-serif;
     font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+[type="checkbox"], [type="radio"] {
+    width: 40px;
+    height: 20px;
 }
 
 #whatsapp {
@@ -501,4 +556,12 @@ iframe {
     margin: 0 auto;
     width: 240px;
     height: 240px;
+}
+
+footer#footer_copyright {
+    margin: auto;
+}
+
+#grid-layout p {
+    text-align: center;
 }

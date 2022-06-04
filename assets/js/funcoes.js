@@ -20,3 +20,23 @@ document.getElementById("btn_Fecha_Informacoes").addEventListener("click", funct
   document.getElementById("veiculo_Informacoes").style.display = "none";
   document.body.style.overflow = "auto";
 });
+
+function check(x){
+  var iconCheck = "iconCheck" + x;
+  var checkTrue = document.getElementById(iconCheck).style.visibility;
+  console.log("CheckTrue: " + checkTrue);
+  var QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)
+  
+  if(checkTrue == "" || checkTrue == "hidden") {
+    console.log("Dentro do IF: " + checkTrue);
+    document.getElementById(iconCheck).style.visibility = "visible";
+    QtdLista += 1;
+    document.getElementById("esfera_notificacao").textContent = QtdLista;
+  }else {
+    console.log("Dentro do Else: " + checkTrue);
+     document.getElementById(iconCheck).style.visibility = "hidden";
+     QtdLista -= 1;
+    document.getElementById("esfera_notificacao").textContent = QtdLista;
+  }
+ 
+}

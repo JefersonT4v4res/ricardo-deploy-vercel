@@ -25,25 +25,31 @@ for(let i = 0; i < lista_Motos.length; i++){
 
 if (lista_Motos[i].tipo == "Street"){
   street.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>" +
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
 
 }else if(lista_Motos[i].tipo == "Adventure"){
   adventure.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>" +
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
+
 }else if(lista_Motos[i].tipo == "Off Road"){
   offRoad.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>" +
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>");
+
 }else if(lista_Motos[i].tipo === "Sport"){
   sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>" + 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>" +
+  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
 }
 
 }
