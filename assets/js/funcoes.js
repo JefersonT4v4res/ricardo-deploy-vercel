@@ -13,6 +13,10 @@ document.getElementById("btn_Contato").addEventListener("click", function sendMe
     document.getElementById("input").value = "";
     document.getElementById("mensagem").value = "";
 
+  document.getElementById("input_Nome").value = "";
+  document.getElementById("input_Assunto").value = "";
+  document.getElementById("input_Mensagem").value = "";
+
 });
 
 
