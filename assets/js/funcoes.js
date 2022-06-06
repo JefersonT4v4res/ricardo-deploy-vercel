@@ -24,19 +24,38 @@ document.getElementById("btn_Fecha_Informacoes").addEventListener("click", funct
 function check(x){
   var iconCheck = "iconCheck" + x;
   var checkTrue = document.getElementById(iconCheck).style.visibility;
-  console.log("CheckTrue: " + checkTrue);
+  
   var QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)
   
   if(checkTrue == "" || checkTrue == "hidden") {
-    console.log("Dentro do IF: " + checkTrue);
     document.getElementById(iconCheck).style.visibility = "visible";
     QtdLista += 1;
     document.getElementById("esfera_notificacao").textContent = QtdLista;
   }else {
-    console.log("Dentro do Else: " + checkTrue);
      document.getElementById(iconCheck).style.visibility = "hidden";
      QtdLista -= 1;
     document.getElementById("esfera_notificacao").textContent = QtdLista;
   }
+
+  if(QtdLista != 0) {
+     document.getElementById("lista_Interesses").style.display = "flex";
+  }else {
+    document.getElementById("lista_Interesses").style.display = "none";
+  }
  
 }
+
+document.getElementById("icon_interesse").addEventListener("click", function getImage() {
+  var imgTraseiraEsq = "../img/_motos/Biz 110i/Branco/lateral.webp";
+  var img = new Image();
+  img.src = imgTraseiraEsq;
+ 
+  if(img.height != 0){
+    console.log("Imagem existe");
+  }else {
+    console.log("Não existe");
+  }
+
+  console.log("Clicou");
+
+});

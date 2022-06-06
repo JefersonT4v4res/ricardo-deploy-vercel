@@ -44,7 +44,7 @@ var motos = [
         freio: "Freio Dianteiro/Diâmetro: A disco / 240mm, Freio Traseiro/Diâmetro: A tambor / 130 mm",
         cor: {
             cor1: "Amarelo Perolizado",
-            cor2: "Preto",
+            cor2: "Cinza Metálico",
             cor3: "Vermelho Perolizado",
             cor4: "none"
         }

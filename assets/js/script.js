@@ -13,6 +13,8 @@ var nome_Moto = document.getElementById("nome_Moto");
 var cores = document.getElementById("lista_Cores");
 var frontal = document.getElementById("frontal");
 var lateral = document.getElementById("lateral");
+var TrasEsq = document.getElementById("TraseiraEsq");
+var TrasDir = document.getElementById("traseiraDir");
 
 var info_Motor = document.getElementById("informacao_motor");
 var info_Cilindrada = document.getElementById("informacao_cilindrada");
@@ -86,13 +88,14 @@ window.sobreMoto = function(x) {
 
 
 function slideShow(moto, cor){
-  let slide = "";
+    let slide = document.getElementById("slide_imgs");
+    let traseiras = "";
 
-  let imgFrontal = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/frontal.webp";
-  let imgLateral = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/lateral.webp";
-
-  frontal.src = imgFrontal;
-  lateral.src = imgLateral;
+    let imgFrontal = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/frontal.webp";
+    let imgLateral = "../assets/img/_motos/"+ lista_Motos[moto].nome +"/"+ cor +"/lateral.webp";
+     
+    frontal.src = imgFrontal;
+    lateral.src = imgLateral; 
 }
 
 window.pegaCor = function(moto) {
