@@ -45,17 +45,12 @@ function check(x){
  
 }
 
-document.getElementById("icon_interesse").addEventListener("click", function getImage() {
-  var imgTraseiraEsq = "../img/_motos/Biz 110i/Branco/lateral.webp";
-  var img = new Image();
-  img.src = imgTraseiraEsq;
- 
-  if(img.height != 0){
-    console.log("Imagem existe");
-  }else {
-    console.log("Não existe");
-  }
+document.getElementById("btn_Interesses").addEventListener("click", function abreLista() {
+  document.getElementById("secao_ListaInteresse").style.display = 'flex';
 
-  console.log("Clicou");
+});
+
+document.getElementById("btn_Fecha_Interesses").addEventListener("click", function abreLista() {
+  document.getElementById("secao_ListaInteresse").style.display = 'none';
 
 });
