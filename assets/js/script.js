@@ -21,6 +21,9 @@ var info_Cilindrada = document.getElementById("informacao_cilindrada");
 var info_Transmissao = document.getElementById("informacao_transmissao");
 var info_Partida = document.getElementById("informacao_partida");
 var info_Freios = document.getElementById("informacao_freios");
+var lista = [];
+var int = 0;
+var interesses = "";
 
 
 for(let i = 0; i < lista_Motos.length; i++){
@@ -28,29 +31,29 @@ for(let i = 0; i < lista_Motos.length; i++){
 if (lista_Motos[i].tipo == "Street"){
   street.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
-  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>" +
+  "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit' >Marcar interesse</button>" +
   "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
 
 }else if(lista_Motos[i].tipo == "Adventure"){
   adventure.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
-  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit' >Marcar interesse</button>" +
+  "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit' >Marcar interesse</button>" +
   "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
 
 }else if(lista_Motos[i].tipo == "Off Road"){
   offRoad.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
-  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>" +
+  "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit'>Marcar interesse</button>" +
   "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>");
 
 }else if(lista_Motos[i].tipo === "Sport"){
   sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
-  "<h1 class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' type='submit'>Marcar interesse</button>" +
+  "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit'>Marcar interesse</button>" +
   "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
 }
 
@@ -84,9 +87,6 @@ window.sobreMoto = function(x) {
   document.body.style.overflow = "hidden";
 }
 
-
-
-
 function slideShow(moto, cor){
     let slide = document.getElementById("slide_imgs");
     let traseiras = "";
@@ -110,4 +110,67 @@ var value;
     }
   }
   
+}
+
+window.check = function(x){
+  var iconCheck = "iconCheck" + x;
+  var checkTrue = document.getElementById(iconCheck).style.visibility;
+  let botao = "btn"+x;
+  var QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)
+  let flag = "";
+  
+  
+  if(checkTrue == "" || checkTrue == "hidden") {
+    document.getElementById(botao).style.background = "#E21F1F";
+    document.getElementById(botao).style.color = "#fff";
+    document.getElementById(botao).textContent = "Desmarcar interesse";
+    flag = "add";
+    atualizaListaInteresse(flag, x)
+    QtdLista += 1;
+    document.getElementById("esfera_notificacao").textContent = QtdLista;
+    document.getElementById(iconCheck).style.visibility = "visible";
+  }else {
+     document.getElementById(iconCheck).style.visibility = "hidden";
+     document.getElementById(botao).style.background = "#1ad600e3";
+     document.getElementById(botao).style.color = "#000";
+     document.getElementById(botao).textContent = "Marcar interesse";
+     flag = "remove";
+     atualizaListaInteresse(flag, x);
+     QtdLista -= 1;
+    document.getElementById("esfera_notificacao").textContent = QtdLista;
+  }
+
+  if(QtdLista != 0) {
+     document.getElementById("lista_Interesses").style.display = "flex";
+  }else {
+    document.getElementById("lista_Interesses").style.display = "none";
+  }
+
+}
+
+function atualizaListaInteresse(flag, moto) {
+  let div = document.getElementById("motos_Em_Interesse");
+  
+    if(flag == "add") {
+      lista[int] = lista_Motos[moto].nome;
+      console.log("Int: " + int + " / Moto Nome: " + lista_Motos[moto].nome);
+      interesses += "<div class='interesse'><div class='quadrado'></div><p class='nomeMoto_Interesse'>"+lista[int]+"</p> <button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+      int++;
+    }else {
+        let posicao = lista.indexOf(lista_Motos[moto].nome);
+        console.log("Antes de remover: " + lista.length + " Posição da moto: " + posicao);
+        lista.splice(posicao, 1);
+        int--;
+        console.log("Depois de remover: " + lista.length);
+          for(let y = 0; y < lista.length; y++){
+            console.log("Lista Nomes: " + lista[y]);
+          }
+          interesses = ""
+          for(let i = 0; i < lista.length; i++) {
+            interesses += "<div class='interesse'><div class='quadrado'></div><p>"+lista[i]+"</p> <button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+          }
+        
+    }
+
+      div.innerHTML = interesses;
 }
