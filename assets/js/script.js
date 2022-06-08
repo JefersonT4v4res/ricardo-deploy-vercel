@@ -32,29 +32,25 @@ if (lista_Motos[i].tipo == "Street"){
   street.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit' >Marcar interesse</button>" +
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
 
 }else if(lista_Motos[i].tipo == "Adventure"){
   adventure.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit' >Marcar interesse</button>" +
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
 
 }else if(lista_Motos[i].tipo == "Off Road"){
   offRoad.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit'>Marcar interesse</button>" +
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>");
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>");
 
 }else if(lista_Motos[i].tipo === "Sport"){
   sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
   "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='check("+ i +")' class='btn_Tenho_Interesse' id='btn"+i+"' type='submit'>Marcar interesse</button>" +
-  "<button class='btn_Saiba_Mais' onclick='sobreMoto("+ i +")'><img class='img_Saiba_Mais' src='../assets/icons/info.png' alt=''></button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>"); 
 }
 
 }
@@ -112,30 +108,35 @@ var value;
   
 }
 
-window.check = function(x){
-  var iconCheck = "iconCheck" + x;
+window.check = function() {
+  let nome = document.getElementById("nome_Moto").textContent;
+  for(let i= 0; i < lista_Motos.length; i++ ){
+    if(lista_Motos[i].nome == nome){
+        var pos = i;
+    }
+  }
+  let iconCheck = "iconCheck"+pos;
   var checkTrue = document.getElementById(iconCheck).style.visibility;
-  let botao = "btn"+x;
   var QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)
   let flag = "";
   
   
   if(checkTrue == "" || checkTrue == "hidden") {
-    document.getElementById(botao).style.background = "#E21F1F";
-    document.getElementById(botao).style.color = "#fff";
-    document.getElementById(botao).textContent = "Desmarcar interesse";
+    document.getElementById("marcar_Interesse").style.background = "#E21F1F";
+    document.getElementById("marcar_Interesse").style.color = "#fff";
+    document.getElementById("marcar_Interesse").textContent = "Desmarcar interesse";
     flag = "add";
-    atualizaListaInteresse(flag, x)
+    atualizaListaInteresse(flag, pos)
     QtdLista += 1;
     document.getElementById("esfera_notificacao").textContent = QtdLista;
     document.getElementById(iconCheck).style.visibility = "visible";
   }else {
      document.getElementById(iconCheck).style.visibility = "hidden";
-     document.getElementById(botao).style.background = "#1ad600e3";
-     document.getElementById(botao).style.color = "#000";
-     document.getElementById(botao).textContent = "Marcar interesse";
+     document.getElementById("marcar_Interesse").style.background = "#1ad600e3";
+     document.getElementById("marcar_Interesse").style.color = "#000";
+     document.getElementById("marcar_Interesse").textContent = "Adicionar na lista de interesse";
      flag = "remove";
-     atualizaListaInteresse(flag, x);
+     atualizaListaInteresse(flag, pos);
      QtdLista -= 1;
     document.getElementById("esfera_notificacao").textContent = QtdLista;
   }
