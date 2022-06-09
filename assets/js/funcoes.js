@@ -63,10 +63,12 @@ document.getElementById("btn_Fecha_Informacoes").addEventListener("click", funct
 
 document.getElementById("btn_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'flex';
+  document.getElementById("lista_Interesses").style.display = 'none';
   document.body.style.overflow = "hidden";
 });
 
 document.getElementById("btn_Fecha_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'none';
+  document.getElementById("lista_Interesses").style.display = 'flex';
   document.body.style.overflow = "auto";
 });

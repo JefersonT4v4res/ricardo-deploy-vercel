@@ -21,9 +21,10 @@ var info_Cilindrada = document.getElementById("informacao_cilindrada");
 var info_Transmissao = document.getElementById("informacao_transmissao");
 var info_Partida = document.getElementById("informacao_partida");
 var info_Freios = document.getElementById("informacao_freios");
-var lista = [];
-var int = 0;
+var listaMotoNome = [];
+var listaMotoCor = [];
 var interesses = "";
+var int = 0;
 
 
 for(let i = 0; i < lista_Motos.length; i++){
@@ -63,10 +64,10 @@ window.sobreMoto = function(x) {
     if(lista_Motos[moto].cor[i] != "none"){
       if(i == "cor1"){
         var check = lista_Motos[moto].cor[i];
-        coloracao += "<li class='cor'><input class='radio_cor' onclick='pegaCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' checked/><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
+        coloracao += "<li class='cor'><input class='radio_cor' onclick='imgCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' checked/><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
         slideShow(moto, check);
       }else {
-        coloracao += "<li class='cor'><input class='radio_cor' onclick='pegaCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
+        coloracao += "<li class='cor'><input class='radio_cor' onclick='imgCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
       }
       
       cores.innerHTML = coloracao;
@@ -94,84 +95,104 @@ function slideShow(moto, cor){
     lateral.src = imgLateral; 
 }
 
-window.pegaCor = function(moto) {
-var radios = document.getElementsByName("coloracao");
+window.imgCor = function(x){
+  let nomeCor = pegaCor();
+  slideShow(x, nomeCor);
+}
 
+function pegaCor() {
+var radios = document.getElementsByName("coloracao");
 var value;
 
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
         value = radios[i].value;  
-        slideShow(moto, value);   
+        return value;
     }
   }
-  
+}
+
+function pegaPosicao() {
+  let nome = document.getElementById("nome_Moto").textContent;
+
+  for(let i= 0; i < lista_Motos.length; i++ ){
+    if(lista_Motos[i].nome == nome){
+        return i;
+    }
+  }
+}
+
+function estaCadastrada(pos, cor){
+  let cad = false;
+  for (var i = 0; i < listaMotoNome.length; i++) {
+    if (listaMotoNome[i] == lista_Motos[pos].nome && listaMotoCor[i] == cor) {
+       alert("A moto " + lista_Motos[pos].nome + " na cor "+ cor + " já foi selecionada" );
+        cad = true;
+    }
+  }
+  return cad;
 }
 
 window.check = function() {
-  let nome = document.getElementById("nome_Moto").textContent;
-  for(let i= 0; i < lista_Motos.length; i++ ){
-    if(lista_Motos[i].nome == nome){
-        var pos = i;
-    }
-  }
-  let iconCheck = "iconCheck"+pos;
-  var checkTrue = document.getElementById(iconCheck).style.visibility;
-  var QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)
-  let flag = "";
+  let cor = pegaCor();
+  listaMotoCor[int] = cor;
+  let pos = pegaPosicao();
   
-  
-  if(checkTrue == "" || checkTrue == "hidden") {
-    document.getElementById("marcar_Interesse").style.background = "#E21F1F";
-    document.getElementById("marcar_Interesse").style.color = "#fff";
-    document.getElementById("marcar_Interesse").textContent = "Desmarcar interesse";
-    flag = "add";
-    atualizaListaInteresse(flag, pos)
-    QtdLista += 1;
-    document.getElementById("esfera_notificacao").textContent = QtdLista;
-    document.getElementById(iconCheck).style.visibility = "visible";
-  }else {
-     document.getElementById(iconCheck).style.visibility = "hidden";
-     document.getElementById("marcar_Interesse").style.background = "#1ad600e3";
-     document.getElementById("marcar_Interesse").style.color = "#000";
-     document.getElementById("marcar_Interesse").textContent = "Adicionar na lista de interesse";
-     flag = "remove";
-     atualizaListaInteresse(flag, pos);
-     QtdLista -= 1;
-    document.getElementById("esfera_notificacao").textContent = QtdLista;
-  }
+  let iconCheck = "iconCheck"+ pos; //Aqui é para pegar o ID do ícone de Check
+  document.getElementById(iconCheck).style.visibility = "visible";
+ 
+  //Verifica se moto e cor já foram cadastradas
+  let cadastro = estaCadastrada(pos, cor);
+  console.log(cadastro);
+ if(cadastro == false){ //cadastra em interesses
+    adicionaItemInteresse(pos, cor)
+    incrementaIndiceLista(1);
+    document.getElementById("lista_Interesses").style.visibility = "visible";
+ }
 
-  if(QtdLista != 0) {
-     document.getElementById("lista_Interesses").style.display = "flex";
-  }else {
-    document.getElementById("lista_Interesses").style.display = "none";
-  }
+  /*if(checkTrue == "" || checkTrue == "hidden") {
+  } else {
+     document.getElementById(iconCheck).style.visibility = "hidden";    
+  }*/
+
 
 }
 
-function atualizaListaInteresse(flag, moto) {
-  let div = document.getElementById("motos_Em_Interesse");
-  
-    if(flag == "add") {
-      lista[int] = lista_Motos[moto].nome;
-      console.log("Int: " + int + " / Moto Nome: " + lista_Motos[moto].nome);
-      interesses += "<div class='interesse'><div class='quadrado'></div><p class='nomeMoto_Interesse'>"+lista[int]+"</p> <button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
-      int++;
-    }else {
-        let posicao = lista.indexOf(lista_Motos[moto].nome);
-        console.log("Antes de remover: " + lista.length + " Posição da moto: " + posicao);
-        lista.splice(posicao, 1);
-        int--;
-        console.log("Depois de remover: " + lista.length);
-          for(let y = 0; y < lista.length; y++){
-            console.log("Lista Nomes: " + lista[y]);
-          }
-          interesses = ""
-          for(let i = 0; i < lista.length; i++) {
-            interesses += "<div class='interesse'><div class='quadrado'></div><p>"+lista[i]+"</p> <button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
-          }
-        
-    }
+function incrementaIndiceLista(qtd) {
+  let QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)//Aqui é para pegar o valor de itens na lista
+  QtdLista += qtd;
+  document.getElementById("esfera_notificacao").textContent = QtdLista;
 
-      div.innerHTML = interesses;
+  if(QtdLista != 0) {
+    document.getElementById("lista_Interesses").style.display = "flex";
+  }else {
+    document.getElementById("lista_Interesses").style.display = "none";
+  }
+}
+
+function adicionaItemInteresse(moto, cor) {
+  let div = document.getElementById("motos_Em_Interesse");
+
+    listaMotoNome[int] = lista_Motos[moto].nome;
+    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p id='moto_Nome'>"+listaMotoNome[int]+"</p><p id='moto_Cor'>Cor: "+cor+"</p></div><button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+    int++;
+    div.innerHTML = interesses;
+}
+
+function removeItemLista(){
+  let div = document.getElementById("motos_Em_Interesse");
+  let cor = pegaCor();
+  let pos = pegaPosicao();
+  let qtd = 0;
+
+  let posArray = listaMotoNome.indexOf(lista_Motos[pos].nome);
+    listaMotoNome.splice(posArray, 1);
+    int--;
+    interesses = ""
+      for(let i = 0; i < listaMotoNome.length; i++) {
+        interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p id='moto_Nome'>"+listaMotoNome[int]+"</p><p id='moto_Cor'>"+cor+"</p></div><button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+      }
+    div.innerHTML = interesses;
+
+    incrementaIndiceLista(-1);
 }

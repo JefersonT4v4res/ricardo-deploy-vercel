@@ -460,10 +460,10 @@ img.checked_Icon {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px;
+    padding: 10px 7px;
     margin-bottom: 20px;
-    gap: 10px;
-    width: auto;
+    gap: 12px;
+    min-width: 84vw;
     height: 46px;
     background: #FFFFFF;
     border: 1px solid rgba(198, 198, 198, 0.79);
@@ -477,18 +477,33 @@ img.checked_Icon {
     background: #010B17;
 }
 
-.interesse p{
+div#moto_NomeCor {
+    display: block;
+    margin-right: auto;
+}
+
+.interesse p {
+    text-align: start;
+    color: #000000;
+    margin: 7px auto;
+}
+
+.interesse #moto_Nome {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 0.96em;
-    text-align: center;
-    color: #000000;
+}
+
+.interesse #moto_Cor {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .deletar_interesse {
     width: 24px;
     height: 24px;
-    order: 1;
+    margin-right: 5px;
 }
 
 button#btn_enviar {
