@@ -112,9 +112,7 @@ var value;
   }
 }
 
-function pegaPosicao() {
-  let nome = document.getElementById("nome_Moto").textContent;
-
+function pegaPosicao(nome) {
   for(let i= 0; i < lista_Motos.length; i++ ){
     if(lista_Motos[i].nome == nome){
         return i;
@@ -136,37 +134,30 @@ function estaCadastrada(pos, cor){
 window.check = function() {
   let cor = pegaCor();
   listaMotoCor[int] = cor;
-  let pos = pegaPosicao();
+  let nome = document.getElementById("nome_Moto").textContent;
+  let pos = pegaPosicao(nome);
   
   let iconCheck = "iconCheck"+ pos; //Aqui é para pegar o ID do ícone de Check
   document.getElementById(iconCheck).style.visibility = "visible";
  
   //Verifica se moto e cor já foram cadastradas
   let cadastro = estaCadastrada(pos, cor);
-  console.log(cadastro);
  if(cadastro == false){ //cadastra em interesses
     adicionaItemInteresse(pos, cor)
     incrementaIndiceLista(1);
-    document.getElementById("lista_Interesses").style.visibility = "visible";
  }
-
-  /*if(checkTrue == "" || checkTrue == "hidden") {
-  } else {
-     document.getElementById(iconCheck).style.visibility = "hidden";    
-  }*/
-
 
 }
 
 function incrementaIndiceLista(qtd) {
   let QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)//Aqui é para pegar o valor de itens na lista
-  QtdLista += qtd;
+   QtdLista += qtd;
   document.getElementById("esfera_notificacao").textContent = QtdLista;
 
-  if(QtdLista != 0) {
-    document.getElementById("lista_Interesses").style.display = "flex";
+  if(QtdLista > 0) {
+    document.querySelector("#lista_Interesses").style.display = "flex";
   }else {
-    document.getElementById("lista_Interesses").style.display = "none";
+    document.querySelector("#lista_Interesses").style.display = "none";
   }
 }
 
@@ -174,25 +165,41 @@ function adicionaItemInteresse(moto, cor) {
   let div = document.getElementById("motos_Em_Interesse");
 
     listaMotoNome[int] = lista_Motos[moto].nome;
-    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p id='moto_Nome'>"+listaMotoNome[int]+"</p><p id='moto_Cor'>Cor: "+cor+"</p></div><button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[int]+"</p><p class='moto_CorInteresse' id='moto_Cor'>Cor: "+cor+"</p></div><button onclick='removeItemLista("+int+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
     int++;
     div.innerHTML = interesses;
 }
 
-function removeItemLista(){
+window.removeItemLista = function(pos){
   let div = document.getElementById("motos_Em_Interesse");
-  let cor = pegaCor();
-  let pos = pegaPosicao();
   let qtd = 0;
+  let nome = listaMotoNome[pos];
 
-  let posArray = listaMotoNome.indexOf(lista_Motos[pos].nome);
-    listaMotoNome.splice(posArray, 1);
+  for(var i = 0; i < listaMotoNome.length; i++) {
+    if(listaMotoNome[i] == listaMotoNome[pos]) {
+      qtd += 1;
+      console.log("Moto: " + listaMotoNome[pos] +" /Quantidade: " + qtd);
+    }
+  }
+  
+  let posNomeArray = listaMotoNome.indexOf(listaMotoNome[pos]);
+    listaMotoNome.splice(posNomeArray, 1);
+  let posCorArray = listaMotoCor.indexOf(listaMotoCor[pos]);
+    listaMotoCor.splice(posCorArray, 1);
     int--;
-    interesses = ""
-      for(let i = 0; i < listaMotoNome.length; i++) {
-        interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p id='moto_Nome'>"+listaMotoNome[int]+"</p><p id='moto_Cor'>"+cor+"</p></div><button class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
-      }
-    div.innerHTML = interesses;
+    qtd -= 1;
 
-    incrementaIndiceLista(-1);
+  interesses = ""
+  for(let i = 0; i < listaMotoNome.length; i++) {
+    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[i]+"</p><p class='moto_CorInteresse' id='moto_Cor'>"+listaMotoCor[i]+"</p></div><button onclick='removeItemLista("+i+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt=''></button></div>";
+  }
+  div.innerHTML = interesses;
+
+  incrementaIndiceLista(-1);
+
+  if(qtd == 0){
+    let value = pegaPosicao(nome);
+    let iconCheck = "iconCheck"+ value; //Aqui é para pegar o ID do ícone de Check
+    document.getElementById(iconCheck).style.visibility = "hidden";
+  }
 }

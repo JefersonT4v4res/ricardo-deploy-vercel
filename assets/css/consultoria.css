@@ -66,7 +66,21 @@ header h1 {
     position: sticky;
     left: 13.8rem;
     top: 11rem;
+    animation: entrance 1.5s easeInOut 0s 1 normal both;
 }
+
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 
 #esfera_notificacao {
     box-sizing: border-box;
@@ -173,7 +187,7 @@ img.checked_Icon {
 #veiculo_Informacoes {
     width: 100%;
     height: 100%;
-    background-color: #1e0628db;
+    background-color: #000000e0;
     position: fixed;
     display: none;
     align-items: center;
@@ -209,13 +223,16 @@ img.checked_Icon {
 
 #veiculo_imgs_cores {
     margin-bottom: 30px;
+    margin-top: 80px;
     padding: 20px;
 }
 
 #topo_Informacoes {
+    position: fixed;
     width: 100vw;
     height: 79px;
     display: flex;
+    z-index: 10;
     align-items: center;
     padding: 0;
     gap: 45px;
@@ -355,8 +372,6 @@ img.checked_Icon {
     margin: 1rem auto;
 }
 
-
-
 .box_informacoes {
     display: flex;
     flex-direction: column;
@@ -367,11 +382,9 @@ img.checked_Icon {
     width: 17rem;
     height: 14rem;
     background: #ffffff;
-    /* border: 0.666678px solid rgba(198, 198, 198, 0.79); */
     border-radius: 10px;
     margin: 0 0 10px;
     padding: 21px 4px;
-   
 }
 
 .box_informacoes p {
@@ -391,10 +404,10 @@ img.checked_Icon {
 #secao_ListaInteresse {
     width: 100%;
     height: 100%;
-    background-color: #000000c4;
+    background-color: #000000e0;
     position: fixed;
     display: none;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     top: 0;
     bottom: 0;
@@ -410,14 +423,14 @@ img.checked_Icon {
     box-sizing: border-box;
     overflow: scroll;
     min-width: 95vw;
-    height: 80vh;
+    height: 85vh;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid #000000;
-    border-radius: 25px;
+    border-radius: 25px 25px 0px 0px;
     background: #F4F4FF;
 }
 
@@ -425,6 +438,7 @@ img.checked_Icon {
     min-width: 95vw;
     min-height: 17vh;
     border-radius: 23px;
+    position: fixed;
     background-image: url('../img/barra_topo_BG.svg');
     background-repeat: no-repeat;
     background-position: top center;
@@ -452,7 +466,7 @@ img.checked_Icon {
 #motos_Em_Interesse {
     width: 90vw;
     height: auto;
-    margin-bottom: 30px;
+    margin: 10rem auto 2rem;
 }
 
 .interesse {
@@ -504,6 +518,10 @@ div#moto_NomeCor {
     width: 24px;
     height: 24px;
     margin-right: 5px;
+}
+
+div#btn_chatWhatsapp {
+    margin: 0.5rem auto 2rem;
 }
 
 button#btn_enviar {

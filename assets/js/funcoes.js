@@ -41,19 +41,20 @@ document.getElementById("whatsapp").addEventListener("click", function msgInfoMo
 });
 
 document.getElementById("btn_enviar").addEventListener("click", function msgListaInteresse() {
-  let nomes = document.querySelectorAll(".nomeMoto_Interesse");
+  let nomes = document.querySelectorAll(".moto_NomeInteresse");
+  let cores = document.querySelectorAll(".moto_CorInteresse");
   var msg;
+
   for(let i = 0; i < nomes.length; i++) {
-    document.getElementById("input_Mensagem").value += nomes[i].textContent + "\n";
+    document.getElementById("input_Mensagem").value += "\nMoto: " + nomes[i].textContent + " // " + cores[i].textContent + ".\n";
   }
     msg = document.getElementById("input_Mensagem").value;
     msg = window.encodeURIComponent(msg);
 
-  let texto = "Oi, Ricardo! Olhando o catálogo acabei ficando interessado pela(s) seguinte(s) moto(s): \n\n" + msg;
+  let texto = "Oi, Ricardo! Olhando o catálogo acabei ficando interessado pela(s) seguinte(s) moto(s): " + msg;
   sendMensage(texto);
-  document.getElementById("mensagem").value = "";
+  document.getElementById("input_Mensagem").value = "";
 });
-
 
 document.getElementById("btn_Fecha_Informacoes").addEventListener("click", function close() {
   document.getElementById("veiculo_Informacoes").style.display = "none";
@@ -63,12 +64,12 @@ document.getElementById("btn_Fecha_Informacoes").addEventListener("click", funct
 
 document.getElementById("btn_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'flex';
-  document.getElementById("lista_Interesses").style.display = 'none';
+  document.getElementById("lista_Interesses").style.zIndex = '25';
   document.body.style.overflow = "hidden";
 });
 
 document.getElementById("btn_Fecha_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'none';
-  document.getElementById("lista_Interesses").style.display = 'flex';
+  document.getElementById("lista_Interesses").style.zIndex = '30';
   document.body.style.overflow = "auto";
 });
