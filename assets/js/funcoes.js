@@ -73,3 +73,41 @@ document.getElementById("btn_Fecha_Interesses").addEventListener("click", functi
   document.getElementById("lista_Interesses").style.zIndex = '30';
   document.body.style.overflow = "auto";
 });
+
+dragElement(document.getElementById("lista_Interesses"));
+
+function dragElement(elmnt) {
+	let pos1 = 0,
+		pos2 = 0,
+		pos3 = 0,
+		pos4 = 0;
+	let LOGO = document.getElementById("icon_interesse");
+	elmnt.onmousedown = dragMouseDown;
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmouseup = closeDragElement;
+		document.onmousemove = elementDrag;
+	}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+		elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+		LOGO.style.pointerEvents = "none";
+	}
+
+	function closeDragElement() {
+		document.onmouseup = null;
+		document.onmousemove = null;
+		LOGO.style.pointerEvents = "auto";
+	}
+}

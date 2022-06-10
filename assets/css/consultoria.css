@@ -34,8 +34,10 @@ p {
 }
 
 #banner {
-    width: 100vw;
-    box-shadow: 0px 15px 40px 1px rgba(8, 77, 178, 0.45);
+    display: block;
+    margin: 10px auto;
+    width: 99vw;
+    box-shadow: 0px 15px 40px 1px rgb(8 77 178 / 45%);
 }
 
 #apresentacao {
@@ -58,36 +60,23 @@ header h1 {
                     /* CONTEUDO PRINCIPAL */
 
 #lista_Interesses {
-    margin: -29px;
-    width: 84px;
+    margin: 0px;
+    width: 65px;
     height: auto;
     display: none;
-    z-index: 30;
-    position: sticky;
-    left: 13.8rem;
-    top: 11rem;
-    animation: entrance 1.5s easeInOut 0s 1 normal both;
+    z-index: 39;
+    position: absolute;
+    left: 15rem;
+    top: 2rem;
 }
-
-@keyframes entrance {
-	0% {
-		opacity: 0;
-		transform: translateY(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
 
 #esfera_notificacao {
     box-sizing: border-box;
-    position: sticky;
+    position: absolute;
     width: 1.3rem;
     height: 1.3rem;
-    left: 18rem;
+    left: 2.6rem;
+    bottom: 2.7rem;
     z-index: 11;
     background: #F87676;
     border: 1px solid #000000;
@@ -98,7 +87,8 @@ header h1 {
 }
 
 #btn_Interesses {
-    margin-top: 2px;
+    width: 4rem;
+    height: 4rem;
 }
 
 img#icon_interesse {
@@ -190,14 +180,14 @@ img.checked_Icon {
     background-color: #000000e0;
     position: fixed;
     display: none;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 25;
-    padding: 40px 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -205,11 +195,24 @@ img.checked_Icon {
     overflow: scroll;
     position: relative;
     width: 100vw;
-    height: 90vh;
+    height: 95vh;
     box-sizing: border-box;
     background: #F4F4FF;
-    border-radius: 30.8502px;
+    border-radius: 30px 30px 0 0;
     z-index: 20;
+    animation: entrance 0.75s ease 0s 1 normal none;
+}
+
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 #veiculo_imgs_cores, #veiculo_informacoes_detalhadas {
@@ -415,7 +418,7 @@ img.checked_Icon {
     right: 0;
     margin: 0;
     z-index: 25;
-    padding: 40px 5px;
+    padding: 0px 5px;
     box-sizing: border-box;
 }
 
@@ -430,13 +433,39 @@ img.checked_Icon {
     flex-direction: column;
     align-items: center;
     border: 1px solid #000000;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 30px 30px 0px 0px;
     background: #F4F4FF;
+    animation: entrance 0.75s ease 0s 1 normal none;
 }
+
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes leave {
+	0% {
+        opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+}
+
 
 #barra_Navegacao {
     min-width: 95vw;
-    min-height: 17vh;
+    min-height: 23vh;
     border-radius: 23px;
     position: fixed;
     background-image: url('../img/barra_topo_BG.svg');
@@ -613,7 +642,7 @@ iframe {
 #contato {
     margin-top: 20px;
     padding-top: 10px;
-    width: 100vw;
+    width: 99vw;
     background-color: #F4F4FF;
     display: flex;
     flex-direction: column;
