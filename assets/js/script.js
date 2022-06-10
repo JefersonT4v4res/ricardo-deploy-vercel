@@ -155,6 +155,9 @@ function incrementaIndiceLista(qtd) {
 
   if(QtdLista > 0) {
     document.querySelector("#lista_Interesses").style.display = "flex";
+    document.getElementById("lista_Interesses").style.position = "sticky";
+    document.getElementById("lista_Interesses").style.left = "0rem";
+    document.getElementById("lista_Interesses").style.top = "2.5rem";
   }else {
     document.querySelector("#lista_Interesses").style.display = "none";
   }

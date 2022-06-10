@@ -20,17 +20,27 @@ p {
     margin: 0;
     border: 0;
     width: 100%;
+    gap: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background: #ff0000de;
 }
 
+#btn_voltar, #logomarca_Ricardo {
+    margin: 5px;
+}
+
 #h1_consultoria {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bold;
     color: #fff;
+}
+
+#logomarca_Ricardo {
+    width: 30%;
+    height: auto;
 }
 
 #banner {
@@ -275,7 +285,7 @@ img.checked_Icon {
   position: absolute;
   min-width: 14vw;
   height: 100px;
-  top: 13%;
+  top: 17%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,11 +341,15 @@ img.checked_Icon {
     height: 20px;
 }
 
+
 #whatsapp {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    min-width: 84vw;
+    justify-content: flex-start;
+    padding-left: 15px;
+    gap: 0.5rem;
+    width: 84vw;
+    max-width: 27rem;
     height: 70px;
     border-radius: 10em;
     border: 0;
@@ -362,7 +376,8 @@ img.checked_Icon {
 }
 
 .btn_listaInteresse {
-    min-width: 84vw;
+    width: 84vw;
+    max-width: 27rem;
     height: 70px;
     font-family: 'DM Sans', sans-serif;
     font-size: 1em;
@@ -431,6 +446,7 @@ img.checked_Icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid #000000;
     border-radius: 30px 30px 0px 0px;
     background: #F4F4FF;
@@ -463,15 +479,15 @@ img.checked_Icon {
 
 
 #barra_Navegacao {
-    min-width: 95vw;
+    width: 95vw;
     min-height: 23vh;
     border-radius: 23px;
     position: fixed;
     background-image: url('../img/barra_topo_BG.svg');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: auto;
-    margin-bottom: 19px;
+    background-size: cover;
+    margin-bottom: 1rem;
     
 }
 
@@ -494,7 +510,7 @@ img.checked_Icon {
 #motos_Em_Interesse {
     width: 90vw;
     height: auto;
-    margin: 10rem auto 2rem;
+    margin: 12rem auto 2rem;
 }
 
 .interesse {
@@ -506,7 +522,7 @@ img.checked_Icon {
     margin-bottom: 20px;
     gap: 12px;
     min-width: 84vw;
-    height: 46px;
+    height: 3rem;
     background: #FFFFFF;
     border: 1px solid rgba(198, 198, 198, 0.79);
     box-shadow: 0px 0px 17px 11px rgb(0 0 0 / 20%);
@@ -632,10 +648,14 @@ aside#videos_informativos {
     background-color: #E21F1F;    
 }
 
+.video {
+    aspect-ratio: 16/9;
+}
+
 iframe {
-    margin: 0 auto;
-    width: 275px;
-    height: 240px;
+    margin: 10px auto;
+    width: 100%;
+    height: 100%;
 }
 
 #contato {
@@ -710,9 +730,144 @@ iframe {
 }
 
 footer#footer_copyright {
+    height: 2rem;
     margin: auto;
-}
-
-#grid-layout p {
     text-align: center;
 }
+
+#div-layout p {
+   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+   margin-top: 0.5rem;
+}
+
+/*    SCREEN SIZE     */
+
+@media only screen and (min-width: 340px) {
+   
+    #h1_consultoria {
+        font-size: 1.5em;
+    }
+
+    #logomarca_Ricardo {
+        width: 40%;
+        height: auto;
+    }
+
+    #topo_Informacoes {
+        justify-content: space-around;
+    }
+
+    #whatsapp {
+        gap: 1.5rem;
+    }
+
+    .interesse {
+        height: 4rem;
+    }
+
+    #titulo_Navegacao {
+        justify-content: flex-end;
+        gap: 35px;
+    }
+
+    #btn_Fecha_Interesses {
+        margin: 10px;
+    }
+}
+@media only screen and (min-width: 420px) {
+    #h1_consultoria {
+        font-size: 2em;
+    }
+
+    #logomarca_Ricardo {
+        width: 30%;
+    }
+
+    #topo_Informacoes {
+        height: 83px;
+        gap: 72px;
+        justify-content: flex-end;
+    }
+
+    #topo_Informacoes h1, #barra_Navegacao h1 {
+        font-size: 1.6em;
+    }
+
+    button#btn_Fecha_Informacoes {
+        margin: 15px;
+    }
+
+    #whatsapp {
+        gap: 2.5rem;
+    }
+
+    #titulo_Navegacao {
+        gap: 45px;
+    }
+} 
+@media only screen and (min-width: 660px) {
+    #icon_voltar {
+        width: 3rem;
+    }
+
+    #h1_consultoria {
+        font-size: 2.5em;
+    }
+
+    #logomarca_Ricardo {
+        width: 25%;
+    }
+
+    #topo_Informacoes { 
+        gap: 152px;
+    }
+
+    #topo_Informacoes h1, #barra_Navegacao h1 {
+        font-size: 2.4em;
+    }
+
+    #input_Nome, #input_Assunto {
+        width: 25rem;
+        height: 3rem;
+    }
+
+    #input_Mensagem  {
+        width: 25rem;
+        padding: 5px;
+    }
+
+    #btn_Contato {
+        width: 150px;
+        height: 30px;
+        margin-left: 15.5rem;
+    }
+
+    #whatsapp {
+        gap: 4.5rem;
+    }
+
+    #barra_Navegacao {
+        min-height: 35vh;
+    }
+
+    #titulo_Navegacao {
+        gap: 86px;
+    }
+
+    #btn_Fecha_Interesses {
+        margin: 15px;
+    }
+
+    #motos_Em_Interesse {
+        margin: 18rem auto 2rem;
+    }
+
+    button#btn_enviar {
+        width: 20rem;
+        justify-content: center;
+    }
+}
+/*@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1400px) {}
+@media only screen and (min-width: 1800px) {}
+@media only screen and (min-width: 2500px) {}*/
