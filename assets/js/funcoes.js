@@ -58,9 +58,11 @@ document.getElementById("btn_enviar").addEventListener("click", function msgList
 
 document.getElementById("btn_Fecha_Informacoes").addEventListener("click", function close() {
   document.getElementById("veiculo_Informacoes").style.display = "none";
+  document.getElementById("lista_Interesses").style.position = "sticky";
+  document.getElementById("lista_Interesses").style.left = "1rem";
+  document.getElementById("lista_Interesses").style.top = "23rem";
   document.body.style.overflow = "auto";
 });
-
 
 document.getElementById("btn_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'flex';
@@ -74,40 +76,24 @@ document.getElementById("btn_Fecha_Interesses").addEventListener("click", functi
   document.body.style.overflow = "auto";
 });
 
-dragElement(document.getElementById("lista_Interesses"));
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function dragElement(elmnt) {
-	let pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	let LOGO = document.getElementById("icon_interesse");
-	elmnt.onmousedown = dragMouseDown;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-	function dragMouseDown(e) {
-		e = e || window.event;
-		e.preventDefault();
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		document.onmouseup = closeDragElement;
-		document.onmousemove = elementDrag;
-	}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-	function elementDrag(e) {
-		e = e || window.event;
-		e.preventDefault();
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-		elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-		LOGO.style.pointerEvents = "none";
-	}
-
-	function closeDragElement() {
-		document.onmouseup = null;
-		document.onmousemove = null;
-		LOGO.style.pointerEvents = "auto";
-	}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("img_MotoExemplo");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
 }

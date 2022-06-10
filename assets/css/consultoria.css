@@ -60,14 +60,13 @@ header h1 {
                     /* CONTEUDO PRINCIPAL */
 
 #lista_Interesses {
-    margin: 0px;
+    margin: -30px;
     width: 65px;
     height: auto;
     display: none;
-    z-index: 39;
+    z-index: 26;
     position: absolute;
-    left: 15rem;
-    top: 2rem;
+    left: 2rem;
 }
 
 #esfera_notificacao {

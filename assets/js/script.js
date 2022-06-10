@@ -8,13 +8,10 @@ var offRoad = document.getElementById("lista_Motos_offRoad");
 var sport = document.getElementById("lista_Motos_Sport");
 
 var saibaMais = document.getElementById("veiculo_Informacoes");
-var img_Moto = document.getElementById("slide_imgs");
 var nome_Moto = document.getElementById("nome_Moto");
 var cores = document.getElementById("lista_Cores");
 var frontal = document.getElementById("frontal");
 var lateral = document.getElementById("lateral");
-var TrasEsq = document.getElementById("TraseiraEsq");
-var TrasDir = document.getElementById("traseiraDir");
 
 var info_Motor = document.getElementById("informacao_motor");
 var info_Cilindrada = document.getElementById("informacao_cilindrada");
@@ -69,7 +66,6 @@ window.sobreMoto = function(x) {
       }else {
         coloracao += "<li class='cor'><input class='radio_cor' onclick='imgCor("+moto+")' type='radio' name='coloracao' value='"+lista_Motos[moto].cor[i]+"' id='"+ i +"' /><label class='opcoes_Cores' for='"+ i +"'>"+ lista_Motos[moto].cor[i] +"</label></li>";
       }
-      
       cores.innerHTML = coloracao;
     }
     
@@ -80,6 +76,9 @@ window.sobreMoto = function(x) {
   info_Partida.textContent = lista_Motos[moto].partida;
   info_Freios.textContent = lista_Motos[moto].freio;
 
+  document.getElementById("lista_Interesses").style.position = "sticky";
+  document.getElementById("lista_Interesses").style.left = "0rem";
+  document.getElementById("lista_Interesses").style.top = "2.5rem";
   saibaMais.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
