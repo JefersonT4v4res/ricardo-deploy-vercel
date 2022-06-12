@@ -78,7 +78,7 @@ window.sobreMoto = function(x) {
 
   document.getElementById("lista_Interesses").style.position = "sticky";
   document.getElementById("lista_Interesses").style.left = "0rem";
-  document.getElementById("lista_Interesses").style.top = "2.5rem";
+  document.getElementById("lista_Interesses").style.top = "3rem";
   saibaMais.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
@@ -157,7 +157,7 @@ function incrementaIndiceLista(qtd) {
     document.querySelector("#lista_Interesses").style.display = "flex";
     document.getElementById("lista_Interesses").style.position = "sticky";
     document.getElementById("lista_Interesses").style.left = "0rem";
-    document.getElementById("lista_Interesses").style.top = "2.5rem";
+    document.getElementById("lista_Interesses").style.top = "3rem";
   }else {
     document.querySelector("#lista_Interesses").style.display = "none";
   }

@@ -6,6 +6,24 @@ body {
     background: #010b17;
 }
 
+
+
+#veiculo_Informacoes_Box::-webkit-scrollbar, #conteudo_Interesse::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+}
+
 button {
     border: 0;
     background: transparent;
@@ -106,8 +124,7 @@ img#icon_interesse {
 }
 
 #lista_veiculos {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto;
     padding-bottom: 20px;
     width: 96vw;
     height: auto;
@@ -465,30 +482,24 @@ img.checked_Icon {
 	}
 }
 
-@keyframes leave {
-	0% {
-        opacity: 1;
-		transform: translateY(0);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateY(250px);
-	}
-}
-
 
 #barra_Navegacao {
     width: 95vw;
-    min-height: 23vh;
-    border-radius: 23px;
-    position: fixed;
+    height: 26vh;
+    border-radius: 25px;
+    position: absolute;
     background-image: url('../img/barra_topo_BG.svg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     margin-bottom: 1rem;
-    
+}
+
+#icon_Interesse {
+    position: absolute;
+    display: none;
+    top: 0.5rem;
+    left: 0.5rem;
 }
 
 #titulo_Navegacao {
@@ -510,7 +521,7 @@ img.checked_Icon {
 #motos_Em_Interesse {
     width: 90vw;
     height: auto;
-    margin: 12rem auto 2rem;
+    margin: 15rem auto 2rem;
 }
 
 .interesse {
@@ -600,8 +611,7 @@ aside#videos_informativos {
     width: 90%;
     display: block;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto;
 }  
 
 .secao_SaibaMais {
@@ -655,13 +665,15 @@ aside#videos_informativos {
 iframe {
     margin: 10px auto;
     width: 100%;
+    max-width: 50rem;
     height: 100%;
+    max-height: 30rem;
 }
 
 #contato {
-    margin-top: 20px;
     padding-top: 10px;
     width: 99vw;
+    margin: 20px auto;
     background-color: #F4F4FF;
     display: flex;
     flex-direction: column;
@@ -735,12 +747,13 @@ footer#footer_copyright {
     text-align: center;
 }
 
-#div-layout p {
+footer#footer_copyright p {
    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
    margin-top: 0.5rem;
 }
 
 /*    SCREEN SIZE     */
+
 
 @media only screen and (min-width: 340px) {
    
@@ -774,7 +787,8 @@ footer#footer_copyright {
         margin: 10px;
     }
 }
-@media only screen and (min-width: 420px) {
+
+@media only screen and (min-width: 481px) {
     #h1_consultoria {
         font-size: 2em;
     }
@@ -785,7 +799,7 @@ footer#footer_copyright {
 
     #topo_Informacoes {
         height: 83px;
-        gap: 72px;
+        gap: 22vw;
         justify-content: flex-end;
     }
 
@@ -801,11 +815,89 @@ footer#footer_copyright {
         gap: 2.5rem;
     }
 
+    #lista_Interesses {
+        left: 1rem;
+        top: 3rem;
+    }
+    
+    #esfera_notificacao {
+        width: 1.6rem;
+        height: 1.6rem;
+        left: 3rem;
+        bottom: 2.7rem;
+        font-size: 18px;
+        padding: 1.5px;
+    }
+    
+    img#icon_interesse {
+        width: 67px;
+        height: 65px;
+    }
+
     #titulo_Navegacao {
-        gap: 45px;
+        gap: 15vw;
+    }
+
+    #barra_Navegacao {
+        width: 95vw;
+        height: 15vh;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border-radius: 25px 25px 0px 0px;
+        background: #E21F1F;
+        justify-content: flex-end;
+    }
+
+    #btn_Fecha_Interesses {
+        margin: 15px;
+    }
+
+    #icon_Interesse {
+        display: flex;
+        top: 1.3rem;
+        filter: drop-shadow(0 0 0.2rem #00000030);
+    }
+
+    #motos_Em_Interesse {
+        margin: 9rem auto 2rem;
+    }
+
+    .interesse {
+        height: 5.5rem;
+        gap: 25px;
+    }
+    
+    .interesse #moto_Nome {
+        font-size: 1.3em;
+    }
+    
+    .interesse #moto_Cor {
+        font-size: 1.2em;
+    }
+    
+    .quadrado {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .deletar_interesse {
+        width: 55px;
+        height: 55px;
+        background: #D9D9D9;
+        border-radius: 7.0132px;
+        margin-right: 5px;
+    }
+    
+    img#icon_remover {
+        width: 30px;
+        height: 30px;
     }
 } 
-@media only screen and (min-width: 660px) {
+
+
+@media only screen and (min-width: 769px) {
     #icon_voltar {
         width: 3rem;
     }
@@ -819,18 +911,51 @@ footer#footer_copyright {
     }
 
     #topo_Informacoes { 
-        gap: 152px;
+        gap: 14rem;
     }
 
     #topo_Informacoes h1, #barra_Navegacao h1 {
         font-size: 2.4em;
     }
 
+    #lista_Interesses {
+        left: 2rem;
+    }
+
+    .next {
+        right: 47%;
+    }
+
+    .prev, .next {
+        min-width: 7vw;
+        height: 80px;
+        top: 30%;
+        background: #d9d9d97d;
+    }
+
+    #slide_imgs .img_MotoExemplo {
+        width: 311px;
+        height: 190.9px;
+    }
+
+    #nome_Moto {
+        width: 17rem;
+    }
+
+
+
+    .btn_listaInteresse, #whatsapp {
+        width: 36vw;
+    }
+
+    #whatsapp {
+        gap: 0.1rem;
+    }
+
     #input_Nome, #input_Assunto {
         width: 25rem;
         height: 3rem;
     }
-
     #input_Mensagem  {
         width: 25rem;
         padding: 5px;
@@ -842,24 +967,16 @@ footer#footer_copyright {
         margin-left: 15.5rem;
     }
 
-    #whatsapp {
-        gap: 4.5rem;
-    }
-
-    #barra_Navegacao {
-        min-height: 35vh;
-    }
-
     #titulo_Navegacao {
-        gap: 86px;
+        gap: 13rem;
     }
 
     #btn_Fecha_Interesses {
         margin: 15px;
     }
 
-    #motos_Em_Interesse {
-        margin: 18rem auto 2rem;
+    #barra_Navegacao {
+        border: 2px solid #2e1018;
     }
 
     button#btn_enviar {
@@ -867,6 +984,7 @@ footer#footer_copyright {
         justify-content: center;
     }
 }
+
 /*@media only screen and (min-width: 1024px) {}
 @media only screen and (min-width: 1400px) {}
 @media only screen and (min-width: 1800px) {}
