@@ -88,7 +88,6 @@ header h1 {
                     /* CONTEUDO PRINCIPAL */
 
 #lista_Interesses {
-    margin: -30px;
     width: 65px;
     height: auto;
     display: none;
@@ -100,6 +99,9 @@ header h1 {
 #esfera_notificacao {
     box-sizing: border-box;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 1.3rem;
     height: 1.3rem;
     left: 2.6rem;
@@ -247,7 +249,7 @@ img.checked_Icon {
     align-items: center;
     align-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #veiculo_imgs_cores {
@@ -914,6 +916,15 @@ footer#footer_copyright p {
         gap: 14rem;
     }
 
+    div#slide_imgs {
+        width: 48vw;
+        max-width: 30rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
     #topo_Informacoes h1, #barra_Navegacao h1 {
         font-size: 2.4em;
     }
@@ -922,27 +933,26 @@ footer#footer_copyright p {
         left: 2rem;
     }
 
-    .next {
-        right: 47%;
+    .next { 
+        right: 50rem;
+        left: 49vw;
     }
 
     .prev, .next {
-        min-width: 7vw;
+        min-width: 3.5rem;
         height: 80px;
         top: 30%;
         background: #d9d9d97d;
     }
 
     #slide_imgs .img_MotoExemplo {
-        width: 311px;
-        height: 190.9px;
+        width: 400px;
+        height: 237.9px;
     }
 
     #nome_Moto {
         width: 17rem;
     }
-
-
 
     .btn_listaInteresse, #whatsapp {
         width: 36vw;
@@ -950,6 +960,10 @@ footer#footer_copyright p {
 
     #whatsapp {
         gap: 0.1rem;
+    }
+
+    #whatsapp .name_button {
+        width: 24vw;
     }
 
     #input_Nome, #input_Assunto {
@@ -982,6 +996,14 @@ footer#footer_copyright p {
     button#btn_enviar {
         width: 20rem;
         justify-content: center;
+    }
+
+    .video {
+        aspect-ratio: 18/10;
+    }
+
+    #breakRow_Red {
+        margin: 1rem auto;
     }
 }
 

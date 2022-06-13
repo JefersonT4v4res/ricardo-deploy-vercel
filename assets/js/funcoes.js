@@ -59,7 +59,7 @@ document.getElementById("btn_enviar").addEventListener("click", function msgList
 document.getElementById("btn_Fecha_Informacoes").addEventListener("click", function close() {
   document.getElementById("veiculo_Informacoes").style.display = "none";
   document.getElementById("lista_Interesses").style.position = "sticky";
-  document.getElementById("lista_Interesses").style.left = "1rem";
+  document.getElementById("lista_Interesses").style.left = "0.4rem";
   document.getElementById("lista_Interesses").style.top = "23rem";
   document.body.style.overflow = "auto";
 });

@@ -77,8 +77,8 @@ window.sobreMoto = function(x) {
   info_Freios.textContent = lista_Motos[moto].freio;
 
   document.getElementById("lista_Interesses").style.position = "sticky";
-  document.getElementById("lista_Interesses").style.left = "0rem";
-  document.getElementById("lista_Interesses").style.top = "3rem";
+  document.getElementById("lista_Interesses").style.left = "0.4rem";
+  document.getElementById("lista_Interesses").style.top = "23rem";
   saibaMais.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
@@ -156,8 +156,8 @@ function incrementaIndiceLista(qtd) {
   if(QtdLista > 0) {
     document.querySelector("#lista_Interesses").style.display = "flex";
     document.getElementById("lista_Interesses").style.position = "sticky";
-    document.getElementById("lista_Interesses").style.left = "0rem";
-    document.getElementById("lista_Interesses").style.top = "3rem";
+    document.getElementById("lista_Interesses").style.left = "0.4rem";
+    document.getElementById("lista_Interesses").style.top = "23rem";
   }else {
     document.querySelector("#lista_Interesses").style.display = "none";
   }
