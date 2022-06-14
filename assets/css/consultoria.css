@@ -308,7 +308,7 @@ img.checked_Icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(217, 217, 217, 0.22);
+  background: #d9d9d97d;
   font-weight: bold;
   font-size: 1.6em;
   border-radius: 5px;
@@ -494,7 +494,7 @@ img.checked_Icon {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    margin-bottom: 1rem;
+    margin: -2px;
 }
 
 #icon_Interesse {
@@ -683,6 +683,12 @@ iframe {
     text-align: center;
 }
 
+div#container_mensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #titulo_contato {
     font-family: inter, sans-serif;
     font-size: 2em;
@@ -863,7 +869,7 @@ footer#footer_copyright p {
     }
 
     #motos_Em_Interesse {
-        margin: 9rem auto 2rem;
+        margin: 12rem auto 2rem;
     }
 
     .interesse {
@@ -929,6 +935,10 @@ footer#footer_copyright p {
         font-size: 2.4em;
     }
 
+    #topo_Informacoes h1 {
+        width: 47vw;
+    }
+
     #lista_Interesses {
         left: 2rem;
     }
@@ -942,7 +952,6 @@ footer#footer_copyright p {
         min-width: 3.5rem;
         height: 80px;
         top: 30%;
-        background: #d9d9d97d;
     }
 
     #slide_imgs .img_MotoExemplo {
@@ -1007,7 +1016,245 @@ footer#footer_copyright p {
     }
 }
 
-/*@media only screen and (min-width: 1024px) {}
-@media only screen and (min-width: 1400px) {}
-@media only screen and (min-width: 1800px) {}
-@media only screen and (min-width: 2500px) {}*/
+@media only screen and (min-width: 1279px) {
+    #icon_voltar {
+        width: 4em;
+    }
+
+    #h1_consultoria {
+        font-size: 3.5em;
+    }
+
+    #logomarca_Ricardo {
+        width: 20%;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header p {
+        font-size: 2em;
+        padding: 0 42px;
+    }
+
+    img#icon_interesse {
+        width: 93px;
+        height: 91px;
+    }
+
+    #esfera_notificacao {
+        width: 2.1rem;
+        height: 2.1rem;
+        left: 4rem;
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+
+    #lista_Interesses {
+        left: 2rem;
+    }
+
+    .lista_titulo{
+        font-size: 3.5em;
+        margin: 0.67em;
+    }
+
+    .card_Moto {
+        width: 325px;
+        height: 390px;
+        margin: 15px 18px;
+    }
+    
+    .moto_Nome {
+        font-size: 1.8em;
+    }
+
+    .moto_Img {
+        max-width: 300px;
+        max-height: 190px;
+    }
+
+    img.checked_Icon {
+        right: 8.3rem;
+        margin: 5px;
+        width: 37px;
+        height: 40px;
+    }
+
+    .btn_Saiba_Mais {
+        width: 195px;
+        height: 46px;
+        font-size: 1.3em;
+    }
+
+    #topo_Informacoes {
+        height: 92px;
+    }
+
+    #topo_Informacoes h1, #barra_Navegacao h1 {
+        font-size: 3em;
+    }
+
+    #icon_fechar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .prev, .next {
+        top: 25%;
+    }
+
+    .next {
+        right: 50rem;
+        left: 46vw;
+    }
+
+    #slide_imgs .img_MotoExemplo {
+        width: 488px;
+        height: 304.9px;
+    }
+
+    [type="checkbox"], [type="radio"] {
+        width: 48px;
+        height: 24px;
+    }
+
+    #nome_Moto {
+        font-size: 3.2em;
+        width: 30rem;
+    }
+
+    .btn_listaInteresse {
+        font-size: 1.5em;
+    }
+
+    #whatsapp, .btn_listaInteresse {
+        height: 78px;
+    }
+
+    #whatsapp .name_button {
+        width: 25vw;
+        font-size: 2.4em;
+    }
+
+    .box_informacoes {
+        justify-content: space-between;
+        font-size: 1em;
+        width: 19rem;
+        height: 18rem;
+    }
+
+    .box_informacoes p {
+        font-size: 1.5em;
+    }
+
+    #btn_Fecha_Interesses {
+        margin: 12px 33px;
+    }
+
+    #icon_Interesse {
+        width: 7rem;
+    }
+
+    .interesse {
+        margin: 1rem auto;
+        height: 6.5rem;
+    }
+
+    .quadrado {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+    }
+
+    .interesse #moto_Nome {
+        font-size: 2em;
+    }
+
+    .interesse #moto_Cor {
+        font-size: 1.4em;
+    }
+
+    .deletar_interesse {
+        width: 66px;
+        height: 66px;
+    }
+
+    img#icon_remover {
+        width: 40px;
+        height: 40px;
+    }
+
+    button#btn_enviar {
+        width: 25rem;
+        height: 5rem;
+    }
+
+    button#btn_enviar img#icon_enviar {
+        width: 2rem;
+    }
+
+    button#btn_enviar span#enviar {
+        font-size: 2em;
+    }
+
+    .secao_SaibaMais #titulo_SaibaMais {
+        font-size: 3.5em;
+    }
+
+    .titulo_Videos {
+        font-size: 3.3em;
+    }
+
+    .frase_Video {
+        font-size: 1.7em;
+        width: 46rem;
+        margin: 0px auto;
+    }
+
+    .video {
+        aspect-ratio: 24/10;
+    }
+
+    #contato {
+        height: 31rem;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    div#container_mensagem {
+        padding: 4rem;
+    }
+
+    #titulo_contato {
+        font-size: 2.6em;
+    }
+
+    #p_contato {
+        font-size: 1.3em;
+        width: 32rem;
+    }
+
+    #input_Nome, #input_Assunto {
+        height: 4rem;
+    }
+
+    #input_Nome, #input_Assunto, #input_Mensagem {
+        width: 30rem;
+    }
+
+    #img_bike_man {
+        width: 306px;
+        height: 279px;
+    }
+
+    #btn_Contato {
+        width: 167px;
+        height: 40px;
+        margin-left: 19.5rem;
+        font-size: 1.5em;
+    }
+}
