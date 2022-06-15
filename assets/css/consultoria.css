@@ -286,12 +286,19 @@ img.checked_Icon {
     cursor: pointer;
 }
 
+div#slide_imgs {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #slide_imgs .img_MotoExemplo {
-    width: 277px;
-    height: 177.9px;
+    width: 209px;
+    height: 150px;
     max-height: 100%;
     max-width: 100%;
-    
+    margin: 0px 0;
 }
 
 #traseiraDir, #TraseiraEsq {
@@ -301,10 +308,8 @@ img.checked_Icon {
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
   min-width: 14vw;
   height: 100px;
-  top: 17%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,14 +319,6 @@ img.checked_Icon {
   border-radius: 5px;
   user-select: none;
   -webkit-user-select: none;
-}
-
-.prev {
-    left: 4%;
-}
-
-.next {
-    right: 4%;
 }
 
 #veiculo_opcoes_cores {
@@ -726,7 +723,7 @@ div#container_mensagem {
     background: #FFFFFF;
     border: 1px solid rgba(186, 183, 183, 0.4);
     border-radius: 10px;
-    padding-left: 10px;
+    padding: 10px;
     margin-bottom: 10px; 
 }
 
@@ -992,13 +989,11 @@ footer#footer_copyright p {
 
     .next { 
         right: 50rem;
-        left: 49vw;
     }
 
     .prev, .next {
         min-width: 3.5rem;
         height: 80px;
-        top: 30%;
     }
 
     .prev:hover, .next:hover {
@@ -1173,13 +1168,8 @@ footer#footer_copyright p {
         height: 30px;
     }
 
-    .prev, .next {
-        top: 25%;
-    }
-
     .next {
         right: 61rem;
-        left: 46vw;
     }
 
     #slide_imgs .img_MotoExemplo {
