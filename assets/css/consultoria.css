@@ -432,7 +432,7 @@ img.checked_Icon {
 }
 
 .box_informacoes h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin: 0.3em 0;
 }
                     /*  SEÇÃO LISTA DE INTERESSES*/
@@ -897,13 +897,16 @@ footer#footer_copyright p {
         border-radius: 7.0132px;
         margin-right: 5px;
     }
+
+    .deletar_interesse:hover{
+        background: #adadad;
+    }
     
     img#icon_remover {
         width: 30px;
         height: 30px;
     }
 } 
-
 
 @media only screen and (min-width: 769px) {
     #icon_voltar {
@@ -916,6 +919,16 @@ footer#footer_copyright p {
 
     #logomarca_Ricardo {
         width: 25%;
+    }
+
+    .btn_Saiba_Mais:hover {
+        box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #00000040;
+        transform: translateY(-0.1em);
+    }
+
+    .btn_Saiba_Mais:active {
+        box-shadow: inset 0px 0.1em 0.6em #00000040;
+        transform: translateY(0em);
     }
 
     #topo_Informacoes { 
@@ -936,7 +949,26 @@ footer#footer_copyright p {
     }
 
     #topo_Informacoes h1 {
-        width: 47vw;
+        font-size: 2.5em;
+        text-align: center;
+        width: 54%;
+    }
+
+    button#btn_Fecha_Informacoes, #btn_Fecha_Interesses {
+        background: #f3f2f2;
+        border-radius: 25rem;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid #c31d1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    button#btn_Fecha_Informacoes:hover, #btn_Fecha_Interesses:hover {
+        background: #ae322e;
+        border: 2px solid #1e0202;
     }
 
     #lista_Interesses {
@@ -954,6 +986,16 @@ footer#footer_copyright p {
         top: 30%;
     }
 
+    .prev:hover, .next:hover {
+        background: #949090;
+    }
+
+    .prev:active, .next:active {
+        box-shadow: inset 0px 0.1em 0.6em #00000040;
+        transform: translateY(0em);
+    }
+
+
     #slide_imgs .img_MotoExemplo {
         width: 400px;
         height: 237.9px;
@@ -965,6 +1007,16 @@ footer#footer_copyright p {
 
     .btn_listaInteresse, #whatsapp {
         width: 36vw;
+        overflow: hidden;
+    }
+
+    .btn_listaInteresse:hover, #whatsapp:hover {
+        background: #19f809;
+    }
+
+    .btn_listaInteresse:active, #whatsapp:active {
+        box-shadow: inset 0px 0.4em 0.8em #00000040;
+        transform: translateY(0em);
     }
 
     #whatsapp {
@@ -979,6 +1031,7 @@ footer#footer_copyright p {
         width: 25rem;
         height: 3rem;
     }
+
     #input_Mensagem  {
         width: 25rem;
         padding: 5px;
@@ -1014,6 +1067,16 @@ footer#footer_copyright p {
     #breakRow_Red {
         margin: 1rem auto;
     }
+
+    #btn_Contato:hover {
+        box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #00000040;
+        transform: translateY(-0.1em);
+    }
+    
+    #btn_Contato:active {
+        box-shadow: inset 0px 0.1em 0.6em #00000040;
+        transform: translateY(0em);
+    }
 }
 
 @media only screen and (min-width: 1279px) {
@@ -1038,15 +1101,9 @@ footer#footer_copyright p {
         padding: 0 42px;
     }
 
-    img#icon_interesse {
-        width: 93px;
-        height: 91px;
-    }
-
     #esfera_notificacao {
         width: 2.1rem;
         height: 2.1rem;
-        left: 4rem;
         font-weight: 600;
         font-size: 1.3em;
     }
@@ -1093,12 +1150,12 @@ footer#footer_copyright p {
     }
 
     #topo_Informacoes h1, #barra_Navegacao h1 {
-        font-size: 3em;
+        font-size: 2.2em;
     }
 
     #icon_fechar {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 
     .prev, .next {
@@ -1106,7 +1163,7 @@ footer#footer_copyright p {
     }
 
     .next {
-        right: 50rem;
+        right: 61rem;
         left: 46vw;
     }
 
@@ -1126,31 +1183,31 @@ footer#footer_copyright p {
     }
 
     .btn_listaInteresse {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     #whatsapp, .btn_listaInteresse {
-        height: 78px;
+        height: 70px;
     }
 
     #whatsapp .name_button {
-        width: 25vw;
-        font-size: 2.4em;
+        width: 20vw;
+        font-size: 2em;
+    }
+
+    #veiculo_imgs_cores {
+        margin-bottom: 14px;
     }
 
     .box_informacoes {
         justify-content: space-between;
         font-size: 1em;
-        width: 19rem;
-        height: 18rem;
+        width: 18rem;
+        height: 14.5rem;
     }
 
-    .box_informacoes p {
-        font-size: 1.5em;
-    }
-
-    #btn_Fecha_Interesses {
-        margin: 12px 33px;
+    .box_informacoes h1 {
+        font-size: 2.2em;
     }
 
     #icon_Interesse {
@@ -1187,8 +1244,46 @@ footer#footer_copyright p {
     }
 
     button#btn_enviar {
-        width: 25rem;
-        height: 5rem;
+        width: 20rem;
+        height: 4rem;
+    }
+
+    button#btn_enviar span#enviar {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button#btn_enviar:hover span#enviar {
+        transform: translateX(10em);
+    }
+       
+    button#btn_enviar:active {
+        transform: scale(0.95);
+    }
+       
+    #btn_enviar .svg-wrapper {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    button#btn_enviar:hover .svg-wrapper  {
+        transform: translateX(6rem) rotate(0deg) scale(1.1);
+    }
+       
+    button#btn_enviar:hover #icon_enviar  {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes fly-1 {
+        from {
+            transform: translateY(0.1em);
+        }
+        
+        to {
+            transform: translateY(-0.1em);
+        }
     }
 
     button#btn_enviar img#icon_enviar {
@@ -1196,7 +1291,7 @@ footer#footer_copyright p {
     }
 
     button#btn_enviar span#enviar {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .secao_SaibaMais #titulo_SaibaMais {
@@ -1214,7 +1309,7 @@ footer#footer_copyright p {
     }
 
     .video {
-        aspect-ratio: 24/10;
+        aspect-ratio: 24/7;
     }
 
     #contato {
