@@ -909,6 +909,21 @@ footer#footer_copyright p {
 } 
 
 @media only screen and (min-width: 769px) {
+    #btn_voltar:hover {
+       animation: goBack 0.8s ease-in-out infinite alternate; 
+    }
+    
+    @keyframes goBack {
+        from {
+            transform: translateX(0.5em);
+            
+        }
+
+        to {
+            transform: translateX(-0.5em);
+        }
+    } 
+
     #icon_voltar {
         width: 3rem;
     }
