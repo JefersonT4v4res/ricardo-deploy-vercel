@@ -70,14 +70,15 @@
         <h1>Escolha sua moto</h1>
         <p>Tem sempre uma Honda que é a sua cara! Veja nosso catálogo, escolha aquelas que estão nos seus sonhos e saiba sobre as condições de consórcio, financiamento ou seguro.</p>
       </header>
-      <div id="lista_Interesses">
-        <div id="esfera_notificacao">0</div>
-        <button id="btn_Interesses">
-          <img id="icon_interesse" src="../assets/icons/Lista_Interesse.svg" draggable="true">
-        </button>
-    </div>
-      
+
     <main id="catalogo_Motos">
+        <div id="lista_Interesses">
+          <div id="esfera_notificacao">0</div>
+            <button id="btn_Interesses">
+              <img id="icon_interesse" src="../assets/icons/Lista_Interesse.svg" loading="lazy">
+            </button>
+        </div>
+        
       <section id="lista_veiculos">
         
         <h1 class="lista_titulo" id="street">Street</h1>
@@ -105,14 +106,14 @@
           <div id="veiculo_Informacoes_Box"> <!-- Box de informação -->
             <div id="topo_Informacoes">
             <h1>Informações</h1>
-            <button id="btn_Fecha_Informacoes"><img id="icon_fechar" src="../assets/icons/close.png" alt=""></button>
+            <button id="btn_Fecha_Informacoes"><img id="icon_fechar" src="../assets/icons/close.png" alt="" loading="lazy"></button>
             </div>
             <div id="veiculo_imgs_cores">
                 <!--SLIDE IMAGE-->
               <div id="slide_imgs">
                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <img class='img_MotoExemplo' id="frontal" src="" >
-                <img class='img_MotoExemplo' id="lateral" src="" >              
+                <img class='img_MotoExemplo' id="frontal" src="" loading="lazy">
+                <img class='img_MotoExemplo' id="lateral" src="" loading="lazy">              
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
 
@@ -138,31 +139,31 @@
 
             <div id="veiculo_informacoes_detalhadas">
               <div class="box_informacoes" id="motor">
-                <img src="../assets/icons/car-engine.png">
+                <img src="../assets/icons/car-engine.png" loading="lazy">
                 <h1 id="titulo_motor">Motor</h1>
                 <p id="informacao_motor"></p>
               </div>
 
               <div class="box_informacoes" id="cilindrada">
-                <img src="../assets/icons/pistons.png">
+                <img src="../assets/icons/pistons.png" loading="lazy">
                 <h1 id="titulo_cilindrada">Cilindrada</h1>
                 <p id="informacao_cilindrada"></p>
               </div>
 
               <div class="box_informacoes" id="transmissao">
-                <img src="../assets/icons/drive-belt.png">
+                <img src="../assets/icons/drive-belt.png" loading="lazy">
                 <h1 id="titulo_transmissao">Transmissão</h1>
                 <p id="informacao_transmissao"></p>
               </div>
 
               <div class="box_informacoes" id="partida">
-                <img src="../assets/icons/key.png">
+                <img src="../assets/icons/key.png" loading="lazy">
                 <h1 id="titulo_partida">Sistema de Partida</h1>
                 <p id="informacao_partida"></p>
               </div>
 
               <div class="box_informacoes" id="freios">
-                <img src="../assets/icons/break.png">
+                <img src="../assets/icons/break.png" loading="lazy">
                 <h1 id="titulo_freios">Freios</h1>
                 <p id="informacao_freios"></p>
               </div>
@@ -175,10 +176,10 @@
       <section id="secao_ListaInteresse">
         <div id="conteudo_Interesse">
           <div id="barra_Navegacao">
-            <img id="icon_Interesse" src="../assets/icons/Icon_Lista Interesse.png" alt="">
+            <img id="icon_Interesse" src="../assets/icons/Icon_Lista Interesse.png" alt="" loading="lazy">
             <div id="titulo_Navegacao">
               <h1>Lista de interesses</h1>
-              <button id="btn_Fecha_Interesses"><img id="icon_fechar" src="../assets/icons/close.png" alt=""></button>
+              <button id="btn_Fecha_Interesses"><img id="icon_fechar" src="../assets/icons/close.png" alt="" loading="lazy"></button>
             </div>
           </div>
 
@@ -192,7 +193,7 @@
             <button id="btn_enviar">
               <div class="svg-wrapper-1">
                 <div class="svg-wrapper">
-                  <img id="icon_enviar" src="../assets/icons/right-arrow.png" alt="">
+                  <img id="icon_enviar" src="../assets/icons/right-arrow.png" alt="" loading="lazy">
                 </div>
               </div>
               <span id="enviar">Iniciar Chat</span>
@@ -233,7 +234,7 @@
         <textarea name="mensagem" id="input_Mensagem" cols="30" rows="5" placeholder="Deixe uma mensagem"></textarea>
         <button id="btn_Contato">Enviar</button>
       </div>
-      <img id="img_bike_man" src="../assets/img/Beep Beep - Small Vehicle.png" alt="">
+      <img id="img_bike_man" src="../assets/img/Beep Beep - Small Vehicle.png" alt="" loading="lazy">
     </section>
 
     <footer id="footer_copyright">
@@ -242,5 +243,6 @@
 
     <script type="module" src="../assets/js/script.js"> </script>
     <script type="application/javascript" src="../assets/js/funcoes.js"></script>
+    <script type="application/javascript" src="../assets/js/sendMensage.js"></script>
   </body>
 </html>
