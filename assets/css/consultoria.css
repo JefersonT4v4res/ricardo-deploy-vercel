@@ -363,7 +363,7 @@ div#slide_imgs {
     padding-left: 15px;
     gap: 0.5rem;
     width: 84vw;
-    max-width: 27rem;
+    max-width: 25rem;
     height: 70px;
     border-radius: 10em;
     border: 0;
@@ -391,7 +391,7 @@ div#slide_imgs {
 
 .btn_listaInteresse {
     width: 84vw;
-    max-width: 27rem;
+    max-width: 25rem;
     height: 70px;
     font-family: 'DM Sans', sans-serif;
     font-size: 1em;
@@ -736,10 +736,22 @@ div#container_mensagem {
     color: #FFFFFF;
 }
 
+#container_imagens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #img_bike_man {
     margin: 0 auto;
-    width: 240px;
-    height: 240px;
+    width: 170px;
+    height: 175px;
+}
+
+#img_traffic_light {
+    margin: 0 auto;
+    width: 110px;
+    height: 15rem;
 }
 
 footer#footer_copyright {
@@ -1120,7 +1132,14 @@ footer#footer_copyright p {
         width: 325px;
         height: 390px;
         margin: 15px 18px;
+        transition: all 0.2s ease-in;
     }
+
+    .card_Moto:hover {
+        transform: translateY(-1rem);
+        box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+    }
+       
     
     .moto_Nome {
         font-size: 1.8em;
@@ -1162,8 +1181,8 @@ footer#footer_copyright p {
     }
 
     #slide_imgs .img_MotoExemplo {
-        width: 488px;
-        height: 304.9px;
+        width: 500px;
+        height: 322.9px;
     }
 
     [type="checkbox"], [type="radio"] {
@@ -1311,7 +1330,7 @@ footer#footer_copyright p {
         flex-direction: row;
         align-items: center;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     div#container_mensagem {
@@ -1336,8 +1355,14 @@ footer#footer_copyright p {
     }
 
     #img_bike_man {
-        width: 306px;
-        height: 279px;
+        width: 280px;
+        height: 230px;
+    }
+    
+    #img_traffic_light {
+        margin: 0 auto;
+        width: 160px;
+        height: 25rem;
     }
 
     #btn_Contato {
