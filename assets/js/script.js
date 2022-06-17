@@ -28,27 +28,27 @@ for(let i = 0; i < lista_Motos.length; i++){
 
 if (lista_Motos[i].tipo == "Street"){
   street.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto' loading='lazy'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='Círculo verde com um 'v' no centro para simbolizar check/marcação' loading='lazy'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
 
 }else if(lista_Motos[i].tipo == "Adventure"){
   adventure.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto' loading='lazy'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='Círculo verde com um 'v' no centro para simbolizar check/marcação' loading='lazy'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit' >Saiba mais +</button>"); 
 
 }else if(lista_Motos[i].tipo == "Off Road"){
   offRoad.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto' loading='lazy'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='Círculo verde com um 'v' no centro para simbolizar check/marcação' loading='lazy'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>");
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>");
 
 }else if(lista_Motos[i].tipo === "Sport"){
   sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='imagem foda da moto' loading='lazy'>" +
+  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='Círculo verde com um 'v' no centro para simbolizar check/marcação' loading='lazy'>" +
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem foda da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>"); 
+  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>"); 
 }
 
 }
@@ -165,7 +165,7 @@ function adicionaItemInteresse(moto, cor) {
   let div = document.getElementById("motos_Em_Interesse");
 
     listaMotoNome[int] = lista_Motos[moto].nome;
-    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[int]+"</p><p class='moto_CorInteresse' id='moto_Cor'>Cor: "+cor+"</p></div><button onclick='removeItemLista("+int+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt='' loading='lazy'></button></div>";
+    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[int]+"</p><p class='moto_CorInteresse' id='moto_Cor'>Cor: "+cor+"</p></div><button onclick='removeItemLista("+int+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt='ícone imagem de uma lata de lixo grande de metal' loading='lazy'></button></div>";
     int++;
     div.innerHTML = interesses;
 }
@@ -191,7 +191,7 @@ window.removeItemLista = function(pos){
 
   interesses = ""
   for(let i = 0; i < listaMotoNome.length; i++) {
-    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[i]+"</p><p class='moto_CorInteresse' id='moto_Cor'>"+listaMotoCor[i]+"</p></div><button onclick='removeItemLista("+i+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt='' loading='lazy'></button></div>";
+    interesses += "<div class='interesse'><div class='quadrado'></div><div id='moto_NomeCor'><p class='moto_NomeInteresse' id='moto_Nome'>"+listaMotoNome[i]+"</p><p class='moto_CorInteresse' id='moto_Cor'>"+listaMotoCor[i]+"</p></div><button onclick='removeItemLista("+i+")' class='deletar_interesse'><img id='icon_remover' src='../assets/icons/remove.png' alt='ícone imagem de uma lata de lixo grande de metal' loading='lazy'></button></div>";
   }
   div.innerHTML = interesses;
 

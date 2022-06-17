@@ -91,7 +91,8 @@ header h1 {
     display: none;
     z-index: 26;
     position: sticky;
-    left: 2rem;
+    left: 1rem;
+    top: 12vh;
 }
 
 #esfera_notificacao {
@@ -680,6 +681,7 @@ div#container_mensagem {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 #titulo_contato {
@@ -725,7 +727,7 @@ div#container_mensagem {
 
 #btn_Contato {
     width: 145px;
-    height: 24px;
+    height: 30px;
     background: #E21F1F;
     border-radius: 7px;
     margin-left: 9.5rem;
@@ -745,12 +747,12 @@ div#container_mensagem {
 #img_bike_man {
     margin: 0 auto;
     width: 170px;
-    height: 175px;
+    height: 170px;
 }
 
 #img_traffic_light {
     margin: 0 auto;
-    width: 110px;
+    width: 100px;
     height: 15rem;
 }
 
@@ -818,8 +820,8 @@ footer#footer_copyright p {
     }
 
     #slide_imgs .img_MotoExemplo {
-        width: 262px;
-        height: 161px;
+        width: 290px;
+        height: 180px;
     }
 
     .prev, .next {
@@ -837,7 +839,6 @@ footer#footer_copyright p {
 
     #lista_Interesses {
         left: 1rem;
-        top: 3rem;
     }
     
     #esfera_notificacao {
@@ -993,7 +994,7 @@ footer#footer_copyright p {
     }
 
     .prev, .next {
-        min-width: 3.5rem;
+        min-width: 3rem;
         height: 80px;
     }
 
@@ -1008,8 +1009,8 @@ footer#footer_copyright p {
 
 
     #slide_imgs .img_MotoExemplo {
-        width: 400px;
-        height: 237.9px;
+        width: 330px;
+        height: 230px;
     }
 
     #nome_Moto {
@@ -1117,10 +1118,6 @@ footer#footer_copyright p {
         height: 2.1rem;
         font-weight: 600;
         font-size: 1.3em;
-    }
-
-    #lista_Interesses {
-        left: 2rem;
     }
 
     .lista_titulo{
