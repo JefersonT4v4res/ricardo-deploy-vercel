@@ -150,13 +150,16 @@ function incrementaIndiceLista(qtd) {
   let QtdLista = parseInt(document.getElementById("esfera_notificacao").textContent)//Aqui é para pegar o valor de itens na lista
    QtdLista += qtd;
   document.getElementById("esfera_notificacao").textContent = QtdLista;
+  document.getElementById("info_Esfera_Notificacao").textContent = QtdLista;
 
   if(QtdLista > 0) {
-    document.querySelector("#lista_Interesses").style.display = "flex";
+    document.getElementById("lista_Interesses").style.display = "flex";
+    document.getElementById("info_Lista_Interesses").style.visibility = "visible";
+
   }else {
-    document.querySelector("#lista_Interesses").style.display = "none";
+    document.getElementById("lista_Interesses").style.display = "none";
+    document.getElementById("info_Lista_Interesses").style.visibility = "hidden";
     document.getElementById("secao_ListaInteresse").style.display = 'none';
-    document.getElementById("lista_Interesses").style.zIndex = '26';
     document.body.style.overflow = "auto";
   }
 }

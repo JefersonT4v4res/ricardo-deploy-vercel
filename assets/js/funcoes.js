@@ -5,13 +5,16 @@ document.getElementById("btn_Fecha_Informacoes").addEventListener("click", funct
 
 document.getElementById("btn_Interesses").addEventListener("click", function abreLista() {
   document.getElementById("secao_ListaInteresse").style.display = "flex";
-  document.getElementById("lista_Interesses").style.zIndex = '24';
+  document.body.style.overflow = "hidden";
+});
+
+document.getElementById("info_Btn_Interesses").addEventListener("click", function abreLista() {
+  document.getElementById("secao_ListaInteresse").style.display = "flex";
   document.body.style.overflow = "hidden";
 });
 
 document.getElementById("btn_Fecha_Interesses").addEventListener("click", function fechaLista() {
   document.getElementById("secao_ListaInteresse").style.display = 'none';
-  document.getElementById("lista_Interesses").style.zIndex = '30';
   document.body.style.overflow = "auto";
 });
 
