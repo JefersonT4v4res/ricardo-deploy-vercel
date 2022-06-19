@@ -40,7 +40,7 @@ div#divisoria {
 
 #secao_cartao_apresentacao {
   display: flex;
-  background-color: #ff0000;
+  background-color: #da0000;
   width: 100%;
   min-height: 414px;
   overflow: hidden;
@@ -1128,8 +1128,8 @@ img#polygon2 {
   }
 
   .cards_atendimento:hover {
-    margin: 65px 40px 15px 0px;
-    transform: translateY(-50px);
+    margin: 48px 31px 27px 0px;
+    transform: translateY(-10px);
   }
 
   #titulo_atendimento {
@@ -1189,24 +1189,19 @@ img#polygon2 {
 }
 
 @media only screen and (min-width: 1800px) {
-
-    img#banner {
-        max-height: 400px;
-    }
-
     #secao_cartao_apresentacao {
       height: 45vh;
       min-height: 400px;
       max-height: 480px;
     }
 
-    #informacoes_cartao {
-      left: 0vw;
-      top: 60px;
+    div#informacoes_cartao {
+      margin-top: 2rem;
+      margin-left: 38.5rem;
     }
     
     #informacoes_cartao h1 {
-      width: 557px;
+      width: 640px;
       line-height: 58px;
     }
 
@@ -1219,11 +1214,11 @@ img#polygon2 {
     }
 
     #logo_honda {
-      width: 145px;
-      height: 105px;
-      left: 21vw;
-      top: 0vh;
-    }
+      left: 26vw;
+      top: -2em;
+      width: 100px;
+      height: 100px;
+  }
 
     #secao_sobre {
       height: 70vh;
@@ -1376,7 +1371,6 @@ img#polygon2 {
 }
 
 @media only screen and (min-width: 2500px) {
-  
     #secao_cartao_apresentacao {
       height: 60vh;
       max-height: 620px;
@@ -1387,9 +1381,9 @@ img#polygon2 {
       top: 82px;
     }
 
-    #informacoes_cartao {
-      left: -1vw;
-      top: 108px;
+    div#informacoes_cartao {
+      margin-top: -2rem;
+      margin-left: 41.5rem;
     }
 
     #informacoes_cartao h1 {
@@ -1406,8 +1400,7 @@ img#polygon2 {
     }
     
     #logo_honda {
-      left: 18vw;
-      top: 1vh;
+
       width: 161px;
       height: 128px;
     }
@@ -1489,11 +1482,6 @@ img#polygon2 {
       width: 300px;
       height: 40px;
       font-size: 1.8em;
-    }
-
-    .cards_atendimento:hover {
-        margin: 48px 31px 27px 0px;
-        transform: translateY(-70px);
     }
 
     #img_ricardo_perfil {
