@@ -1,5 +1,5 @@
 function sendMensage(mensagem) {
-    var url = "https://wa.me/5575988464938?text=" + mensagem;  
+    var url = "https://wa.me/5575988361964?text=" + mensagem;  
     window.open(url, '_blank').focus();
 }
   

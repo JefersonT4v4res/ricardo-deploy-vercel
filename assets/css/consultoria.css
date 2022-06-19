@@ -800,6 +800,10 @@ footer#footer_copyright p {
         justify-content: space-around;
     }
 
+    #info_Esfera_Notificacao {
+        left: 15.3vw;
+    }
+
     #whatsapp {
         gap: 1.5rem;
     }
@@ -832,6 +836,16 @@ footer#footer_copyright p {
         gap: 22vw;
         justify-content: flex-end;
     }
+
+    #info_Esfera_Notificacao {
+        left: 2.8rem;
+        bottom: 2.6rem;
+    }
+    
+    #info_Lista_Interesses {
+        left: 10px;
+        position: absolute;
+    }   
 
     #topo_Informacoes h1, #barra_Navegacao h1 {
         font-size: 1.6em;

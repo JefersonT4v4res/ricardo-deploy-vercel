@@ -33,17 +33,6 @@ body {
 /*--Estilizando pagina--*/
 
 /*   ***Sessao 1*** */
-div#secao_cabecalho, header#header_pagina {
-  display: block;
-}
-
-img#banner {
-  -webkit-box-reflect: below 1px
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-  width: 100%;
-  max-height: 320px;
-}
-
 div#divisoria {
   height: 5px;
   background: #000000cc;
@@ -57,11 +46,15 @@ div#divisoria {
   overflow: hidden;
 }
 
+#logo_marca {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
 img#polygon1 {
-  width: 100%;
-  height: auto;
-  position: relative;
-  left: 20vw;
+  display: none;
 }
 
 #container_image {
@@ -70,18 +63,30 @@ img#polygon1 {
 }
 
 #container_informacoes_cartao {
-  width: 66%;
-  height: auto;
+  background: #f4f4f4;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+div#informacoes_cartao {
+  margin-top: auto;
+  height: 13rem;
 }
 
 #informacoes_cartao h1 {
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-  text-align: start;
   font-weight: bold;
-  width: auto;
+  text-align: center;
+  line-height: 25px;
+  width: 90vw;
+}
+
+.info_cartao_nome {
+  font-size: 0.8em;
 }
 
 #info_cartao_ola,
@@ -89,16 +94,12 @@ img#polygon1 {
   font-size: 0.7em;
 }
 
-.info_cartao_nome {
-  font-size: 1.6em;
-}
-
 #logo_honda {
-  width: 122px;
-  height: 110px;
+  width: 70px;
+  height: 55px;
   position: relative;
-  left: 26em;
-  top: 13.5em;
+  left: 36vw;
+  top: 0.5em;
 }
 
 #conteudo_sobre {
@@ -450,7 +451,6 @@ img#polygon2 {
   background-color: #ff0000;
 }
 
-
 #area_img_frase {
   width: 42%;
   display: flex;
@@ -499,58 +499,18 @@ img#polygon2 {
     align-items: center;
   }
 
-  #logo_marca {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vh;
-  }
-
   #container_image {
     width: 100%;
     height: 330px;
-  }
-  
-  #container_informacoes_cartao {
-    width: 100%;
-    height: 262px;
-  }
-
-  img#polygon1 {
-    width: 183%;
-    max-width: 186%;
-    left: 132vw;
-    top: -27vh;
-    margin-top: 16em;
-    transform: rotate(90deg);
-  }
-
-  #informacoes_cartao {
-    margin-top: 4em;
-    margin-bottom: auto;
-    position: relative;
-    right: 7px;
-  }
-
-  #informacoes_cartao h1 {
-    text-align: center;
-    line-height: 34px;
-    width: 90vw;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
     font-size: 0.5em;
   }
 
-  .info_cartao_nome {
-    font-size: 1em;
-  }
-
   #logo_honda {
     width: 70px;
     height: 55px;
-    left: 36vw;
-    top: -1.5em;
   }
 
   #secao_sobre {
@@ -572,7 +532,7 @@ img#polygon2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 330px;
-    background-color: transparent;
+    background-color: #070c0cdb;
   }
 
   #p_sobre_mim {
@@ -697,7 +657,7 @@ img#polygon2 {
   }
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 481px) {
   img#banner {
     height: 27vh;
   }
@@ -706,22 +666,25 @@ img#polygon2 {
     margin-top: 5vh;
   }
 
-  img#polygon1 {
-    max-width: 180%;
-    top: -6vh;
+  #secao_cartao_apresentacao {
+    background-size: cover;
   }
-  
-  #logo_honda {
-    left: 14em;
-    top: -0.5em;
+
+  #informacoes_cartao h1 {
+    line-height: 32px;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
     font-size: 0.7em;
   }
-
+  
   .info_cartao_nome {
-    font-size: 1.3em;
+    font-size: 1.2em;
+  }
+  
+  #logo_honda {
+    left: 42vw;
+    top: -1em;
   }
 
   #conteudo_sobre {
@@ -777,27 +740,20 @@ img#polygon2 {
     height: 100%;
   }
   
-  img#polygon1 {
-    width: 155%;
-    max-width: 170%;
-    left: 126vw;
-    top: 0vh;
-    margin-top: 0vh;
-    transform: rotate(0deg);
+  #container_informacoes_cartao {
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
   }
 
-  #informacoes_cartao {
-    margin-top: 4em;
+  div#informacoes_cartao {
+    margin-top: 8rem;
+    height: 16rem;
+    margin-left: 14.5rem;
   }
 
   #informacoes_cartao h1 {
     text-align: start;
     line-height: 23px;
-    width: 104vw;
-  }
-
-  #informacoes_cartao h1 span#info_cartao_ola, span#app, span#info_cartao_profissao {
-    margin-left: 67vw;
+    width: 24rem;
   }
 
   #info_cartao_ola, #info_cartao_profissao {
@@ -809,7 +765,7 @@ img#polygon2 {
   }
 
   #logo_honda {
-    left: 92vw;
+    left: 25vw;
     top: -0.5em;
     width: 60px;
   }
@@ -903,24 +859,15 @@ img#polygon2 {
 }
 
 @media only screen and (min-width: 1024px) {
-    img#banner {
-      max-height: 333px;
-    }
-
     #logo_marca {
       left: 4vw;
       margin-top: 2.5em;
     }
 
-    img#polygon1 {
-      width: 100%;
-      max-width: 100%;
-      left: 37vw;
-    }
-
-    #informacoes_cartao  {
-      margin-top: 3em;
-      right: 0em;
+    div#informacoes_cartao {
+      margin-top: 6.6rem;
+      height: 16rem;
+      margin-left: 11.5rem;
     }
 
     #informacoes_cartao h1 {
@@ -930,23 +877,19 @@ img#polygon2 {
       margin-right: auto;
     }
 
-    #informacoes_cartao h1 span#info_cartao_ola, span#app, span#info_cartao_profissao {
-      margin-left: 0vw;
-    }
-
     #info_cartao_ola, #info_cartao_profissao {
-      font-size: 0.6em;
+      font-size: 0.5em;
     }
 
     .info_cartao_nome {
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
 
     #logo_honda {
-      width: 86px;
-      height: 68px;
-      left: 16em;
-      top: 0.5em;
+    width: 70px;
+    height: 70px;
+    left: 17em;
+    top: -2rem;
     }
 
     #secao_sobre {
@@ -1114,37 +1057,35 @@ img#polygon2 {
     height: auto;
   }
 
-  img#polygon1 {
-    width: 100%;
-    max-width: 100%;
-    left: 40vw;
+  #container_informacoes_cartao {
+    width: 66%;
+    clip-path: polygon(20% 50%, 100% 100%, 100% 0%);
   }
 
-  #informacoes_cartao {
-    top: 2.5em;
-    margin-top: 2em;
-    left: 3em;
+  div#informacoes_cartao {
+    margin-top: 5.2rem;
+    margin-left: 30.5rem;
   }
 
   #informacoes_cartao h1 {
     width: 460px;
-    line-height: 44px;
+    line-height: 40px;
   }
 
   #info_cartao_ola,
   #info_cartao_profissao {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .info_cartao_nome {
-    font-size: 1.9em;
+    font-size: 1.6em;
   }
 
   #logo_honda {
-    left: 20em;
-    top: 0em;
-    width: 110px;
-    height: 87px;
+    left: 23em;
+    top: -3em;
+    width: 83px;
+    height: 83px;
   }
 
   #secao_sobre {
@@ -1257,10 +1198,6 @@ img#polygon2 {
       height: 45vh;
       min-height: 400px;
       max-height: 480px;
-    }
-
-    img#polygon1 {
-      left: 35vw;
     }
 
     #informacoes_cartao {
@@ -1448,11 +1385,6 @@ img#polygon2 {
     #logo_marca {
       left: 9vw;
       top: 82px;
-    }
-
-    img#polygon1 {
-      left: 31vw;
-      height: 40em;
     }
 
     #informacoes_cartao {
