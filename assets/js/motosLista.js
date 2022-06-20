@@ -171,40 +171,6 @@ var motos = [
 
     {
         tipo: "Street",
-        nome: "CB 500F ABS",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-01/cb500f_card_365x233_laranja.png.webp",
-        motor: "DOHC, Dois cilindros 4 tempos, refrigeração líquida",
-        cilindrada: "471 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "A disco / 320 mm",
-        cor: {
-            cor1: "Laranja",
-            cor2: "Vermelho Perolizado",
-            cor3: "Prata Metálico",
-            cor4: "none"
-        }
-    },
-
-    {
-        tipo: "Street",
-        nome: "CB 1000R",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-03/cb1000r_card_365x233_vermelha.png.webp",
-        motor: "DOHC, Quatro cilindros 4 tempos, refrigeração líquida",
-        cilindrada: "998,4 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "A disco/ 310 mm",
-        cor: {
-            cor1: "Vermelho Metálico",
-            cor2: "Preto",
-            cor3: "none",
-            cor4: "none"
-        }
-    },
-
-    {
-        tipo: "Street",
         nome: "Pop 110i",
         url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-12/Pop---Branca---Sombra-alterada---Lateral-365px_0.png.webp",
         motor: "OHC, Monocilíndrico 4 tempos, arrefecido a ar",
@@ -272,57 +238,6 @@ var motos = [
     },
 
     {
-        tipo: "Adventure",
-        nome: "CB 500X ABS",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-01/cb500x_card_365x233_vermelho-perolizado.png.webp",
-        motor: "DOHC, Dois cilindros 4 tempos, refrigeração líquida",
-        cilindrada: "471 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "A disco / 320 mm",
-        cor: {
-            cor1: "Vermelho Perolizado",
-            cor2: "Preto Perolizado",
-            cor3: "Prata Metálico",
-            cor4: "none"
-        }
-    },
-
-    {
-        tipo: "Adventure",
-        nome: "NC 750X ABS",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-10/nc750_card_365x233_azul_0.png.webp",
-        motor: "OHC, Dois Cilindros 4 tempos, refrigeração líquida",
-        cilindrada: "745 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "A disco / 320 mm",
-        cor: {
-            cor1: "Azul-Escuro Perolizado",
-            cor2: "Verde",
-            cor3: "Vermelho",
-            cor4: "none"
-        }
-    },
-
-    {
-        tipo: "Adventure",
-        nome: "CRF 1100L AFRICA TWIN MT",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2021-06/crf-1100l-africa-twin-mt-4.png.webp",
-        motor: "OHC, 2 cilindros 4 tempos, arrefecido a líquido",
-        cilindrada: "1.084 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "ABS Selecionável",
-        cor: {
-            cor1: "Vermelho",
-            cor2: "Preto",
-            cor3: "none",
-            cor4: "none"
-        }
-    },
-
-    {
         tipo: "Off Road",
         nome: "CRF 250F",
         url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2019-03/crf250f_card_365x233_vermelha.png.webp",
@@ -337,24 +252,7 @@ var motos = [
             cor3: "none",
             cor4: "none"
         }
-    },
-
-    {
-        tipo: "Sport",
-        nome: "CBR 650R",
-        url: "https://ddccctl8fxsqn.cloudfront.net/content/static/images/prod/2020-02/cbr650r_card_365x233_cinza-metalico.png.webp",
-        motor: "DOHC, quatro cilindros 4 tempos, refrigeração líquida",
-        cilindrada: "649 cc",
-        transmissao: "6 velocidades",
-        partida: "Elétrico",
-        freio: "Dianteiro/Diâmetro: A disco / 310 mm, Traseiro/Diâmetro: A disco / 240 mm",
-        cor: {
-            cor1: "Cinza Metálico",
-            cor2: "Vermelho",
-            cor3: "none",
-            cor4: "none"
-        }
-    },
+    }
 ]
 
 export function listaMotos(){
