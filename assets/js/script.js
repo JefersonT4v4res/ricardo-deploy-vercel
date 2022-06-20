@@ -44,11 +44,6 @@ if (lista_Motos[i].tipo == "Street"){
   "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
   "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>");
 
-}else if(lista_Motos[i].tipo === "Sport"){
-  sport.insertAdjacentHTML("afterbegin", "<div class='card_Moto' id='card_Moto_Street"+ i +"'>" +
-  "<img id='iconCheck"+ i +"' class='checked_Icon' src='../assets/icons/icon_Checked.svg' alt='Círculo verde com um 'v' no centro para simbolizar check/marcação' loading='lazy'>" +
-  "<h1 id='moto"+i+"' class='moto_Nome'>" + lista_Motos[i].nome + "</h1>"+ 
-  "<img class='moto_Img' src='"+ lista_Motos[i].url +"' alt='imagem da moto' loading='lazy'>" + "<button onclick='sobreMoto("+ i +")' class='btn_Saiba_Mais' id='btn"+i+"' type='submit'>Saiba mais +</button>"); 
 }
 
 }
