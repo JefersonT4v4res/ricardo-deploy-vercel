@@ -785,6 +785,11 @@ footer#footer_copyright p {
    margin-top: 0.5rem;
 }
 
+footer#footer_copyright p #author-linkedin {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /*    SCREEN SIZE     */
 @media only screen and (min-width: 340px) {
     #h1_consultoria {
