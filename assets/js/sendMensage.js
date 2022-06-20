@@ -1,5 +1,5 @@
 function sendMensage(mensagem) {
-    var url = "https://wa.me/5575988361964?text=" + mensagem;  
+    var url = "https://wa.me/5575988006438?text=" + mensagem;  
     window.open(url, '_blank').focus();
 }
   
@@ -15,8 +15,6 @@ document.getElementById("btn_Contato").addEventListener("click", function format
   
     sendMensage(msgFormatada);
   
-    document.getElementById("input").value = "";
-    document.getElementById("mensagem").value = "";
     document.getElementById("input_Nome").value = "";
     document.getElementById("input_Assunto").value = "";
     document.getElementById("input_Mensagem").value = "";
